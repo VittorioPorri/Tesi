@@ -1,0 +1,529 @@
+\setchapterpreamble[u]{\margintoc}
+\chapter{Balanced Binary Search Trees}
+\labch{struttura_dati}
+
+\section{Alberi Binari di Ricerca}
+Un Albero Binario di Ricerca (BST) è una struttura dati ad albero che soddisfa le seguenti proprietà per ogni nodo $v$:
+\begin{itemize}
+    \item Ogni nodo contiene un elemento a cui è associata una chiave presa da un dominio totalmente ordinato.
+    \item Tutte le chiavi nel sottoalbero \textbf{sinistro} di $v$ sono minori o uguali ($\leq$) alla chiave in $v$.
+    \item Tutte le chiavi nel sottoalbero \textbf{destro} di $v$ sono maggiori o uguali ($\geq$) alla chiave in $v$.
+\end{itemize}
+
+\begin{kaobox}[frametitle=Note] 
+Eseguendo una visita \textbf{simmetrica} dei nodi, le chiavi vengono enumerate in ordine crescente.
+\end{kaobox}
+
+\begin{proof}
+La dimostrazione procede per induzione sull'altezza $h$ dell'albero:
+\begin{itemize}
+    \item \textbf{Caso base} $h=1$: L'albero è composto dalla sola radice e dai due figli foglia. La visita simmetrica visita nell'ordine: figlio sinistro, radice, figlio destro. Date le proprietà del BST, l'ordine è rispettato.
+    \item \textbf{Passo induttivo} $h>1$: Supponiamo che la proprietà valga per alberi di altezza inferiore a $h$. Per definizione, la visita simmetrica visita il sottoalbero sinistro $L$, poi la radice $r$ e infine il sottoalbero destro $R$. 
+    Per ipotesi induttiva, $L$ e $R$ sono visitati in ordine crescente. Poiché ogni chiave in $L \leq \text{key}(r)$ e ogni chiave in $R \geq \text{key}(r)$, l'intera sequenza risultante sarà ordinata.
+\end{itemize}
+\end{proof}
+
+\subsection{Operazioni}
+
+\subsubsection{Search}
+L'algoritmo di ricerca ricalca il principio della ricerca binaria. Partendo dalla radice, si confronta la chiave cercata $k$ con la chiave del nodo corrente $v$:
+\begin{itemize}
+    \item Se $k = \text{key}(v)$, la ricerca termina con successo e ritorna.
+    \item Se $k < \text{key}(v)$, la ricerca prosegue ricorsivamente nel sottoalbero \textbf{sinistro}.
+    \item Se $k > \text{key}(v)$, la ricerca prosegue ricorsivamente nel sottoalbero \textbf{destro}.
+\end{itemize}
+Se si raggiunge un nodo nullo (\texttt{NULL}), la chiave non è presente nell'albero.
+
+\begin{algorithm}[H]
+    \caption{Ricerca in un BST}
+    \label{alg:search_bst}
+    \SetAlgoLined
+    \DontPrintSemicolon
+    
+    \KwIn{Nodo radice $u$, chiave cercata $k$}
+    \KwOut{Il nodo con chiave $k$ o \texttt{NULL}}
+    
+    \BlankLine 
+    
+    \While{$u \neq \text{NULL}$}{
+        \If{$k == u.key$}{
+            \Return $u$\;
+        }
+        \If{$k < u.key$}{
+            $u \leftarrow u.left$\;
+        }
+        \Else{
+            $u \leftarrow u.right$\;
+        }
+    }
+    \Return \texttt{NULL}\;
+\end{algorithm}
+
+\subsubsection{Insert}
+L'obiettivo dell'inserimento è posizionare un nuovo nodo $u$ come \textbf{foglia}, preservando le proprietà dell'albero. Il procedimento prevede i seguenti passi:
+\begin{enumerate}
+    \item Si crea il nodo $u$ con i relativi attributi (\textit{elem}, \textit{key}).
+    \item Si simula una procedura di \textit{search(key(u))} per individuare il futuro nodo padre.
+    \item Una volta individuato il padre, si aggancia $u$ come figlio destro o sinistro in modo da rispettare le proprietà dei BST.
+\end{enumerate}
+
+\begin{algorithm}
+    \caption{Inserimento in un BST}
+    \label{alg:insert_bst}
+    \SetAlgoLined
+    \DontPrintSemicolon
+    
+    \KwIn{Nodo radice $r$, nuovo nodo $u$ (già inizializzato)}
+    
+    \BlankLine 
+    
+    $y \leftarrow \text{NULL}$ \tcp*{y sarà il padre di u}
+    
+    \If{$r == \text{NULL}$}{
+        $r \leftarrow u$ \tcp*{L'albero era vuoto}
+        }
+        
+    $x \leftarrow r$ 
+    
+    \While{$x \neq \text{NULL}$}{
+        $y \leftarrow x$\;
+        \If{$u.key < x.key$}{
+            $x \leftarrow x.left$\;
+        }
+        \Else{
+            $x \leftarrow x.right$\;
+        }
+    }
+    
+    $u.parent \leftarrow y$\;
+    
+    \ElseIf{$u.key < y.key$}{
+        $y.left \leftarrow u$\;
+    }
+    \Else{
+        $y.right \leftarrow u$\;
+    }
+\end{algorithm}
+
+
+\subsubsection{Delete}
+
+L'operazione di cancellazione di un nodo $v$ è la più complessa da implementare quindi prima di definire la cancellazione, è necessario introdurre alcune operazioni ausiliarie fondamentali.
+
+\begin{itemize}
+    \item \textbf{Ricerca del minimo (findMin):} Partendo dal nodo radice, si segue ricorsivamente il puntatore \textbf{sinistro}. Il minimo è rappresentato dal primo nodo incontrato il cui puntatore sinistro è \texttt{NULL}.
+    \item \textbf{Ricerca del successore (findSuccessor):} Il successore di un nodo $v$ è il nodo con la minima chiave tra tutti i nodi aventi chiave maggiore di $\text{key}(v)$. Si distinguono due casi:
+    \begin{enumerate}
+        \item \textbf{Se $v$ ha un sottoalbero destro:} il successore è semplicemente il valore minimo di tale sottoalbero (\textit{findMin(v.right)}).
+        \item \textbf{Se $v$ non ha un figlio destro:} il successore si trova risalendo l'albero fino a individuare il primo antenato di $v$ tale che $v$ appartenga al suo sottoalbero \textbf{sinistro}.
+    \end{enumerate}
+\end{itemize}
+
+
+\begin{algorithm}[H]
+    \caption{Ricerca del minimo in un BST}
+    \label{alg:findmin_bst}
+    \SetAlgoLined
+    \DontPrintSemicolon
+    
+    \KwIn{Nodo radice $r$}
+    \KwOut{Il nodo con chiave minima o \texttt{NULL}}
+    
+    \BlankLine 
+    
+    \If{$r == \text{NULL}$}{
+        \Return \texttt{NULL}\;
+    }
+    
+    $x \leftarrow r$\;
+    \While{$x.left \neq \text{NULL}$}{
+        $x \leftarrow x.left$\;
+    }
+    
+    \Return $x$\;
+\end{algorithm}
+
+
+
+\begin{algorithm}[H]
+    \caption{Ricerca del successore di un nodo in un BST}
+    \label{alg:findSuccessor_bst}
+    \SetAlgoLined
+    \DontPrintSemicolon
+    
+    \KwIn{Nodo $v$ di cui cercare il successore}
+    \KwOut{Il nodo successore o \texttt{NULL}}
+    
+    \BlankLine 
+    
+    \If{$v.right \neq \text{NULL}$}{
+        \Return \text{findMin}(v.right)\;
+    }
+    
+    $u \leftarrow v$\;
+    \While{$u.parent \neq \text{NULL} \land u.parent.right == u$}{
+        $u \leftarrow u.parent$\;
+    }
+    \Return $u.parent$\;
+\end{algorithm}
+
+
+Le operazioni di cancellazione richiede la gestione di tre scenari differenti:
+
+\begin{itemize}
+    \item \textbf{Caso 1: $v$ è una foglia.} Si rimuove il nodo aggiornando il corrispondente puntatore del padre a \texttt{NULL}.
+    \item \textbf{Caso 2: $v$ ha un solo figlio.} Si effettua un'operazione di "scavalcamento": il padre di $v$ viene collegato direttamente all'unico figlio di $v$, rimuovendo $v$ dalla struttura.
+    \item \textbf{Caso 3: $v$ ha due figli.} Non è possibile rimuovere $v$ direttamente senza rompere la struttura dell'albero. Si procede quindi come segue:
+    \begin{enumerate}
+        \item Si individua il \textbf{successore} di $v$ (che si troverà necessariamente nel sottoalbero destro).
+        \item Si copia il contenuto (chiave ed elementi) del successore nel nodo $v$.
+        \item Si rimuove fisicamente il successore dall'albero. Poiché il successore è il minimo del sottoalbero destro, esso avrà al massimo un figlio (il destro), ricadendo quindi nel Caso 1 o nel Caso 2.
+    \end{enumerate}
+\end{itemize}
+
+\begin{algorithm}[H]
+    \caption{Cancellazione di un nodo in un BST}
+    \label{alg:delete_bst}
+    \SetAlgoLined
+    \DontPrintSemicolon
+    
+    \KwIn{Nodo radice $r$, nodo $v$ da rimuovere}
+    
+    \BlankLine 
+    
+    $p \leftarrow v.parent$\;
+
+    \If{$v.left == \text{NULL} \land v.right == \text{NULL}$}{
+        \If{$p == \text{NULL}$}{
+            $r \leftarrow \text{NULL}$\;
+        }
+        \ElseIf{$p.left == v$}{
+            $p.left \leftarrow \text{NULL}$\;
+        }
+        \Else{
+            $p.right \leftarrow \text{NULL}$\;
+        }
+    }
+    \ElseIf{($v.left == \text{NULL}$) \textbf{xor} ($v.right == \text{NULL}$)}{
+        \If{$v.left \neq \text{NULL}$}{
+            $child \leftarrow v.left$\;
+        }
+        \Else{
+            $child \leftarrow v.right$\;
+        }
+        \If{$p == \text{NULL}$}{
+            $r \leftarrow child$\;
+        }
+        \ElseIf{$p.left == v$}{
+            $p.left \leftarrow child$\;
+        }
+        \Else{
+            $p.right \leftarrow child$\;
+        }
+        \If{$child \neq \text{NULL}$}{
+            $child.parent \leftarrow p$\;
+        }
+    }
+    \Else{
+        $s \leftarrow \text{findSuccessor}(v)$\;
+        $v.key \leftarrow s.key$\;
+        $v.elem \leftarrow s.elem$\;
+        \text{Delete}(r, s)\;
+    }
+\end{algorithm}
+
+\begin{kaobox}[frametitle=Note] 
+Tutte le operazioni dipendono dall'altezza dell'albero per cui il loro costo è $O(h)$
+\end{kaobox}
+
+\section{Red-Black Trees}
+Lo standard per garantire l'efficienza di queste operazioni è imporre una \textit{condizione di bilanciamento}. Tale vincolo assicura che l'altezza dell'albero rimanga logaritmica rispetto al numero di nodi ($h = O(\log n)$), evitando la degenerazione della struttura in una lista concatenata.
+Per farlo ad ogni nodo viene associata una funzione chiamata \textbf{rango} che assegna ad ogni nodo $x$ un valore intero non negativo $rank(x)$ che deve soddisfare le seguenti proprietà fondamentali:
+
+\begin{enumerate}
+    \item \textbf{Proprietà del Padre:} Se $x$ è un nodo dotato di genitore $p(x)$, allora:
+    \[ rank(x) \leq rank(p(x)) \leq rank(x) + 1 \]
+    \item \textbf{Proprietà del Nonno:} Se $x$ è un nodo dotato di un nonno $p^2(x)$, allora:
+    \[ rank(x) < rank(p^2(x)) \]
+    \item \textbf{Proprietà dei Nodi Esterni:} Se $x$ è un nodo esterno (nodo con valore NULL), allora $rank(x) = 0$. Inoltre, se $x$ possiede un genitore, allora $rank(p(x)) = 1$.
+\end{enumerate}
+
+Come visto in \cite{tarjan1983data} è possibile derivare una definizione alternativa, ma formalmente equivalente, basata sulla colorazione dei nodi. Si definisce un nodo $x$ come \textbf{Nero} (\textit{Black}) se $rank(p(x)) = rank(x) + 1$ (o se $x$ è la radice dell'albero) e \textbf{Rosso} (\textit{Red}) se $rank(p(x)) = rank(x)$. 
+
+
+Sotto questa formalizzazione, le condizioni di bilanciamento si traducono nelle proprietà canoniche dei \textbf{Red-Black Trees}:
+
+\begin{enumerate}
+    \item Ogni nodo è marcato con il colore rosso o nero.
+    \item Un nodo rosso deve necessariamente avere un genitore e un figlio di colore nero.
+    \item Ogni nodo esterno è nero e tutti i cammini che congiungono un nodo $x$ ai nodi esterni discendenti contengono il medesimo numero di nodi neri.
+\end{enumerate}
+
+\begin{kaobox}[frametitle=Note]
+$rank(v) = k$ è il numero di nodi neri che si incontrano dal nodo $v$, escluso, verso qualsiasi sua foglia
+\end{kaobox} 
+
+\begin{lemma}
+Un albero binario bilanciato con $n$ nodi interni ha altezza  $h \leq 2\log_2(n+1)$.
+\end{lemma}
+
+\begin{proof}
+Dimostriamo per induzione sul rango $k$ che un nodo $u$ con $rank(u) = k$ possiede un numero di discendenti interni $n(u) \geq 2^k - 1$, poi da qui determiniamo l'altezza dell'albero.
+
+\begin{itemize}
+    \item \textbf{Caso base} ($k = 0$): per la Proprietà dei Nodi Esterni, un nodo con rango $0$ è un nodo esterno. Esso non possiede discendenti interni, coerentemente con la formula: $2^0 - 1 = 0$.
+    
+    \item \textbf{Passo induttivo} ($k > 0$): Supponiamo che la proprietà sia vera per tutti i nodi con rango inferiore a $k$. Sia $u$ un nodo con $rank(u) = k$ e siano $v$ e $w$ i suoi figli. 
+    Per la \textit{Proprietà del Padre}, il rango di un figlio può essere $k$ o $k-1$. Tuttavia, analizziamo i due scenari possibili per un generico figlio $v$:
+    \begin{enumerate}
+        \item Se $rank(v) = k-1$, per ipotesi induttiva $v$ ha almeno $2^{k-1}-1$ discendenti.
+        \item Se $rank(v) = k$, allora $v$ deve essere necessariamente un nodo rosso. Per la \textit{Proprietà del Nonno}, i figli di $v$ (nipoti di $u$) devono avere rango strettamente inferiore a $rank(u)$, ovvero $k-1$. In questo caso, applicando l'ipotesi induttiva ai due figli di $v$, il numero di discendenti di $v$ è almeno $(2^{k-1}-1) + (2^{k-1}-1) + 1 = 2^k - 1$.
+    \end{enumerate}
+    
+    In entrambi i casi, ogni figlio di $u$ garantisce almeno $2^{k-1}-1$ discendenti. Sommando i contributi dei due figli di $u$ e del nodo $u$:
+        \[ n(u) \geq (2^{k-1} - 1) + (2^{k-1} - 1) + 1 = 2 \cdot 2^{k-1} - 1 = 2^k - 1 \]
+\end{itemize}
+La proprietà è dunque dimostrata per ogni $k$.\;
+
+Sia $T$ un albero con $n$ nodi interni e sia $k$ il rango della sua radice. Dalla proprietà appena dimostrata sappiamo che:
+\[ n \geq 2^k - 1 \]
+Risistemando i termini
+\[ n + 1 \geq 2^k \implies \log_2(n+1) \geq k \]
+
+Dalla \textit{Proprietà del Nonno}, sappiamo che lungo ogni cammino non possono esserci due nodi rossi consecutivi. Questo implica che l'altezza fisica $h$ dell'albero può essere al massimo il doppio del rango della radice ($h \leq 2k$). 
+
+Sostituendo la relazione trovata per $k$:
+\[ h \leq 2k \leq 2\log_2(n+1) \]
+\end{proof}
+
+Le operazioni di inserimento (Insert) e di cancellazione (Delete) sono le medesime degli alberi binari tuttavia potrebbero rovinare il bilanciamento e violare le proprietà dell'albero quindi abbiamo bisogno di alcune operazioni ausiliarie che ripristino tutte le proprietà dei red-blak trees 
+
+\subsubsection{Rotazioni e Ribilanciamento}
+
+Le rotazioni sono operazioni locali che modificano la struttura dell'albero preservando l'ordine simmetrico dei nodi (proprietà di ricerca). Un nodo $v$ intuitivamente è \textbf{sbilanciato} se uno dei suoi sottoalberi è troppo alto rispetto agli alti.
+
+Sia $v$ il nodo sbilanciato possiamo distinguiamo quattro casi fondamentali in base alla posizione del sottoalbero $T$ che causa lo sbilanciamento:
+
+\begin{description}
+    \item[Caso Sinistro-Sinistro (SS):] $T$ è il figlio sinistro del figlio sinistro di $v$. Si risolve con una \textit{rotazione semplice  verso destra} su $v$.
+    \begin{figure}[h] 
+        \centering
+        \includegraphics[width=0.8\textwidth]{rotazioneSS.png}
+        \caption{Rotazione semplice destra (Caso SS).}
+        \label{fig:rotazioneSS}
+    \end{figure}
+
+    \item[Caso Destro-Destro (DD):] Speculare al caso SS. Si risolve con una \textit{rotazione semplice verso sinistra} su $v$.
+
+    \item[Caso Sinistro-Destro (SD):] $T$ è il figlio destro del figlio sinistro di $v$. Si risolve con una \textit{rotazione doppia} (una rotazione verso sinistra sul figlio z, seguita da una verso destra su $v$).
+    \begin{figure}[h] 
+        \centering
+        \includegraphics[width=0.9\textwidth]{rotazioneSinistroDestro.png}
+        \caption{Rotazione doppia sinistra-destra (Caso SD).}
+        \label{fig:rotazioneSD}
+    \end{figure}
+
+    \item[Caso Destro-Sinistro (DS):] Speculare al caso SD. Si risolve con una rotazione doppia destra-sinistra.
+\end{description}
+
+\begin{lemma}
+    Sia $v$ un nodo sbilanciato a seguito di un'operazione di inserimento o cancellazione. Esiste sempre una rotazione semplice o doppia in grado di ripristinare il bilanciamento del sottoalbero radicato in $v$.
+\end{lemma}
+
+\begin{proof}
+    Si consideri il caso Sinistro-Sinistro (Fig. \ref{fig:rotazioneSS}). Prima della rotazione, l'altezza del sottoalbero radicato in $v$ è $h+3$. Dopo la rotazione semplice destra, il nodo $u$ diventa la nuova radice locale. La nuova altezza sarà $h+2$\\
+    Ragionamento analogo può essere applicato alla rotazione doppia (Fig. \ref{fig:rotazioneSD}), dove la sequenza di rotazioni trasforma un cammino critico di altezza $h+3$ in una struttura bilanciata di altezza $h+2$. \\
+    Poiché l'altezza viene ridotta esattamente del valore necessario a compensare lo sbilanciamento e l'ordinamento simmetrico è preservato, il nodo risulta correttamente ribilanciato.
+\end{proof}
+
+\subsubsection{Insert}
+
+L'inserimento di un elemento in un \textit{Red-Black Tree} (RBT) è un'operazione composta che integra la logica strutturale degli alberi binari di ricerca con un protocollo di ripristino delle proprietà cromatiche.
+
+Sia $v$ il nodo da inserire nell'albero $T$, si colora il nodo $v$ di \textbf{rosso} e si seguendo l'algoritmo di inserimento standard per i BST.
+
+\paragraph{Analisi della politica di colorazione}
+La scelta di assegnare il colore rosso al nuovo nodo $v$ è dettata dalla necessità di limitare le potenziali violazioni alle proprietà strutturali dell'RBT:
+
+\begin{itemize}
+    \item \textbf{Invarianza dell'Altezza Nera (Proprietà 3):} L'assegnazione del colore rosso garantisce intrinsecamente il mantenimento della \textit{Proprietà 3}, la quale impone che ogni cammino semplice da un nodo a una foglia discendente contenga il medesimo numero di nodi neri. Poiché $v$ è rosso, il conteggio dei nodi neri (la cosiddetta \textit{black-height}) per ogni cammino che attraversa $v$ rimane inalterato rispetto alla configurazione precedente l'inserimento.
+    \item \textbf{Vincoli di Adiacenza (Proprietà 2):} Le unice potenziali violazioni introdotte possono essere releative al fatto che il nodo padre (p(v)) è \textit{NULL} o alla \textit{Proprietà 2}, che vieta la presenza di due nodi rossi consecutivi. Tale conflitto si manifesta esclusivamente nell'eventualità in cui il padre del nodo inserito, $p(v)$, sia a sua volta di colore rosso, in questo caso va utilizzata la procedura fixInsert al fine ripristinare le proprietà dell'albero.
+\end{itemize}
+
+\subsubsection{fixInsert}
+
+\begin{marginfigure}
+    \includegraphics{triangoloDS.png}
+    \caption[Titolo breve]{Caso del triangolo destro}
+    \labfig{triangolo-destro}
+\end{marginfigure}
+
+\begin{marginfigure}
+    \includegraphics{lineaDestra.png}
+    \caption[Titolo breve]{Caso della linea destra}
+    \labfig{linea-destra}
+\end{marginfigure} 
+
+La routine \texttt{fixInsert(v)} interviene quando il padre del nodo appena inserito, $p[v]$, è rosso o, violando la \textit{Proprietà 2}. Il comportamento della procedura dipende dal colore e dalla posizione dello \textbf{zio} di $v$ , indicato come $u$ (fratello di $p[v]$).
+
+Si distinguono i seguenti casi fondamentali:
+
+\begin{enumerate}
+    \item \textbf{Caso della Radice:} Se $p[v]$ è \texttt{NULL}, significa che $v$ è la radice dell'albero. In questo caso è sufficiente ricolorare $v$ di nero per soddisfare tutte le proprietà.
+    
+    \item \textbf{Ricolorazione (Zio Rosso):} Se lo zio $u$ è rosso, il nonno $g$ deve essere necessariamente nero (\textit{Proprietà 2}). Si procede ricolorando $p[v]$ e $u$ di nero, e $g$ di rosso. 
+    \begin{itemize}
+        \item \textit{Nota:} Poiché $g$ è diventato rosso, la violazione potrebbe essersi spostata verso l'alto. La procedura viene quindi chiamata ricorsivamente su $g$.
+    \end{itemize}
+
+    \item \textbf{Caso del Triangolo :} Se lo zio $u$ è nero (o \texttt{NULL}) e $v$ è un figlio interno rispetto al nonno (es. $v$ è figlio destro e $p[v]$ è figlio sinistro, come in Fig. \ref{fig:triangolo-destro}), ci troviamo in una configurazione a "triangolo". 
+    Si applica una \textbf{rotazione semplice} sul padre $p[v]$ per ricondursi al caso della linea (Caso 4).
+
+    \item \textbf{Caso della Linea:} Se lo zio $u$ è nero (o \texttt{NULL}) e $v$ è un figlio esterno (es. entrambi figli sinistri, come in Fig. \ref{fig:linea-destra}), i nodi sono allineati. 
+    Si applica una \textbf{rotazione semplice} sul nonno $g$, ricolorando il padre $p[v]$ di nero e il nonno $g$ di rosso. Questa operazione risolve definitivamente la violazione senza alterare la \textit{black-height}.
+\end{enumerate}
+
+\begin{remark}
+    È importante notare che, mentre il Caso 2 può propagare la violazione fino alla radice con costo $O(\log n)$, i Casi 3 e 4 richiedono al massimo due rotazioni totali per terminare l'esecuzione della procedura.
+\end{remark}
+
+\subsubsection{Delete}
+L'operazione di rimozione di un nodo in un \textit{Red-Black Tree} segue inizialmente la logica strutturale della cancellazione negli alberi binari di ricerca (BST). Tuttavia, le implicazioni cromatiche variano drasticamente in base al colore del nodo rimosso o del nodo che ne prende il posto:
+
+\begin{itemize}
+    \item Se il nodo rimosso è \textbf{rosso}, le proprietà dell'albero rimangono invariate, poiché l'altezza nera dei cammini non subisce alterazioni e non si possono creare conflitti tra nodi rossi consecutivi.
+    \item Se il nodo rimosso è \textbf{nero}, si verifica una violazione della \textit{Proprietà 3}, poiché ogni cammino che attraversava quel nodo vedrà ridursi il proprio numero di nodi neri di un'unità.
+\end{itemize}
+
+Per ovviare a questa violazione, si introduce una procedura ausiliaria chiamata fixDelete che si occupa di ribilanciare la black-height
+
+\subsubsection{fixDelete}
+
+La procedura \texttt{fixDelete(x)} viene invocata qualora il nodo rimosso sia di colore nero, determinando una violazione della \textit{Proprietà 3} (altezza nera). L'obiettivo della routine è eliminare tale riduzione risalendo l'albero o assorbendola tramite rotazioni.
+
+Il comportamento dell'algoritmo è determinato dal colore del fratello $f$ e dei relativi figli (nipoti di $x$): $cl$ (figlio sinistro) e $cr$ (figlio destro).
+
+\begin{marginfigure}
+    \includegraphics{fratelloRosso.png}
+    \caption[Titolo breve]{Caso del fratello Rosso}
+    \labfig{fratello-rosso}
+\end{marginfigure}
+
+\begin{marginfigure}
+    \includegraphics{nipoteVicinoRosso.png}
+    \caption[Titolo breve]{Caso del nipote vicino rosso}
+    \labfig{nipote-vicino-rosso}
+\end{marginfigure}
+
+\begin{marginfigure}
+    \includegraphics{nipoteLontanoRosso.png}
+    \caption[Titolo breve]{Caso del nipote lontano rosso}
+    \labfig{nipote-lontano-rosso}
+\end{marginfigure}
+
+\begin{enumerate}
+    \item \textbf{Caso 1: Fratello $f$ rosso.}
+    Se $f$ è rosso, il padre $p[x]$ deve essere necessariamente nero. Si esegue una rotazione (sinistra se $x$ è figlio sinistro, destra se $x$ è figlio destro come nel \ref{fig:fratello-rosso}) su $p[x]$ e si scambiano i colori tra $p[x]$ e $f$. Questa operazione trasforma la configurazione in uno dei casi 2, 3 o 4, dove il nuovo fratello di $x$ è nero.
+
+    \item \textbf{Caso 2: Fratello $f$ e nipoti entrambi neri.}
+    In questa situazione, vengono ricolorati $x$ e da $f$ di rosso ora controllo $p[x]$. 
+    \begin{itemize}
+        \item Se $p[x]$ era rosso, esso diventa semplicemente nero e la procedura termina.
+        \item Se $p[x]$ era già nero, allora la procedura \texttt{fixDelete} viene richiamata ricorsivamente verso l'alto su $p[x]$.
+    \end{itemize}
+
+    \item \textbf{Caso 3: Nipote "vicino" rosso (Zio nero).}
+    Si verifica quando il figlio di $f$ più prossimo a $x$ è rosso (es. $x$ è figlio sinistro e $cl$ è rosso come nella figura \ref{fig:nipote-vicino-rosso}). Si esegue una rotazione su $f$ (direzione opposta a $x$) e si scambiano i colori tra $f$ e il nipote rosso. Questa trasformazione riconduce l'albero al Caso 4.
+
+    \item \textbf{Caso 4: Nipote "lontano" rosso (Zio nero).}
+    Si verifica quando il figlio di $f$ più distante da $x$ è rosso (es. $x$ è figlio sinistro e $cr$ è rosso come nella figura \ref{fig:nipote-lontano-rosso}). Si esegue una rotazione su $p[x]$ verso $x$. 
+    \begin{itemize}
+        \item Il nodo $f$ (nuova radice locale) assume il colore che aveva $p[x]$ prima della rotazione.
+        \item I nodi $p[x]$ e il nipote lontano rosso vengono colorati di nero.
+    \end{itemize}
+    Questa operazione ripristina l'altezza nera.
+\end{enumerate}
+
+\begin{kaobox}[frametitle=Note] 
+Nei casi 3 e 4, il colore di $p$ può essere sia rosso che nero.
+\end{kaobox}
+
+\begin{remark}
+    Si osservi che, mentre il Caso 2 può propagare la violazione fino alla radice con costo $O(\log n)$, i Casi 3 e 4 garantiscono la terminazione della procedura dopo un numero costante di rotazioni.
+\end{remark}
+
+
+\subsubsection{Join}
+
+L'operazione di \textbf{Join} riceve in input due alberi Red-Black $S_1$ e $S_2$ e un nodo con chiave $i$, sotto l'ipotesi che:
+\[ \forall x \in S_1, \forall y \in S_2 : \text{key}(x) < i < \text{key}(y) \]
+
+
+L'algoritmo si divide in due casi:
+\begin{itemize}
+    \item \textbf{Caso $rank(S_1) \geq rank(S_2)$}: 
+    Poiché $i$ e tutti gli elementi di $S_2$ sono maggiori di ogni chiave in $S_1$, l'obiettivo è inserire il blocco $(i, S_2)$ all'interno di $S_1$.
+    \begin{enumerate}
+        \item \textbf{Ricerca}: Si discende lungo il cammino dei figli destri di $S_1$ fino a individuare un nodo $x$ tale che $rank(x) = rank(S_2)$.
+        \item \textbf{Innesto}: Sia $p$ il padre di $x$. Il nodo $i$ viene inserito come nuovo figlio destro di $p$, $x$ diventa il figlio sinistro di $i$, mentre la radice di $S_2$ diventa il figlio destro di $i$.
+        \item \textbf{Colorazione}: Il nodo $i$ viene colorato di \textbf{rosso}. Affinché la proprietà del rango sia preservata, le radici dei due sottoalberi $x$ e $S_2$ vengono ricolorate di nere.
+        \item \textbf{Ribilanciamento}: Viene invocata la procedura \texttt{fixInsert(i)} per risolvere eventuali violazioni della \textit{Proprietà 2}
+    \end{enumerate}
+
+    \item \textbf{Caso $rank(S_1) < rank(S_2)$}:
+    Il procedimento è simmetrico, ma questa volta si discende lungo il cammino dei figli sinistri di $S_2$ fino a trovare un nodo $x$ con $rank(x) = rank(S_1)$. Il nodo $i$ ( colorato di rosso) sostituirà $x$, prendendo $S_1$ come figlio sinistro e $x$ come figlio destro, poi si ricolora $x$ e $S_1$ di \textbf{nero}
+\end{itemize}
+
+\begin{remark}
+    La complessità temporale della procedura di $join(S_1, i, S_2)$ dipende dalla ricerca del nodo $x$, che richiede $|rank(S_1) - rank(S_2)|$, $O(1)$ per agganciare l'albero e la procedura \texttt{fixInsert}, richiede tempo proporzionale a quanto siamo discesi nell'albero $|rank(S_1) -rank(S_2)|$ \\
+    Quindi, il costo complessivo è $O(|rank(S_1) - rank(S_2)| +1) = O(log(n))$.
+\end{remark}
+
+\subsubsection{Split}
+L'operazione di \texttt{split}$(T, v)$ divide l'albero $T$ in due alberi $T_L$ e $T_R$ rispetto alla chiave del nodo $v$. La procedura avviene in due fasi:
+\begin{enumerate}
+    \item Si individua il nodo $v$ e si inizializzano $T_L = v.left$ e $T_R = v.right$.
+    \item Si risale l'albero dal nodo $v$ verso la radice. Per ogni nodo padre $p$ nel cammino:
+    \begin{itemize}
+        \item Se $v$ discende dal figlio sinistro di $p$, allora $p$ e il sottoalbero $p.right$ appartengono alla parte destra. Si esegue: \\ $T_R = \text{join}(p.right, p, T_R)$.
+        \item Se $v$ discende dal figlio destro di $p$, allora $p$ e il sottoalbero $p.left$ appartengono alla parte sinistra. Si esegue: \\ $T_L = \text{join}(T_L, p, p.left)$.
+    \end{itemize}
+\end{enumerate}
+
+\begin{proof}
+    Nella dimostrazione ci concentreremo sull'accolumatore $T_L$ ma il ragionamento rimane invariato per $T_R$.\\
+    Ad ogni passo $i$ se il cammino devia a destra uniremo quanto accumulato fino ad ora $T_{L,i}$ con un nuovo sottoalbero $S_i$, cosi da creare l'accumulatore $T_{L,i+1}$
+
+    Denominiamo con $h_i = rank(T_{L,i})$ il rank dell'accumulato dopo l'i-esimo join e osserviamo che:
+    \begin{itemize}
+        \item per le proprietà dei Red-Black Trees il $rank(S_i) \geq  h$, poiche si troverà in un livello piu in alto
+        \item Il risultato del join avra come rank o lo stesso $rank(S_i)$ o $rank(S_i)+1$, ne consegue che $h_{i+1} \approx rank(S_i)$
+    \end{itemize}
+    
+    Come abbiamo visto il costo di ogni singola operazione $\text{join}_i$ è proporzionale alla differenza di altezza tra l'accumulatore corrente $T_{L,i}$ e il sottoalbero da unire $S_i$, più un costo costante per il collegamento:
+    \[ \text{join}_{i-esimo} = O(rank(S_i) -rank(T_{L,i}) + 1) = O(h_{i+1}-h_i +1)\]
+    
+    Il costo totale dello \texttt{split} per $T_L$ è dato dalla somma dei costi di tutte le operazioni di \texttt{join}:
+    \[ \sum_{i=1}^{j} O(h_i - h_{i-1} + 1) \]
+    
+    Espandendo la sommatoria:
+    \[ O((h_1 - h_0) + (h_2 - h_1) + \dots + (h_j - h_{j-1}) + \sum_{i=1}^{j} 1) \]
+    
+    Notiamo che tutti i termini intermedi si cancellano a vicenda, lasciando solo la differenza tra l'altezza finale e quella iniziale, più il numero di passi $j$:
+    \[ O(h_j - h_0 + j) \]
+    
+    Poiché:
+    \begin{itemize}
+        \item $h_0 \geq 0$ è l'altezza del nodo di partenza;
+        \item $j$ è il numero di nodi sul cammino verso la radice, ovvero $O(\log n)$;
+    \end{itemize}
+    
+    Concludiamo che la complessità è:
+    \[ O(\log n - 0 + \log n) = O(\log n) \]
+\end{proof}
+    
+    
+    
+    
+    
+    

@@ -1,0 +1,35 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {italian}{}\relax
+\babel@toc {italian}{}\relax
+\contentsline {chapter}{\nonumberline Indice}{3}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Euler Tour Trees}{1}{chapter.1}%
+\etoc@startlocaltoc {2}
+\etoc@startlocaltoc {3}
+\contentsline {subsection}{\numberline {1.0.1}Operazioni}{2}{subsection.1.0.1}%
+\contentsline {mtocsubsection}{\numberline {1.0.1}Operazioni}{2}{subsection.1.0.1}%
+\contentsline {subsubsection}{\nonumberline isConnected}{2}{subsubsection*.4}%
+\contentsline {subsubsection}{\nonumberline Rerooting}{2}{subsubsection*.6}%
+\contentsline {subsubsection}{\nonumberline Link}{2}{subsubsection*.8}%
+\contentsline {subsubsection}{\nonumberline Cut}{3}{subsubsection*.10}%
+\contentsline {part}{\nonumberline Struttura dati}{5}{part*.12}%
+\contentsline {chapter}{\numberline {2}Balanced Binary Search Trees}{7}{chapter.2}%
+\etoc@startlocaltoc {4}
+\etoc@startlocaltoc {5}
+\contentsline {section}{\numberline {2.1}Alberi Binari di Ricerca}{7}{section.2.1}%
+\contentsline {mtocsection}{\numberline {2.1}Alberi Binari di Ricerca}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Operazioni}{7}{subsection.2.1.1}%
+\contentsline {mtocsubsection}{\numberline {2.1.1}Operazioni}{7}{subsection.2.1.1}%
+\contentsline {subsubsection}{\nonumberline Search}{7}{subsubsection*.14}%
+\contentsline {subsubsection}{\nonumberline Insert}{8}{subsubsection*.16}%
+\contentsline {subsubsection}{\nonumberline Delete}{9}{subsubsection*.19}%
+\contentsline {section}{\numberline {2.2}Red-Black Trees}{11}{section.2.2}%
+\contentsline {mtocsection}{\numberline {2.2}Red-Black Trees}{11}{section.2.2}%
+\contentsline {subsubsection}{\nonumberline Rotazioni e Ribilanciamento}{12}{subsubsection*.21}%
+\contentsline {subsubsection}{\nonumberline Insert}{13}{subsubsection*.25}%
+\contentsline {paragraph}{\nonumberline Analisi della politica di colorazione}{13}{paragraph*.27}%
+\contentsline {subsubsection}{\nonumberline fixInsert}{14}{subsubsection*.29}%
+\contentsline {subsubsection}{\nonumberline Delete}{14}{subsubsection*.33}%
+\contentsline {subsubsection}{\nonumberline fixDelete}{15}{subsubsection*.35}%
+\contentsline {subsubsection}{\nonumberline Join}{15}{subsubsection*.40}%
+\contentsline {subsubsection}{\nonumberline Split}{16}{subsubsection*.42}%
+\contentsline {chapter}{\nonumberline Bibliography}{21}{chapter*.43}%

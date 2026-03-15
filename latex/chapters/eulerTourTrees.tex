@@ -1,0 +1,221 @@
+\setchapterpreamble[u]{\margintoc}
+\chapter{Euler Tour Trees}
+\labch{Introduzione}
+
+In questa tesi esploreremo gli Euler Tour Trees 
+(ETT), una struttura dati dinamica introdotta da 
+Henzinger e King \cite{HenzingerKing1999}, 
+progettata per mantenere informazioni su foreste 
+soggette a modifiche strutturali.
+
+L'obiettivo è supportare operazioni di: 
+\begin{itemize}
+    \item \textbf{link(u,v)}: aggiungere un arco $(u,v)$ unendo due alberi.
+    \item \textbf{cut(u,v)}: rimuovere l'arco $(u,v)$ dividendo l'albero in due.
+    \item \textbf{isConnected(u,v)}: verificare se $u$ e $v$ appartengono allo stesso albero.
+\end{itemize}
+
+A differenza di altre strutture che operano direttamente sui nodi,
+gli ETT si basano sulla linearizzazione dell'albero 
+tramite cicli di Eulero. Questa rappresentazione
+permette di ridurre complessi problemi di connettività 
+a semplici manipolazioni di sequenze.
+
+\begin{definition}
+Un ciclo euleriano è un percorso in un grafo che inizia e finisce nello stesso nodo passando esattamente una volta per ogni arco.
+\end{definition}
+
+\begin{kaobox}[frametitle=Note] 
+Poiché gli alberi non hanno veri cicli euleriani, consideriamo ogni arco $e=(u,v)$ come una coppia di archi diretti $(u,v)$ e $(v,u)$.
+\end{kaobox}
+
+L'idea della stuttura dati è quella di creare il ciclo euleriano visitando l'albero tramite una ricerca in profondità (DFS) tenendo traccia dell'ordine in cui vengono visitati i nodi
+
+\begin{marginfigure}
+    \centering
+    \includegraphics[width=\marginparwidth]{makeTour.png}
+    \caption[Ciclo Euleriano]{Il Ciclo euleriano che si forma è ABDBEBACA}
+    \label{fig:Tour}
+\end{marginfigure}
+
+\begin{algorithm}[H]
+    \caption{Creazione Tour Euleriano }
+    \label{alg:make_ETT}
+    \SetAlgoLined
+    \DontPrintSemicolon
+    
+    \KwIn{Nodo corrente $u$, Lista $L$}
+    \KwOut{Cammino euleriano in $L$}
+    
+    \BlankLine 
+    $L \leftarrow u$\;
+    
+    \If{$u.left \neq NULL$}{
+        makeTour($u.left, L$)\;
+        $L \leftarrow u$\;
+    }
+    
+    \If{$u.right \neq NULL$}{
+        makeTour($u.right, L$)\;
+        $L \leftarrow u$\;
+    }
+\end{algorithm}
+
+Il ciclo euleriano è strettamente connesso con la struttra dell'albero, ad esempio si osserva che la sequanza A\textbf{BDBEB}ACA rappresenta il sottoalbero radicato in BACK
+
+\begin{kaobox}[frametitle=Claim] 
+La sequenza di nodi visitati tra la prima e l'ultima istanza di un nodo $v$ è il cammino euleriano del sottoalbero radicato in $v$
+\end{kaobox}
+
+\subsection{Operazioni}
+
+\subsubsection{isConnected}
+L'operazione \textbf{isConnected(u,v)} è la più semplice poichè è sufficente verificare che i due nodi $u$ e $v$ si trovino nello stesso ciclo euleriano, per farlo basta verificare che il primo elemento della sequanza sia il medesimo per i due nodi  
+
+\subsubsection{Rerooting}
+Prima di introdurre le altre operazioni introduciamo,
+un'operazione ausiliaria \textbf{rerooting(v)}, 
+tale operazione ha il compito di rendere un nodo 
+interno del ciclo euleriano il primo nodo del ciclo
+, per farlo seguiamo i seguenti passaggi:
+
+\begin{enumerate}
+    \item si cerca la prima occorrenza del nodo $v$ nel ciclo euleriano, e si separa la sequanza in A che conterrà tutto ciò che c'era prima di tale nodo e B che  conterrà il nodo $v$ e tutto ciò che c'è dopo
+    \item si elimina il primo carattere di A
+    \item riconcateno $B + A + B[0]$
+\end{enumerate}
+
+\begin{algorithm}[H]
+    \caption{Rerooting}
+    \label{alg:rerooting}
+    \SetAlgoLined
+    \DontPrintSemicolon
+    
+    \KwIn{ETT $L$, nodo $v$}
+    \KwOut{il nuovo ETT}
+    
+    \BlankLine 
+
+    \If{$L[0] == v$}{
+        \Return $L$
+    }
+    
+    $A \leftarrow \emptyset$\;
+    $B \leftarrow \emptyset$\;
+    $isFound \leftarrow False$\;
+    
+    \For{$i \leftarrow 0$ \KwTo $len(L) - 1$}{
+        \If{$L[i] == v$ \textbf{and} $\neg isFound$}{
+            $isFound \leftarrow True$\;
+        }
+
+        \If{$\neg isFound$}{
+            $A \leftarrow A + L[i]$\;
+        }
+        \Else{
+            $B \leftarrow B +L[i]$\;
+        }
+    }
+
+    \Return $B + A + B[0]$
+    
+\end{algorithm}
+
+\subsubsection{Link}
+L'operazione \textbf{link(u,v)} permette di unire due alberi distinti aggiungendo un arco tra il nodo u (appartenente al primo albero) e il nodo v (appartenente al secondo), per farlo seguiamo i seguenti passaggi:
+\begin{enumerate}
+    \item C = rerooting(v) 
+    \item si cerca l'ultima occorrenza di $v$ nel suo ciclo euleriano, e si separa la sequanza in A che conterrà tutto ciò che c'era prima di tale nodo e il nodo $v$ e B che conterrà tutto ciò che c'è dopo
+    \item concateno  $A + C + u + B$ 
+\end{enumerate}
+
+\begin{algorithm}[H]
+    \caption{Link}
+    \label{alg:link}
+    \SetAlgoLined
+    \DontPrintSemicolon
+    
+    \KwIn{ETT $L$, ETT $C$, nodo $u$, nodo $v$}
+    \KwOut{l'ETT del nuovo albero}
+    
+    \BlankLine 
+
+    $C \leftarrow rerooting(C,v)$\;
+    $A \leftarrow \emptyset$\;
+    $B \leftarrow \emptyset$\;
+    $isFound \leftarrow False$\;
+
+    \For{$i \leftarrow len(L)-1 $ \KwTo $-1$}{
+        \If{$L[i] == u$ \textbf{and} $\neg isFound$}{
+            $isFound \leftarrow True$\;
+        }
+
+        \If{$\neg isFound$}{
+            $B \leftarrow L[i] + B$\;
+        }
+        \Else{
+            $A \leftarrow L[i] + A$\;
+        }
+    }
+
+    \Return $A + C + u + B$
+    
+\end{algorithm}
+
+\subsubsection{Cut}
+L'operazione \textbf{cut(u,v)} permette di separare un albero in due alberi distinti, eliminando l'arco $(u,v)$ crando due nuovi alberi radicati rispettivamente in $u$ e $v$, per farlo seguiamo i seguenti passaggi:
+\begin{enumerate}
+    \item rerooting(v)
+    \item si cerca la sequanza tra la prima e l'ultima occorrenza di $u$ e si separea in A che conterrà tutto ciò che c'era prima della prima occorrenza di $u$, B che conterrà tutto ciò che c'è tra la prima e l'ultima occorrenza di $u$ e C che contiene ciò che c'è dopo l'ultima occorrenza di $u$
+    \item si elimina l'ultimo carattere in $A$
+    \item si restituisce $A + C$ e $B$
+\end{enumerate}
+
+\begin{algorithm}[H]
+    \caption{Cut}
+    \label{alg:cut}
+    \SetAlgoLined
+    \DontPrintSemicolon
+    
+    \KwIn{ETT $L$, nodo $u$, nodo $v$}
+    \KwOut{l'ETT $L_1$ e $L_2$ dei due nuovi alberi}
+    
+    \BlankLine 
+
+    $L \leftarrow \text{rerooting}(L,v)$\;
+    $A \leftarrow \emptyset$\;
+    $B \leftarrow \emptyset$\;
+    $C \leftarrow \emptyset$\;
+
+    \tcp{Trova la prima occorrenza di u}
+    \For{$i \leftarrow 0$ \KwTo $\text{len}(L)-1$}{
+        \If{$L[i] == u$}{
+            \textbf{break}\;
+        }
+        $A \leftarrow A + L[i]$\;
+    }
+    
+    % Rimuovi l'ultimo carattere di A 
+    \text{elimino l'ultimo elemento di } $A$\;
+
+    \tcp{Trova l'ultima occorrenza di u}
+    \For{$j \leftarrow \text{len}(L)-1$ \KwTo $0$}{
+        \If{$L[j] == u$}{
+            \textbf{break}\;
+        }
+        $C \leftarrow L[j] + C$\;
+    }
+
+    \tcp{Costruisce la sequenza B tra le due occorrenze}
+    \For{$k \leftarrow i$ \KwTo $j$}{
+        $B \leftarrow B + L[k]$\;
+    }
+
+    \Return $(A + C)$, $B$
+\end{algorithm}
+
+ \begin{remark}
+    Tutte queste implementazioni delle operazioni però hanno costo proporzionale alla dimensione del ciclo euleriano dunque il loro costo sara $O(n)$
+ \end{remark}
+
+L'obbiettivo quindi sara quello di introdurre una struttra dati che ci permetterà di eseguire queste operazioni in maniera molto piu efficente
