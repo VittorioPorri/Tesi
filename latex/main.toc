@@ -31,5 +31,5 @@
 \contentsline {subsubsection}{\nonumberline Delete}{14}{subsubsection*.21}%
 \contentsline {subsubsection}{\nonumberline fixDelete}{15}{subsubsection*.22}%
 \contentsline {subsubsection}{\nonumberline Join}{16}{subsubsection*.26}%
-\contentsline {subsubsection}{\nonumberline Split}{17}{subsubsection*.27}%
+\contentsline {subsubsection}{\nonumberline Split}{16}{subsubsection*.27}%
 \contentsline {chapter}{\nonumberline Bibliography}{21}{chapter*.28}%

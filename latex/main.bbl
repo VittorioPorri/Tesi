@@ -1,0 +1,94 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{HenzingerKing1999}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=8397503437f589797f52937b49c16620}{%
+           family={Henzinger},
+           familyi={H\bibinitperiod},
+           given={Monika\bibnamedelima Rauch},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=523d42c006c014c1ea6e02836f89825e}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Valerie},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{00df9619d4f8b837c440cb618da977f5}
+      \strng{fullhash}{00df9619d4f8b837c440cb618da977f5}
+      \strng{fullhashraw}{00df9619d4f8b837c440cb618da977f5}
+      \strng{bibnamehash}{00df9619d4f8b837c440cb618da977f5}
+      \strng{authorbibnamehash}{00df9619d4f8b837c440cb618da977f5}
+      \strng{authornamehash}{00df9619d4f8b837c440cb618da977f5}
+      \strng{authorfullhash}{00df9619d4f8b837c440cb618da977f5}
+      \strng{authorfullhashraw}{00df9619d4f8b837c440cb618da977f5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the ACM (JACM)}
+      \field{number}{4}
+      \field{title}{Randomized Dynamic Graph Algorithms with Polylogarithmic Time per Operation}
+      \field{volume}{46}
+      \field{year}{1999}
+      \field{pages}{502\bibrangedash 516}
+      \range{pages}{15}
+    \endentry
+    \entry{tarjan1983data}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=09f1ee63063ed5ad11c3baa87f800eb7}{%
+           family={Tarjan},
+           familyi={T\bibinitperiod},
+           given={Robert\bibnamedelima Endre},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Philadelphia, PA}%
+      }
+      \list{publisher}{2}{%
+        {Society for Industrial}%
+        {Applied Mathematics (SIAM)}%
+      }
+      \strng{namehash}{09f1ee63063ed5ad11c3baa87f800eb7}
+      \strng{fullhash}{09f1ee63063ed5ad11c3baa87f800eb7}
+      \strng{fullhashraw}{09f1ee63063ed5ad11c3baa87f800eb7}
+      \strng{bibnamehash}{09f1ee63063ed5ad11c3baa87f800eb7}
+      \strng{authorbibnamehash}{09f1ee63063ed5ad11c3baa87f800eb7}
+      \strng{authornamehash}{09f1ee63063ed5ad11c3baa87f800eb7}
+      \strng{authorfullhash}{09f1ee63063ed5ad11c3baa87f800eb7}
+      \strng{authorfullhashraw}{09f1ee63063ed5ad11c3baa87f800eb7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-89871-187-5}
+      \field{series}{CBMS-NSF Regional Conference Series in Applied Mathematics}
+      \field{title}{Data Structures and Network Algorithms}
+      \field{volume}{44}
+      \field{year}{1983}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

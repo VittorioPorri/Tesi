@@ -257,6 +257,7 @@ Sotto questa formalizzazione, le condizioni di bilanciamento si traducono nelle 
     \item Ogni nodo è marcato con il colore rosso o nero.
     \item Un nodo rosso deve necessariamente avere un genitore e un figlio di colore nero.
     \item Ogni nodo esterno è nero e tutti i cammini che congiungono un nodo $x$ ai nodi esterni discendenti contengono il medesimo numero di nodi neri.
+    \item La radice dell'albero è nera
 \end{enumerate}
 
 \begin{kaobox}[frametitle=Note]
@@ -293,7 +294,7 @@ Risistemando i termini
 Dalla \textit{Proprietà del Nonno}, sappiamo che lungo ogni cammino non possono esserci due nodi rossi consecutivi. Questo implica che l'altezza fisica $h$ dell'albero può essere al massimo il doppio del rango della radice ($h \leq 2k$). 
 
 Sostituendo la relazione trovata per $k$:
-\[ h \leq 2k \leq 2\log_2(n+1) \]
+\[ h \leq 2k \leq \log_2(n+1) \]
 \end{proof}
 
 Le operazioni di inserimento (Insert) e di cancellazione (Delete) sono le medesime degli alberi binari tuttavia potrebbero rovinare il bilanciamento e violare le proprietà dell'albero quindi abbiamo bisogno di alcune operazioni ausiliarie che ripristino tutte le proprietà dei red-blak trees 
@@ -305,23 +306,23 @@ Le rotazioni sono operazioni locali che modificano la struttura dell'albero pres
 Sia $v$ il nodo sbilanciato possiamo distinguiamo quattro casi fondamentali in base alla posizione del sottoalbero $T$ che causa lo sbilanciamento:
 
 \begin{description}
-    \item[Caso Sinistro-Sinistro (SS):] $T$ è il figlio sinistro del figlio sinistro di $v$. Si risolve con una \textit{rotazione semplice  verso destra} su $v$.
-    \begin{figure}[h] 
-        \centering
+    \item[Caso Sinistro-Sinistro (SS):] $T$ è il figlio sinistro del figlio sinistro di $v$. Si risolve con una \textit{rotazione semplice verso destra} su $v$.
+    \begin{center}
+        \nopagebreak 
         \includegraphics[width=0.8\textwidth]{rotazioneSS.png}
-        \caption{Rotazione semplice destra (Caso SS).}
+        \captionof{figure}{Rotazione semplice destra (Caso SS).}
         \label{fig:rotazioneSS}
-    \end{figure}
+    \end{center}
 
     \item[Caso Destro-Destro (DD):] Speculare al caso SS. Si risolve con una \textit{rotazione semplice verso sinistra} su $v$.
 
     \item[Caso Sinistro-Destro (SD):] $T$ è il figlio destro del figlio sinistro di $v$. Si risolve con una \textit{rotazione doppia} (una rotazione verso sinistra sul figlio z, seguita da una verso destra su $v$).
-    \begin{figure}[h] 
-        \centering
+    \begin{center}
+        \nopagebreak
         \includegraphics[width=0.9\textwidth]{rotazioneSinistroDestro.png}
-        \caption{Rotazione doppia sinistra-destra (Caso SD).}
+        \captionof{figure}{Rotazione doppia sinistra-destra (Caso SD).}
         \label{fig:rotazioneSD}
-    \end{figure}
+    \end{center}
 
     \item[Caso Destro-Sinistro (DS):] Speculare al caso SD. Si risolve con una rotazione doppia destra-sinistra.
 \end{description}
@@ -471,50 +472,77 @@ L'algoritmo si divide in due casi:
     \end{enumerate}
 
     \item \textbf{Caso $rank(S_1) < rank(S_2)$}:
-    Il procedimento è simmetrico, ma questa volta si discende lungo il cammino dei figli sinistri di $S_2$ fino a trovare un nodo $x$ con $rank(x) = rank(S_1)$. Il nodo $i$ ( colorato di rosso) sostituirà $x$, prendendo $S_1$ come figlio sinistro e $x$ come figlio destro, poi si ricolora $x$ e $S_1$ di \textbf{nero}
+    Il procedimento è simmetrico, ma questa volta si discende lungo il cammino dei figli sinistri di $S_2$ fino a trovare un nodo $x$ con $rank(x) = rank(S_1)$. Il nodo $i$ ( colorato di rosso) sostituirà $x$, prendendo $S_1$ come figlio sinistro e $x$ come figlio destro, poi si ricolora $x$ e $S_1$ di \textbf{nero} e si richiama fixInsert(i)
 \end{itemize}
-
-\begin{remark}
+\begin{definition}
+    Il costo del  $join(S_1, i, S_2)$ è $O(log(n))$
+\end{definition}
+\begin{proof}
     La complessità temporale della procedura di $join(S_1, i, S_2)$ dipende dalla ricerca del nodo $x$, che richiede $|rank(S_1) - rank(S_2)|$, $O(1)$ per agganciare l'albero e la procedura \texttt{fixInsert}, richiede tempo proporzionale a quanto siamo discesi nell'albero $|rank(S_1) -rank(S_2)|$ \\
     Quindi, il costo complessivo è $O(|rank(S_1) - rank(S_2)| +1) = O(log(n))$.
-\end{remark}
+\end{proof}
 
+\begin{kaobox}[frametitle=Note] 
+    Il rank del nuovo albero che si formerà dopo $\text{join}(S_1, i, S_2)$ sarà:
+    \begin{itemize}
+        \item Se $\text{rank}(S_1) = \text{rank}(S_2)$, allora il nuovo rank sarà $\text{rank}(S_1) + 1$.
+        \item Se $\text{rank}(S_1) \neq \text{rank}(S_2)$, allora il nuovo rank sarà $\max(\text{rank}(S_1), \\\text{rank}(S_2))$.
+    \end{itemize}
+\end{kaobox}
+\newpage
 \subsubsection{Split}
 L'operazione di \texttt{split}$(T, v)$ divide l'albero $T$ in due alberi $T_L$ e $T_R$ rispetto alla chiave del nodo $v$. La procedura avviene in due fasi:
 \begin{enumerate}
     \item Si individua il nodo $v$ e si inizializzano $T_L = v.left$ e $T_R = v.right$.
     \item Si risale l'albero dal nodo $v$ verso la radice. Per ogni nodo padre $p$ nel cammino:
     \begin{itemize}
-        \item Se $v$ discende dal figlio sinistro di $p$, allora $p$ e il sottoalbero $p.right$ appartengono alla parte destra. Si esegue: \\ $T_R = \text{join}(p.right, p, T_R)$.
-        \item Se $v$ discende dal figlio destro di $p$, allora $p$ e il sottoalbero $p.left$ appartengono alla parte sinistra. Si esegue: \\ $T_L = \text{join}(T_L, p, p.left)$.
+        \item Se $v$ discende dal figlio sinistro di $p$, allora $p$ e il sottoalbero $p.right$ appartengono alla parte destra. Si esegue: \\ $T_R = \text{join}(T_R, p, p.right)$.
+        \item Se $v$ discende dal figlio destro di $p$, allora $p$ e il sottoalbero $p.left$ appartengono alla parte sinistra. Si esegue: \\ $T_L = \text{join}(p.left, p, T_L)$.
     \end{itemize}
 \end{enumerate}
 
-\begin{proof}
-    Nella dimostrazione ci concentreremo sull'accolumatore $T_L$ ma il ragionamento rimane invariato per $T_R$.\\
-    Ad ogni passo $i$ se il cammino devia a destra uniremo quanto accumulato fino ad ora $T_{L,i}$ con un nuovo sottoalbero $S_i$, cosi da creare l'accumulatore $T_{L,i+1}$
+\begin{definition}
+    Il costo dello split(T,v) è $O(log(n))$.
+\end{definition}
 
-    Denominiamo con $h_i = rank(T_{L,i})$ il rank dell'accumulato dopo l'i-esimo join e osserviamo che:
-    \begin{itemize}
-        \item per le proprietà dei Red-Black Trees il $rank(S_i) \geq  h$, poiche si troverà in un livello piu in alto
-        \item Il risultato del join avra come rank o lo stesso $rank(S_i)$ o $rank(S_i)+1$, ne consegue che $h_{i+1} \approx rank(S_i)$
-    \end{itemize}
+\begin{proof}
+    Ci concentreremo sull'accolumatore $T_L$ ma il ragionamento rimane invariato per $T_R$.\\
+    Ad ogni passo $i$ se il cammino devia a destra eseguiremo $\text{Join}(S_1, n, T_{L,i})$ ossia uniremo quanto accumulato fino ad ora $T_{L,i}$ con perno il nodo sul cammino $n$ e $S_i$ che rappresenta il sottoalbero sinistro del nodo sul cammino, cosi da creare l'accumulatore $T_{L,i+1}$
+
+    \begin{kaobox}[frametitle=claim] 
+    Ad ogni passo i della risalita $rank(S_i) \geq rank(T_{L,i})$ 
+    \end{kaobox}
+
+    \begin{proof}
+        Per dimostrare il claim per prima cosa dimostreremo che per le proprietà del RB-Trees la differenza di rank( o black-height) tra un nodo e i suoi nipoti è al massimo 1, supponiamo quindi di avere un nodo $n$
+        \begin{itemize}
+            \item Se il nodo $n$ è nero i figli $n.left$ e $n.right$ avranno il medesimo rank mentre il padre avrà $rank(n.parent) = rank(n)+1$. Di conseguenza  il  figlio sinistro di $n.parent$ ossia $S_i$ dovrà avere se è rosso $rank(S_i) = rank(n.parent)$ mentre se è nero $rank(S_i) = rank(n) = rank(n.left)$ 
+            \item Se il nodo $n$ è rosso i figli $n.left$ e $n.right$ avranno rank minore di 1 mentre il padre sarà necessariamente nero e avra $rank(n.parent) = rank(n)$.Di conseguenza il suo figlio sinistro di $n.parent$ ossia $S_i$ dovra avere se è rosso $rank(S_i) = rank(n.parent)$ mentre se è nero avrà lo stesso rank dei figli di $n$ ossia $rank(S_i) = rank(n.left)$ e $rank(S_i) = rank(n.right)$
+        \end{itemize}
+        In entrambi i casi $rank(S_i)$ sarà o uguale o maggiore di 1 rispetto al rank dei nipoti\\
+        L'accumulato $T_{L,i}$ è il risultato delle join effettuate con sottoalberi aventi rank minore o uguale a $S_i$ e siccome la funione join come abbiamo visto preserva il rank possiamo concluedere che $rank(S_i) \geq rank(T_{L,i})$
+    \end{proof} 
+    Siccome $rank(S_i) \geq rank(T_{L,i})$, avremo che $rank(T_{L,i+1})= rank(S_i)$ oppure $rank(T_{L,i+1})= rank(S_i)+1$, quindi possiamo scrivere che  $rank(T_{L,i+1}) \approx rank(S_i)$
     
     Come abbiamo visto il costo di ogni singola operazione $\text{join}_i$ è proporzionale alla differenza di altezza tra l'accumulatore corrente $T_{L,i}$ e il sottoalbero da unire $S_i$, più un costo costante per il collegamento:
-    \[ \text{join}_{i-esimo} = O(rank(S_i) -rank(T_{L,i}) + 1) = O(h_{i+1}-h_i +1)\]
+    \[ \text{join}_{i-esimo} = O(rank(S_i) - rank(T_{L,i}) + 1) = O(rank(T_{L,i+1}) - rank(T_{L,i}) +1)\]
     
     Il costo totale dello \texttt{split} per $T_L$ è dato dalla somma dei costi di tutte le operazioni di \texttt{join}:
-    \[ \sum_{i=1}^{j} O(h_i - h_{i-1} + 1) \]
+    \[ \sum_{i=1}^{j} O(rank(T_{L,i+1}) - rank(T_{L,i}) +1) \]
     
     Espandendo la sommatoria:
-    \[ O((h_1 - h_0) + (h_2 - h_1) + \dots + (h_j - h_{j-1}) + \sum_{i=1}^{j} 1) \]
-    
+    \[
+    \begin{aligned}
+        O \Big( & (rank(T_{L,1}) - rank(T_{L,0})) + (rank(T_{L,2}) - rank(T_{L,1})) + \dots \\
+        & + (rank(T_{L,j}) - rank(T_{L,j-1})) + \sum_{i=1}^{j} 1 \Big)
+    \end{aligned}
+    \]
     Notiamo che tutti i termini intermedi si cancellano a vicenda, lasciando solo la differenza tra l'altezza finale e quella iniziale, più il numero di passi $j$:
-    \[ O(h_j - h_0 + j) \]
+    \[ O(rank(T_{L,j}) - rank(T_{L,0}) + j) \]
     
     Poiché:
     \begin{itemize}
-        \item $h_0 \geq 0$ è l'altezza del nodo di partenza;
+        \item $rank(T_{L,0}) \geq 0$
         \item $j$ è il numero di nodi sul cammino verso la radice, ovvero $O(\log n)$;
     \end{itemize}
     
