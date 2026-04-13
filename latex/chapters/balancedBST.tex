@@ -281,8 +281,9 @@ Dimostriamo per induzione sul rango $k$ che un nodo $u$ con $rank(u) = k$ possie
         \item Se $rank(v) = k$, allora $v$ deve essere necessariamente un nodo rosso. Per la \textit{Proprietà del Nonno}, i figli di $v$ (nipoti di $u$) devono avere rango strettamente inferiore a $rank(u)$, ovvero $k-1$. In questo caso, applicando l'ipotesi induttiva ai due figli di $v$, il numero di discendenti di $v$ è almeno $(2^{k-1}-1) + (2^{k-1}-1) + 1 = 2^k - 1$.
     \end{enumerate}
     
-    In entrambi i casi, ogni figlio di $u$ garantisce almeno $2^{k-1}-1$ discendenti. Sommando i contributi dei due figli di $u$ e del nodo $u$:
-        \[ n(u) \geq (2^{k-1} - 1) + (2^{k-1} - 1) + 1 = 2 \cdot 2^{k-1} - 1 = 2^k - 1 \]
+    In entrambi i casi, ogni figlio di $u$ garantisce almeno $2^{k-1}-1$ discendenti. \\
+    Sommando i contributi dei due figli di $u$ otteniamo:
+        \[ n(u) \geq (2^{k-1} - 1) + (2^{k-1} - 1)  = 2 (2^{k-1} - 1) \geq 2^k - 1 \]
 \end{itemize}
 La proprietà è dunque dimostrata per ogni $k$.\;
 
@@ -293,7 +294,7 @@ Risistemando i termini
 
 Dalla \textit{Proprietà del Nonno}, sappiamo che lungo ogni cammino non possono esserci due nodi rossi consecutivi. Questo implica che l'altezza fisica $h$ dell'albero può essere al massimo il doppio del rango della radice ($h \leq 2k$). 
 
-Sostituendo la relazione trovata per $k$:
+Utilizzando entrambe le disuguaglianze trovata per $k$:
 \[ h \leq 2k \leq \log_2(n+1) \]
 \end{proof}
 
@@ -303,7 +304,7 @@ Le operazioni di inserimento (Insert) e di cancellazione (Delete) sono le medesi
 
 Le rotazioni sono operazioni locali che modificano la struttura dell'albero preservando l'ordine simmetrico dei nodi (proprietà di ricerca). Un nodo $v$ intuitivamente è \textbf{sbilanciato} se uno dei suoi sottoalberi è troppo alto rispetto agli alti.
 
-Sia $v$ il nodo sbilanciato possiamo distinguiamo quattro casi fondamentali in base alla posizione del sottoalbero $T$ che causa lo sbilanciamento:
+Sia $v$ il nodo sbilanciato possiamo distinguere quattro casi fondamentali in base alla posizione del sottoalbero $T$ che causa lo sbilanciamento:
 
 \begin{description}
     \item[Caso Sinistro-Sinistro (SS):] $T$ è il figlio sinistro del figlio sinistro di $v$. Si risolve con una \textit{rotazione semplice verso destra} su $v$.
@@ -396,7 +397,7 @@ L'operazione di rimozione di un nodo in un \textit{Red-Black Tree} segue inizial
     \item Se il nodo rimosso è \textbf{nero}, si verifica una violazione della \textit{Proprietà 3}, poiché ogni cammino che attraversava quel nodo vedrà ridursi il proprio numero di nodi neri di un'unità.
 \end{itemize}
 
-Per ovviare a questa violazione, si introduce una procedura ausiliaria chiamata fixDelete che si occupa di ribilanciare la black-height
+Per ovviare a questa violazione, si introduce una procedura ausiliaria chiamata fixDelete che si occupa di ribilanciare la black-height, essa viene chiamata sul nodo che fisicamente sostitusce il nodo appena eliminato 
 
 \subsubsection{fixDelete}
 
@@ -491,7 +492,7 @@ L'algoritmo si divide in due casi:
 \end{kaobox}
 \newpage
 \subsubsection{Split}
-L'operazione di \texttt{split}$(T, v)$ divide l'albero $T$ in due alberi $T_L$ e $T_R$ rispetto alla chiave del nodo $v$. La procedura avviene in due fasi:
+L'operazione di \texttt{split}$(T, v)$ divide l'albero $T$ in due alberi $T_L$ e $T_R$ rispetto alla chiave del nodo $v$, quindi $T_L$ conterrà tutte le chiavi piu piccole di $v$, mentre $T_R$ tutte quelle maggiori di $v$ . La procedura avviene in due fasi:
 \begin{enumerate}
     \item Si individua il nodo $v$ e si inizializzano $T_L = v.left$ e $T_R = v.right$.
     \item Si risale l'albero dal nodo $v$ verso la radice. Per ogni nodo padre $p$ nel cammino:

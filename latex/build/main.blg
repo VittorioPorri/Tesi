@@ -1,15 +1,15 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
-[8] Config.pm:331> INFO - Logfile is 'build/main.blg'
-[63] biber:342> INFO - === ven mar 27, 2026, 22:28:29
-[74] Biber.pm:421> INFO - Reading 'build/main.bcf'
-[131] Biber.pm:1002> INFO - Found 2 citekeys in bib section 0
-[144] Biber.pm:4487> INFO - Processing section 0
-[151] Biber.pm:4678> INFO - Looking for bibtex file 'main.bib' for section 0
-[152] bibtex.pm:1713> INFO - LaTeX decoding ...
-[154] bibtex.pm:1519> INFO - Found BibTeX data source 'main.bib'
-[198] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'variable = shifted' with 'variable = non-ignorable'
-[198] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[198] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'it-IT'
-[198] Biber.pm:4313> INFO - No sort tailoring available for locale 'it-IT'
-[199] bbl.pm:676> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
-[200] bbl.pm:779> INFO - Output to build/main.bbl
+[0] Config.pm:331> INFO - Logfile is 'build/main.blg'
+[53] biber:342> INFO - === lun apr 13, 2026, 15:31:12
+[65] Biber.pm:421> INFO - Reading 'build/main.bcf'
+[120] Biber.pm:1002> INFO - Found 2 citekeys in bib section 0
+[133] Biber.pm:4487> INFO - Processing section 0
+[140] Biber.pm:4678> INFO - Looking for bibtex file 'main.bib' for section 0
+[140] bibtex.pm:1713> INFO - LaTeX decoding ...
+[143] bibtex.pm:1519> INFO - Found BibTeX data source 'main.bib'
+[188] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[188] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[188] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'it-IT'
+[188] Biber.pm:4313> INFO - No sort tailoring available for locale 'it-IT'
+[189] bbl.pm:676> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
+[190] bbl.pm:779> INFO - Output to build/main.bbl

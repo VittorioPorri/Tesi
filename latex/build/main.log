@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.19)  27 MAR 2026 22:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.19)  13 APR 2026 15:31
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2733,7 +2733,7 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 30.
-<images/makeTour.png, id=61, 482.80376pt x 362.35374pt>
+<images/makeTour.png, id=70, 482.80376pt x 362.35374pt>
 File: images/makeTour.png Graphic file (type png)
 <use images/makeTour.png>
 Package pdftex.def Info: images/makeTour.png  used on input line 36.
@@ -2782,7 +2782,7 @@ $[]$
  []
 
 
-Overfull \hbox (9.99756pt too wide) in paragraph at lines 132--163
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 132--148
 $[]$ 
  []
 
@@ -2790,7 +2790,7 @@ $[]$
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.165 \subsubsection
+l.150 \subsubsection
                     {Cut}
 \openout4 = `main.mw'.
 
@@ -2798,48 +2798,45 @@ l.165 \subsubsection
 \openout4 = `main.mw'.
 
 LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
-(Font)              scaled to size 7.08101pt on input line 185.
+(Font)              scaled to size 7.08101pt on input line 170.
 LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
-(Font)              scaled to size 5.335pt on input line 185.
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 190.
+(Font)              scaled to size 5.335pt on input line 170.
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 175.
  (/usr/share/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 190.
+(Font)              scaled to size 8.50006pt on input line 175.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/zpllf/m/it' will be
-(Font)              scaled to size 7.08101pt on input line 197.
+(Font)              scaled to size 7.08101pt on input line 182.
 LaTeX Font Info:    Font shape `T1/zpllf/m/it' will be
-(Font)              scaled to size 5.335pt on input line 197.
+(Font)              scaled to size 5.335pt on input line 182.
 
-Overfull \hbox (9.99756pt too wide) in paragraph at lines 174--215
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 159--200
 $[]$ 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+Package mdframed Info: mdframed works in twoside mode on input line 203.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 203.
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 203.
+)
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.218     T
-           utte queste implementazioni delle operazioni per√≤ hanno costo pr...
+l.85 
+     
 \openout4 = `main.mw'.
 
- [3] (build/main.mw)
+ [3{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}] (build/main.mw)
 \openout4 = `main.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 218.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 218.
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 218.
-)
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2847,7 +2844,7 @@ l.86 \pagelayout{wide}
                        % No margins
 \openout4 = `main.mw'.
 
- [4{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}] (build/main.mw)
+ [4] (build/main.mw)
 \openout4 = `main.mw'.
 
 *geometry* verbose mode - [ newgeometry ] result:
@@ -3035,137 +3032,190 @@ Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input l
  [11] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/rotazioneSS.png, id=344, 1461.46pt x 514.92375pt>
+<images/rotazioneSS.png, id=340, 1461.46pt x 514.92375pt>
 File: images/rotazioneSS.png Graphic file (type png)
 <use images/rotazioneSS.png>
-Package pdftex.def Info: images/rotazioneSS.png  used on input line 312.
+Package pdftex.def Info: images/rotazioneSS.png  used on input line 313.
 (pdftex.def)             Requested size: 243.5389pt x 85.80731pt.
 \openout4 = `main.mw'.
 
  [12] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/rotazioneSinistroDestro.png, id=353, 2761.31625pt x 657.45625pt>
+<images/rotazioneSinistroDestro.png, id=348, 2761.31625pt x 657.45625pt>
 File: images/rotazioneSinistroDestro.png Graphic file (type png)
 <use images/rotazioneSinistroDestro.png>
-Package pdftex.def Info: images/rotazioneSinistroDestro.png  used on input line 322.
+Package pdftex.def Info: images/rotazioneSinistroDestro.png  used on input line 323.
 (pdftex.def)             Requested size: 273.99896pt x 65.23784pt.
-Package mdframed Info: mdframed works in twoside mode on input line 331.
+Package mdframed Info: mdframed works in twoside mode on input line 332.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 331.
+(mdframed)              on input line 332.
 \openout4 = `main.mw'.
 
  [13 <./images/rotazioneSS.png> <./images/rotazioneSinistroDestro.png>] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/triangoloDS.png, id=368, 442.65375pt x 442.65375pt>
+<images/triangoloDS.png, id=364, 442.65375pt x 442.65375pt>
 File: images/triangoloDS.png Graphic file (type png)
 <use images/triangoloDS.png>
-Package pdftex.def Info: images/triangoloDS.png  used on input line 357.
+Package pdftex.def Info: images/triangoloDS.png  used on input line 358.
 (pdftex.def)             Requested size: 135.72177pt x 135.72177pt.
-<images/lineaDestra.png, id=369, 603.25375pt x 402.50375pt>
+<images/lineaDestra.png, id=365, 603.25375pt x 402.50375pt>
 File: images/lineaDestra.png Graphic file (type png)
 <use images/lineaDestra.png>
-Package pdftex.def Info: images/lineaDestra.png  used on input line 363.
+Package pdftex.def Info: images/lineaDestra.png  used on input line 364.
 (pdftex.def)             Requested size: 135.71703pt x 90.55328pt.
-Package mdframed Info: mdframed works in twoside mode on input line 388.
+Package mdframed Info: mdframed works in twoside mode on input line 389.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 388.
+(mdframed)              on input line 389.
 
 pdfTeX warning (ext4): destination with the same identifier (name{remark.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.388     √
+l.389     √
            à importante notare che, mentre il Caso 2 pu√≤ propagare la viola...
 \openout4 = `main.mw'.
 
  [14 <./images/triangoloDS.png> <./images/lineaDestra.png>] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/fratelloRosso.png, id=387, 1280.785pt x 512.91624pt>
+<images/fratelloRosso.png, id=383, 1280.785pt x 512.91624pt>
 File: images/fratelloRosso.png Graphic file (type png)
 <use images/fratelloRosso.png>
-Package pdftex.def Info: images/fratelloRosso.png  used on input line 408.
+Package pdftex.def Info: images/fratelloRosso.png  used on input line 409.
 (pdftex.def)             Requested size: 135.70784pt x 54.34694pt.
-<images/nipoteVicinoRosso.png, id=388, 1446.40375pt x 623.32875pt>
+<images/nipoteVicinoRosso.png, id=384, 1446.40375pt x 623.32875pt>
 File: images/nipoteVicinoRosso.png Graphic file (type png)
 <use images/nipoteVicinoRosso.png>
-Package pdftex.def Info: images/nipoteVicinoRosso.png  used on input line 414.
+Package pdftex.def Info: images/nipoteVicinoRosso.png  used on input line 415.
 (pdftex.def)             Requested size: 135.71037pt x 58.48448pt.
-<images/nipoteLontanoRosso.png, id=389, 1366.10374pt x 502.87875pt>
+<images/nipoteLontanoRosso.png, id=385, 1366.10374pt x 502.87875pt>
 File: images/nipoteLontanoRosso.png Graphic file (type png)
 <use images/nipoteLontanoRosso.png>
-Package pdftex.def Info: images/nipoteLontanoRosso.png  used on input line 420.
+Package pdftex.def Info: images/nipoteLontanoRosso.png  used on input line 421.
 (pdftex.def)             Requested size: 135.70119pt x 49.95319pt.
-Package mdframed Info: mdframed works in twoside mode on input line 448.
+Package mdframed Info: mdframed works in twoside mode on input line 449.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 448.
+(mdframed)              on input line 449.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 450.
-Package mdframed Info: mdframed works in twoside mode on input line 453.
+(mdframed)              on input line 451.
+Package mdframed Info: mdframed works in twoside mode on input line 454.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 453.
+(mdframed)              on input line 454.
 \openout4 = `main.mw'.
 
  [15 <./images/fratelloRosso.png> <./images/nipoteVicinoRosso.png> <./images/nipoteLontanoRosso.png>] (build/main.mw)
 \openout4 = `main.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 478.
+Package mdframed Info: mdframed works in twoside mode on input line 479.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 478.
+(mdframed)              on input line 479.
 
 pdfTeX warning (ext4): destination with the same identifier (name{definition.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.478     I
+l.479     I
            l costo del  $join(S_1, i, S_2)$ √® $O(log(n))$
-Overfull \hbox (2.30391pt too wide) in paragraph at lines 481--483
+Overfull \hbox (2.30391pt too wide) in paragraph at lines 482--484
 []\T1/zpllf/m/n/10 (-20) La com-ples-si-t‡ tem-po-ra-le del-la pro-ce-du-ra di $\OML/npxmi/m/it/10 join\LMS/npxsy/m/n/10 π\OML/npxmi/m/it/10 S[]; i; S[]\LMS/npxsy/m/n/10 ∫$
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 485.
+Package mdframed Info: mdframed works in twoside mode on input line 486.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 485.
+(mdframed)              on input line 486.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 491.
+(mdframed)              on input line 492.
 \openout4 = `main.mw'.
 
 [16] (build/main.mw)
 \openout4 = `main.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 505.
+Package mdframed Info: mdframed works in twoside mode on input line 506.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 505.
-Package mdframed Info: mdframed works in twoside mode on input line 512.
+(mdframed)              on input line 506.
+Package mdframed Info: mdframed works in twoside mode on input line 513.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 512.
+(mdframed)              on input line 513.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 514.
+(mdframed)              on input line 515.
+\openout4 = `main.mw'.
 
-Overfull \hbox (6.2051pt too wide) detected at line 528
+ [17] (build/main.mw)
+\openout4 = `main.mw'.
+
+
+Overfull \hbox (6.2051pt too wide) detected at line 529
 [][] \U/npxmia/m/it/10 = \OML/npxmi/m/it/10 O\LMS/npxsy/m/n/10 π\OML/npxmi/m/it/10 rank\LMS/npxsy/m/n/10 π\OML/npxmi/m/it/10 S[]\LMS/npxsy/m/n/10 ∫ ^^@ \OML/npxmi/m/it/10 rank\LMS/npxsy/m/n/10 π\OML/npxmi/m/it/10 T[]\LMS/npxsy/m/n/10 ∫ œ \OT1/minzpl/m/n/10 1\LMS/npxsy/m/n/10 ∫ \U/npxmia/m/it/10 = \OML/npxmi/m/it/10 O\LMS/npxsy/m/n/10 π\OML/npxmi/m/it/10 rank\LMS/npxsy/m/n/10 π\OML/npxmi/m/it/10 T[]\LMS/npxsy/m/n/10 ∫ ^^@ \OML/npxmi/m/it/10 rank\LMS/npxsy/m/n/10 π\OML/npxmi/m/it/10 T[]\LMS/npxsy/m/n/10 ∫ œ \OT1/minzpl/m/n/10 1\LMS/npxsy/m/n/10 ∫
  []
 
+) (./chapters/ottimizzazioni.tex
 \openout4 = `main.mw'.
 
-[17] (build/main.mw)
+ [18] (build/main.mw)
+\openout4 = `main.mw'.
+
+
+chapter 3.
+Package marginnote Info: Margin note 23.1 is on absolute page 23 on input line 2.
+Package marginnote Info: xpos seems to be 70.56247pt on input line 2.
+Package mdframed Info: mdframed works in twoside mode on input line 20.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 20.
+
+pdfTeX warning (ext4): destination with the same identifier (name{definition.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20     $
+          size(v) = 1 + size(v.left) +size(v.right)$
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 28--51
+$[]$ 
+ []
+
+
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 56--83
+$[]$ 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+\openout4 = `main.mw'.
+
+ [19
+
+
+] (build/main.mw)
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+ [20] (build/main.mw)
 \openout4 = `main.mw'.
 
 )
 \openout4 = `main.mw'.
 
- [18] (build/main.mw)
+ [21] (build/main.mw)
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+ [22
+
+
+] (build/main.mw)
 \openout4 = `main.mw'.
 
 *geometry* verbose mode - [ newgeometry ] result:
@@ -3202,16 +3252,14 @@ Overfull \hbox (6.2051pt too wide) detected at line 528
 
 \openout4 = `main.mw'.
 
- [19
-
-
+ [23
 
 ] (build/main.mw)
 \openout4 = `main.mw'.
 
 \openout4 = `main.mw'.
 
- [20
+ [24
 
 
 
@@ -3223,7 +3271,7 @@ chapter without number
 (./main.gls)
 \openout4 = `main.mw'.
 
- [21] (build/main.mw)
+ [25] (build/main.mw)
 \openout4 = `main.mw'.
 
 \openout4 = `main.mw'.
@@ -3236,7 +3284,7 @@ chapter without number
 
 \openout4 = `main.mw'.
 
- [22
+ [26
 
 
 ] (build/main.mw)
@@ -3256,6 +3304,58 @@ runsystem(makeindex main.idx)...executed.
 \openout4 = `main.mw'.
 
  (build/main.aux
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
 \openout4 = `main.mw'.
 
 \openout4 = `main.mw'.
@@ -3418,18 +3518,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 63143 strings out of 469504
- 1272594 string characters out of 5470379
- 2548828 words of memory out of 5000000
- 89677 multiletter control sequences out of 15000+600000
- 769344 words of font info for 282 fonts, out of 8000000 for 9000
+ 63260 strings out of 469504
+ 1273955 string characters out of 5470379
+ 2549809 words of memory out of 5000000
+ 89696 multiletter control sequences out of 15000+600000
+ 769683 words of font info for 285 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  122i,20n,159p,11227b,2267s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on build/main.pdf (26 pages, 480887 bytes).
+Output written on build/main.pdf (30 pages, 489383 bytes).
 PDF statistics:
- 619 PDF objects out of 1000 (max. 8388607)
- 542 compressed objects within 6 object streams
- 289 named destinations out of 1000 (max. 500000)
- 67733 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 693 PDF objects out of 1000 (max. 8388607)
+ 611 compressed objects within 7 object streams
+ 319 named destinations out of 1000 (max. 500000)
+ 67765 words of extra memory for PDF output out of 74296 (max. 10000000)
 

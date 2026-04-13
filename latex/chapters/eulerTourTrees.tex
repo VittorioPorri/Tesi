@@ -124,9 +124,9 @@ interno del ciclo euleriano il primo nodo del ciclo
 \subsubsection{Link}
 L'operazione \textbf{link(u,v)} permette di unire due alberi distinti aggiungendo un arco tra il nodo u (appartenente al primo albero) e il nodo v (appartenente al secondo), per farlo seguiamo i seguenti passaggi:
 \begin{enumerate}
-    \item C = rerooting(v) 
-    \item si cerca l'ultima occorrenza di $v$ nel suo ciclo euleriano, e si separa la sequanza in A che conterrà tutto ciò che c'era prima di tale nodo e il nodo $v$ e B che conterrà tutto ciò che c'è dopo
-    \item concateno  $A + C + u + B$ 
+    \item A = rerooting(u)
+    \item B = rerooting(v) 
+    \item concateno  $A + B + u$ 
 \end{enumerate}
 
 \begin{algorithm}[H]
@@ -140,25 +140,10 @@ L'operazione \textbf{link(u,v)} permette di unire due alberi distinti aggiungend
     
     \BlankLine 
 
-    $C \leftarrow rerooting(C,v)$\;
-    $A \leftarrow \emptyset$\;
-    $B \leftarrow \emptyset$\;
-    $isFound \leftarrow False$\;
+    $A \leftarrow rerooting(L,u)$\;
+    $B \leftarrow rerooting(C,v)$\;
 
-    \For{$i \leftarrow len(L)-1 $ \KwTo $-1$}{
-        \If{$L[i] == u$ \textbf{and} $\neg isFound$}{
-            $isFound \leftarrow True$\;
-        }
-
-        \If{$\neg isFound$}{
-            $B \leftarrow L[i] + B$\;
-        }
-        \Else{
-            $A \leftarrow L[i] + A$\;
-        }
-    }
-
-    \Return $A + C + u + B$
+    \Return $A + B + u$
     
 \end{algorithm}
 

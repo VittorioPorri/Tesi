@@ -1,0 +1,120 @@
+\setchapterpreamble[u]{\margintoc}
+\chapter{Le Ottimizzazioni}
+\labch{Ottimizzazioni}
+
+\section{Size}
+Negli Euler Tour Trees, la struttura deve gestire sequenze 
+dinamiche dove la posizione dei nodi cambia continuamente a
+causa di cut e link. Per trasformare i RB-Trees una struttra
+dati dinamica abbiamo bisongo di eliminare il concetto
+di chiavi statiche introducendone uno che gestiche le chiavi 
+in maniera implicita.\\
+L'idea fondamentale è che la posizione di un nodo nella 
+sequenza non è determinata da un valore fisso, ma dalla 
+sua posizione relativa all'interno dell'ETT.
+Per gestire efficientemente questa informazione, 
+ogni nodo v memorizza un attributo aggiuntivo denominato 
+\textbf{size}.
+
+\begin{definition}
+    $size(v) = 1 + size(v.left) +size(v.right)$ 
+\end{definition}
+
+\subsubsection{Perche la size è fondamentale?}
+L'introduzione della size nei Red-Black Tree permette di:
+\begin{itemize}
+    \item {Calcolare la posizione di un nodo nella sequenza risalendo il RB-Trees verso la radice.
+        
+        \begin{algorithm}[H]
+            \caption{Posizione del nodo nella sequenza}
+            \label{alg:find_i}
+            \SetAlgoLined
+            \DontPrintSemicolon
+            
+            \KwIn{Nodo $n$}
+            \KwOut{Posizione $i$ del nodo nell'ETT}
+            
+            \BlankLine 
+            $i \leftarrow size(n.left) + 1$\;
+
+            \While{$n.parent \neq \text{NULL}$}{
+                $p \leftarrow n.parent$\;
+                
+                \If{$n == p.right$}{
+                    $i \leftarrow i + size(p.left) + 1$\;
+                }
+        
+                $n \leftarrow p$\;
+            }
+
+            \Return $i$
+        \end{algorithm}
+    }   
+
+    \item {Individuare l'elemento in i-esima posizione discendendo nel RB-Trees basandomi sulla size.
+        
+    \begin{algorithm}[H]
+        \caption{Nodo in posizione i-esima}
+        \label{alg:find_i-esimo}
+        \SetAlgoLined
+        \DontPrintSemicolon
+        
+        \KwIn{Radice dell'albero $r$, posizione desiderata $i$}
+        \KwOut{Nodo $n$ in posizione $i$ nella sequenza}
+        
+        \BlankLine 
+        $n \leftarrow r$\;
+        
+        \While{$n \neq \text{NULL}$}{
+            
+            \If{$i == size(n.left) + 1$}{
+                \Return $n$ 
+            }
+            \ElseIf{$i < size(n.left) + 1$}{
+                $n \leftarrow n.left$
+            }
+            \Else{
+                $i \leftarrow i - size(n.left) + 1$\;
+                $n \leftarrow n.right$ 
+            }
+        }
+        
+        \Return NULL \tcp*{Posizione non valida}
+    \end{algorithm}
+    }
+\end{itemize}
+
+
+\subsubsection{La size influenza i costi?}
+L'introduzione dell'attributo \textit{size} in ogni nodo non altera la complessità temporale delle operazioni, che rimangono nell'ordine di $O(\log n)$.
+
+\paragraph{Rotazioni}
+Le rotazioni (semplici o doppie) sono operazioni locali che coinvolgono un numero costante di nodi. Poiché la \textit{size} di un nodo è
+\[ size(n) = size(n.left) + size(n.right) + 1 \]
+il ricalcolo del valore richiede tempo costante $O(1)$. Nelle rotazioni semplici \ref{fig:rotazioneSS}, gli unici nodi soggetti ad aggiornamento sono \textit{u} e \textit{v}; nelle rotazioni doppie \ref{fig:rotazioneSD}, l'aggiornamento interessa i nodi \textit{v, z} e \textit{w}. Di conseguenza, il costo aggiuntivo per l'aggiornamento delle size durante il ribilanciamento è $O(1)$.
+
+\paragraph{Operazioni di Insert e Delete} 
+Durante le fasi di inserimento o rimozione, il cammino percorso dalla radice verso il nodo target ha lunghezza proporzionale all'altezza dell'albero che sappiamo essere  $O(\log n)$. 
+\begin{itemize}
+    \item \textbf{Insert}: Ogni nodo lungo il cammino dal nodo inserito fino alla radice vede la propria \textit{size} incrementata di un'unità.
+    \item \textbf{Delete}: Ogni nodo lungo il cammino del padre del nodo rimosso fino alla radice vede la propria \textit{size} decrementata di un'unità.
+\end{itemize}
+Tali aggiornamenti dunque non alterano il costo delle operazioni che rimane $O(\log n)$.
+
+\paragraph{Operazioni di Join e Split} 
+Nell'operazione di \texttt{Join}, il valore \textit{size} 
+del nuovo nodo di giunzione $i$ viene calcolato come 
+$size(i) = size(x)+ size(S_{min}) + 1 $, dove $S_{min}$ è 
+l'albero con rank minore tra $S_1$ e $S_2$. Successivamente, 
+risalendo il cammino da $i$ verso la radice dell'albero , 
+si incrementano le \textit{size} dei nodi sul cammino di una 
+quantità pari a $(size(S_{min}) + 1)$. Poiché la risalita è 
+limitata dall'altezza dell'albero, il costo è $O(\log n)$.
+
+Siccome l'operazione di \texttt{Split} è basata sull'operazioni 
+di \texttt{Join}, e  il costo di queste ultime rimane invariato 
+anche la complessità dello \texttt{Split} resta invariata.
+
+\subsection{Operazioni}
+
+\subsubsection{isConnected}
