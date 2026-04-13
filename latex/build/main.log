@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.19)  13 APR 2026 15:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.19)  13 APR 2026 22:43
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -3169,6 +3169,10 @@ Overfull \hbox (6.2051pt too wide) detected at line 529
 chapter 3.
 Package marginnote Info: Margin note 23.1 is on absolute page 23 on input line 2.
 Package marginnote Info: xpos seems to be 70.56247pt on input line 2.
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
 Package mdframed Info: mdframed works in twoside mode on input line 20.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -3203,6 +3207,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20] (build/main.mw)
 \openout4 = `main.mw'.
+
+
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 126--151
+$[]$ 
+ []
 
 )
 \openout4 = `main.mw'.
@@ -3295,6 +3304,10 @@ chapter without number
 runsystem(makeindex main.idx)...executed.
 
  (build/main.ind)
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
 \openout4 = `main.mw'.
 
 \openout4 = `main.mw'.
@@ -3496,11 +3509,32 @@ runsystem(makeindex main.idx)...executed.
 
 \openout4 = `main.mw'.
 
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
 )
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 \openout4 = `main.mw'.
 
 \openout4 = `main.mw'.
@@ -3518,18 +3552,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 63260 strings out of 469504
- 1273955 string characters out of 5470379
- 2549809 words of memory out of 5000000
- 89696 multiletter control sequences out of 15000+600000
- 769683 words of font info for 285 fonts, out of 8000000 for 9000
+ 63306 strings out of 469504
+ 1274612 string characters out of 5470379
+ 2550099 words of memory out of 5000000
+ 89706 multiletter control sequences out of 15000+600000
+ 769814 words of font info for 286 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  122i,20n,159p,11227b,2267s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on build/main.pdf (30 pages, 489383 bytes).
+Output written on build/main.pdf (30 pages, 490808 bytes).
 PDF statistics:
- 693 PDF objects out of 1000 (max. 8388607)
- 611 compressed objects within 7 object streams
- 319 named destinations out of 1000 (max. 500000)
+ 718 PDF objects out of 1000 (max. 8388607)
+ 636 compressed objects within 7 object streams
+ 338 named destinations out of 1000 (max. 500000)
  67765 words of extra memory for PDF output out of 74296 (max. 10000000)
 

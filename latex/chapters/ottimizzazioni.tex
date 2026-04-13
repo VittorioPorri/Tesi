@@ -14,7 +14,7 @@ sequenza non è determinata da un valore fisso, ma dalla
 sua posizione relativa all'interno dell'ETT.
 Per gestire efficientemente questa informazione, 
 ogni nodo v memorizza un attributo aggiuntivo denominato 
-\textbf{size}.
+\textbf{size} (tecnica formalizzata da Cormen in \cite{CLRS09})
 
 \begin{definition}
     $size(v) = 1 + size(v.left) +size(v.right)$ 
@@ -112,9 +112,46 @@ quantità pari a $(size(S_{min}) + 1)$. Poiché la risalita è
 limitata dall'altezza dell'albero, il costo è $O(\log n)$.
 
 Siccome l'operazione di \texttt{Split} è basata sull'operazioni 
-di \texttt{Join}, e  il costo di queste ultime rimane invariato 
+di \texttt{Join}, e  il costo di quest' ultime rimane invariato 
 anche la complessità dello \texttt{Split} resta invariata.
 
 \subsection{Operazioni}
 
 \subsubsection{isConnected}
+Per eseguire l'operazione \textbf{isConnected(u,v)} bisongna verificare
+che \textit{u} e \textit{v} siano nello stesso RB-Trees 
+per farlo basta risalire l'albero prima da \textit{u} e poi da \textit{v} per verificare 
+che la radice sia la medesima
+
+\begin{algorithm}[H]
+    \caption{isConnected}
+    \label{alg:isConnectedEfficent}
+    \SetAlgoLined
+    \DontPrintSemicolon
+    
+    \KwIn{Nodo $u$, nodo $v$}
+    \KwOut{True o False}
+    
+    \BlankLine 
+    $r \leftarrow \text{NULL}$\;
+    $p \leftarrow u$ \tcp*{Risale da u}\;
+    
+    \While{$p.parent \neq \text{NULL}$}{
+        $p \leftarrow p.parent$\;
+    }
+    $r \leftarrow p$
+
+    $p \leftarrow v$ \tcp*{Risale da v}\;
+    \While{$p.parent \neq \text{NULL}$}{
+            $p \leftarrow p.parent$\;
+    }
+            
+    \Return $r == p$
+    
+\end{algorithm}
+
+\subsubsection{Rerooting}
+
+\subsubsection{Link}
+
+\subsubsection{Cut}

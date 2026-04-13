@@ -45,4 +45,7 @@
 \contentsline {subsection}{\numberline {3.1.1}Operazioni}{21}{subsection.3.1.1}%
 \contentsline {mtocsubsection}{\numberline {3.1.1}Operazioni}{21}{subsection.3.1.1}%
 \contentsline {subsubsection}{\nonumberline isConnected}{21}{subsubsection*.33}%
-\contentsline {chapter}{\nonumberline Bibliography}{25}{chapter*.34}%
+\contentsline {subsubsection}{\nonumberline Rerooting}{21}{subsubsection*.34}%
+\contentsline {subsubsection}{\nonumberline Link}{21}{subsubsection*.35}%
+\contentsline {subsubsection}{\nonumberline Cut}{21}{subsubsection*.36}%
+\contentsline {chapter}{\nonumberline Bibliography}{25}{chapter*.37}%
