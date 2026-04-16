@@ -2394,8 +2394,10 @@
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">HenzingerKing1999</bcf:citekey>
     <bcf:citekey order="2" intorder="1">tarjan1983data</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">CLRS09</bcf:citekey>
     <bcf:citekeycount count="1">HenzingerKing1999</bcf:citekeycount>
     <bcf:citekeycount count="1">tarjan1983data</bcf:citekeycount>
+    <bcf:citekeycount count="1">CLRS09</bcf:citekeycount>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -151,6 +151,23 @@ che la radice sia la medesima
 \end{algorithm}
 
 \subsubsection{Rerooting}
+Per rendere l'operazione ausiliaria di rerooting(T,v) 
+un'operazione efficente sfruttiamo le operazione della 
+struttra dati introdotta precedentemente:
+\begin{enumerate}
+\item Si esegue l'operazione split(T,v) in corrispondenza della prima occorrenza del nodo $v$. Tale operazione divide la sequenza originale in tre componenti: $T_L$(che conterrà tutti gli elementi che precedono $v$), il nodo $v$ stesso, e $T_R$(che conterrà gli elementi che seguono v).
+\item Si elimina l'elemento più a sinistra di $T_L$. Poiché in un Euler Tour completo la sequenza inizia e termina con la radice, questo elemento rappresenta l'occorrenza iniziale della vecchia radice.
+\item Si rimuove l'elemento più a destra di $T_R$, che rappresenta l'occorrenza finale della vecchia radice. Denotiamo tale elemento rimosso come $P$.
+\item {Si procede alla creazione di una nuova sequenza $T_{new}$ concatenando le sottosequenze in ordine invertito rispetto alla struttura originale, utilizzando la vecchia radice $P$ come elemento di giunzione:
+    \[ T_{new} = \text{join}(T_R, P, T_L) \]}
+\item Infine, per garantire che $v$ sia la nuova radice e che il tour sia completo, si inserisce il nodo $v$ come elemento minimo (all'inizio) e come elemento massimo (alla fine) della sequenza $T_{new}$. 
+\end{enumerate}
+
+\begin{marginfigure}
+    \includegraphics{rerootingEfficente.png}
+    \caption[Titolo breve]{Procedura di rerooting}
+    \labfig{rerootingEfficente}
+\end{marginfigure}
 
 \subsubsection{Link}
 

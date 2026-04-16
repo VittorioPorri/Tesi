@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.19)  13 APR 2026 22:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.19)  17 APR 2026 00:28
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2091,57 +2091,57 @@ Package biblatex Info: ... file 'main.bbl' found.
  (build/main.bbl)
 Package biblatex Info: Reference section=0 on input line 47.
 Package biblatex Info: Reference segment=0 on input line 47.
-LaTeX Font Info:    Trying to load font information for T1+qhv on input line 57.
+LaTeX Font Info:    Trying to load font information for T1+qhv on input line 56.
  (/usr/share/texmf-dist/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 9.02084pt on input line 57.
+(Font)              scaled to size 9.02084pt on input line 56.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `qhv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 9.02084pt on input line 57.
+(Font)              scaled to size 9.02084pt on input line 56.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 18.70923pt on input line 57.
+(Font)              scaled to size 18.70923pt on input line 56.
 LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
-(Font)              scaled to size 13.968pt on input line 57.
-LaTeX Font Info:    Trying to load font information for OT1+minzpl on input line 57.
+(Font)              scaled to size 13.968pt on input line 56.
+LaTeX Font Info:    Trying to load font information for OT1+minzpl on input line 56.
  (/usr/share/texmf-dist/tex/latex/newpx/ot1minzpl.fd
 File: ot1minzpl.fd 2021/05/25 v1.0 font definition file for OT1/minzpl/TLF
 )
 LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
-(Font)              scaled to size 13.968pt on input line 57.
+(Font)              scaled to size 13.968pt on input line 56.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `minzpl' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
-(Font)              scaled to size 10.18501pt on input line 57.
+(Font)              scaled to size 10.18501pt on input line 56.
 LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
-(Font)              scaled to size 7.663pt on input line 57.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
+(Font)              scaled to size 7.663pt on input line 56.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 56.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 56.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+npxmia on input line 57.
+LaTeX Font Info:    Trying to load font information for U+npxmia on input line 56.
  (/usr/share/texmf-dist/tex/latex/newpx/unpxmia.fd
 File: unpxmia.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxmia.
 )
-LaTeX Font Info:    Trying to load font information for U+npxsym on input line 57.
+LaTeX Font Info:    Trying to load font information for U+npxsym on input line 56.
  (/usr/share/texmf-dist/tex/latex/newpx/unpxsym.fd
 File: unpxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/npxsym.
 )
-LaTeX Font Info:    Trying to load font information for U+npxsyc on input line 57.
+LaTeX Font Info:    Trying to load font information for U+npxsyc on input line 56.
  (/usr/share/texmf-dist/tex/latex/newpx/unpxsyc.fd
 File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
 )
@@ -2613,7 +2613,7 @@ File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
 
 
 
-Package etoc Warning: \etocstandarddisplaystyle on input line 68
+Package etoc Warning: \etocstandarddisplaystyle on input line 67
 (etoc)                is deprecated.  Please use \etocclasstocstyle.
 
 \tf@toc=\write134
@@ -2628,34 +2628,34 @@ Package etoc Warning: \etocstandarddisplaystyle on input line 68
 \openout4 = `main.mw'.
 
 LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
-(Font)              scaled to size 20.11783pt on input line 72.
+(Font)              scaled to size 20.11783pt on input line 71.
 LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
-(Font)              scaled to size 20.11783pt on input line 72.
-Package tocbasic Info: character protrusion at toc deactivated on input line 72.
+(Font)              scaled to size 20.11783pt on input line 71.
+Package tocbasic Info: character protrusion at toc deactivated on input line 71.
 LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
-(Font)              scaled to size 9.70001pt on input line 72.
+(Font)              scaled to size 9.70001pt on input line 71.
 LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
-(Font)              scaled to size 9.70001pt on input line 72.
+(Font)              scaled to size 9.70001pt on input line 71.
 LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
-(Font)              scaled to size 7.08101pt on input line 72.
+(Font)              scaled to size 7.08101pt on input line 71.
 LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
-(Font)              scaled to size 5.335pt on input line 72.
+(Font)              scaled to size 5.335pt on input line 71.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 10.82501pt on input line 72.
+(Font)              scaled to size 10.82501pt on input line 71.
 LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
-(Font)              scaled to size 11.64001pt on input line 72.
+(Font)              scaled to size 11.64001pt on input line 71.
 LaTeX Font Info:    Font shape `T1/zpllf/m/sc' will be
-(Font)              scaled to size 11.64001pt on input line 72.
+(Font)              scaled to size 11.64001pt on input line 71.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/zpllf/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `T1/zpllf/b/sc' will be
-(Font)              scaled to size 11.64001pt on input line 72.
+(Font)              scaled to size 11.64001pt on input line 71.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/zpllf/b/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `T1/zpllf/m/sl' will be
-(Font)              scaled to size 9.70001pt on input line 79.
+(Font)              scaled to size 9.70001pt on input line 78.
 \openout4 = `main.mw'.
 
  [3{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-lf-pc.enc}] (build/main.mw)
@@ -2829,7 +2829,7 @@ Package hyperref Info: bookmark level for unknown remark defaults to 0 on input 
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.85 
+l.84 
      
 \openout4 = `main.mw'.
 
@@ -2840,7 +2840,7 @@ l.85
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.86 \pagelayout{wide}
+l.85 \pagelayout{wide}
                        % No margins
 \openout4 = `main.mw'.
 
@@ -2882,16 +2882,16 @@ l.86 \pagelayout{wide}
 
 part without number
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 22.44386pt on input line 87.
+(Font)              scaled to size 22.44386pt on input line 86.
 LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
-(Font)              scaled to size 24.13362pt on input line 87.
+(Font)              scaled to size 24.13362pt on input line 86.
 LaTeX Font Info:    Font shape `T1/zpllf/m/sc' will be
-(Font)              scaled to size 24.13362pt on input line 87.
+(Font)              scaled to size 24.13362pt on input line 86.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/zpllf/m/sc/24.88'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `T1/zpllf/b/sc' will be
-(Font)              scaled to size 24.13362pt on input line 87.
+(Font)              scaled to size 24.13362pt on input line 86.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/zpllf/b/sc/24.88'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -3213,18 +3213,20 @@ Overfull \hbox (9.99756pt too wide) in paragraph at lines 126--151
 $[]$ 
  []
 
+<images/rerootingEfficente.png, id=485, 931.48pt x 637.38126pt>
+File: images/rerootingEfficente.png Graphic file (type png)
+<use images/rerootingEfficente.png>
+Package pdftex.def Info: images/rerootingEfficente.png  used on input line 167.
+(pdftex.def)             Requested size: 135.70784pt x 92.86043pt.
 )
 \openout4 = `main.mw'.
 
- [21] (build/main.mw)
+ [21 <./images/rerootingEfficente.png>] (build/main.mw)
 \openout4 = `main.mw'.
 
 \openout4 = `main.mw'.
 
- [22
-
-
-] (build/main.mw)
+ [22] (build/main.mw)
 \openout4 = `main.mw'.
 
 *geometry* verbose mode - [ newgeometry ] result:
@@ -3262,6 +3264,8 @@ $[]$
 \openout4 = `main.mw'.
 
  [23
+
+
 
 ] (build/main.mw)
 \openout4 = `main.mw'.
@@ -3526,15 +3530,6 @@ runsystem(makeindex main.idx)...executed.
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 \openout4 = `main.mw'.
 
 \openout4 = `main.mw'.
@@ -3552,18 +3547,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 63306 strings out of 469504
- 1274612 string characters out of 5470379
- 2550099 words of memory out of 5000000
- 89706 multiletter control sequences out of 15000+600000
+ 63323 strings out of 469504
+ 1275024 string characters out of 5470379
+ 2550183 words of memory out of 5000000
+ 89717 multiletter control sequences out of 15000+600000
  769814 words of font info for 286 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  122i,20n,159p,11227b,2267s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on build/main.pdf (30 pages, 490808 bytes).
+Output written on build/main.pdf (30 pages, 535906 bytes).
 PDF statistics:
- 718 PDF objects out of 1000 (max. 8388607)
- 636 compressed objects within 7 object streams
- 338 named destinations out of 1000 (max. 500000)
- 67765 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 727 PDF objects out of 1000 (max. 8388607)
+ 643 compressed objects within 7 object streams
+ 344 named destinations out of 1000 (max. 500000)
+ 67770 words of extra memory for PDF output out of 74296 (max. 10000000)
 

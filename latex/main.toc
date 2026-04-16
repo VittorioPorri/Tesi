@@ -31,5 +31,21 @@
 \contentsline {subsubsection}{\nonumberline Delete}{14}{subsubsection*.21}%
 \contentsline {subsubsection}{\nonumberline fixDelete}{15}{subsubsection*.22}%
 \contentsline {subsubsection}{\nonumberline Join}{16}{subsubsection*.26}%
-\contentsline {subsubsection}{\nonumberline Split}{16}{subsubsection*.27}%
-\contentsline {chapter}{\nonumberline Bibliography}{21}{chapter*.28}%
+\contentsline {subsubsection}{\nonumberline Split}{17}{subsubsection*.27}%
+\contentsline {chapter}{\numberline {3}Le Ottimizzazioni}{19}{chapter.3}%
+\etoc@startlocaltoc {6}
+\etoc@startlocaltoc {7}
+\contentsline {section}{\numberline {3.1}Size}{19}{section.3.1}%
+\contentsline {mtocsection}{\numberline {3.1}Size}{19}{section.3.1}%
+\contentsline {subsubsection}{\nonumberline Perche la size è fondamentale?}{19}{subsubsection*.28}%
+\contentsline {subsubsection}{\nonumberline La size influenza i costi?}{20}{subsubsection*.29}%
+\contentsline {paragraph}{\nonumberline Rotazioni}{20}{paragraph*.30}%
+\contentsline {paragraph}{\nonumberline Operazioni di Insert e Delete}{20}{paragraph*.31}%
+\contentsline {paragraph}{\nonumberline Operazioni di Join e Split}{20}{paragraph*.32}%
+\contentsline {subsection}{\numberline {3.1.1}Operazioni}{21}{subsection.3.1.1}%
+\contentsline {mtocsubsection}{\numberline {3.1.1}Operazioni}{21}{subsection.3.1.1}%
+\contentsline {subsubsection}{\nonumberline isConnected}{21}{subsubsection*.33}%
+\contentsline {subsubsection}{\nonumberline Rerooting}{21}{subsubsection*.34}%
+\contentsline {subsubsection}{\nonumberline Link}{22}{subsubsection*.35}%
+\contentsline {subsubsection}{\nonumberline Cut}{22}{subsubsection*.36}%
+\contentsline {chapter}{\nonumberline Bibliography}{25}{chapter*.37}%
