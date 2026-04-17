@@ -170,5 +170,31 @@ struttra dati introdotta precedentemente:
 \end{marginfigure}
 
 \subsubsection{Link}
+Come fatto per il rerooting,per rendere il link(u,v)
+efficente utilizziamo le operazioni della struttra 
+dati introdotta precedentemente 
+\begin{enumerate}
+    \item Si esegue l'operazione ausiliaria di rerooting(T,v) sugli alberi che contengono $u$ e $v$, $\text{rerooting}(T_1,u)$ $\text{rerooting}(T_2,v)$
+    \item Si rimuove l'elemento più a destra di $T_1$, che sarà sicuramente $u$. Denotiamo tale elemento rimosso come $P$.
+    \item {Si procede alla creazione di una nuova sequenza $T_{new}$ concatenando $T_1$ e $T_2$, utilizzando $P$ come elemento di giunzione:
+    \[ T_{new} = \text{join}(T_1, P, T_2) \]}
+    \item Infine, per garantire che $u$ sia la nuova radice e che il tour sia completo, si inserisce il nodo $u$ come elemento  massimo (alla fine) della sequenza $T_{new}$. 
+\end{enumerate}
+
+\begin{marginfigure}
+    \includegraphics{linkEfficiente.png}
+    \caption[Titolo breve]{Procedura di link}
+    \labfig{linkEfficente}
+\end{marginfigure}
 
 \subsubsection{Cut}
+Come fatto per il rerooting e per il link,per rendere 
+il cut(u,v) efficente utilizziamo le operazioni della 
+struttra dati introdotta precedentemente 
+
+
+\begin{marginfigure}
+    \includegraphics{linkEfficiente.png}
+    \caption[Titolo breve]{Procedura di cut}
+    \labfig{cutEfficente}
+\end{marginfigure}
