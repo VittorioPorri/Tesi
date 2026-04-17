@@ -1,0 +1,8 @@
+# Ignora l'intera cartella di build di LaTeX
+latex/build/
+
+# Opzionale: ignora altri file ausiliari comuni
+*.aux
+*.log
+*.synctex(busy)
+*.synctex.gz

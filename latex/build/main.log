@@ -1282,4 +1282,2292 @@ Package: import 2020/04/01  v 6.2
 Package: todonotes 2024/01/05 v1.1.7 Todonotes source and documentation.
 Package: todonotes 2024/01/05
  (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
-File: tikzlibrar
+File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+\c@@todonotes@numberoftodonotes=\count413
+) (/usr/share/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count414
+\algocf@hangindent=\skip188
+ (/usr/share/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip189
+\skiplinenumber=\skip190
+\skiprule=\skip191
+\skiphlne=\skip192
+\skiptext=\skip193
+\skiplength=\skip194
+\algomargin=\skip195
+\skipalgocfslide=\skip196
+\algowidth=\dimen351
+\inoutsize=\dimen352
+\inoutindent=\dimen353
+\interspacetitleruled=\dimen354
+\interspacealgoruled=\dimen355
+\interspacetitleboxruled=\dimen356
+\algocf@ruledwidth=\skip197
+\algocf@inoutbox=\box142
+\algocf@inputbox=\box143
+\AlCapSkip=\skip198
+\AlCapHSkip=\skip199
+\algoskipindent=\skip256
+\algocf@nlbox=\box144
+\algocf@hangingbox=\box145
+\algocf@untilbox=\box146
+\algocf@skipuntil=\skip257
+\algocf@capbox=\box147
+\algocf@lcaptionbox=\skip258
+\algoheightruledefault=\skip259
+\algoheightrule=\skip260
+\algotitleheightruledefault=\skip261
+\algotitleheightrule=\skip262
+\c@algocfline=\count415
+\c@algocfproc=\count416
+\c@algocf=\count417
+\algocf@algoframe=\box148
+\algocf@algobox=\box149
+) (/usr/share/texmf-dist/tex/latex/ccicons/ccicons.sty
+Package: ccicons 2017/10/30 v1.6 LaTeX support for Creative Commons icons
+) (/usr/share/texmf-dist/tex/latex/metalogo/metalogo.sty
+Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
+\xl@everylogo=\toks61
+\xl@@everylogo=\toks62
+LaTeX Info: Redefining \TeX on input line 193.
+LaTeX Info: Redefining \LaTeX on input line 202.
+LaTeX Info: Redefining \LaTeXe on input line 219.
+) (/usr/share/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+Package: glossaries 2025/11/09 v4.9 (NLCT)
+ (/usr/share/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
+Package: mfirstuc 2025/04/03 v2.09 (NLCT)
+\@glsmfirst=\toks63
+\@glsmrest=\toks64
+) (/usr/share/texmf-dist/tex/latex/xfor/xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+) (/usr/share/texmf-dist/tex/latex/datatool/datatool-base.sty
+Package: datatool-base 2025/12/04 v3.4.3 (NLCT)
+ (/usr/share/texmf-dist/tex/latex/tracklang/tracklang.sty
+Package: tracklang 2025/03/11 v1.6.6 (NLCT) Track Languages
+ (/usr/share/texmf-dist/tex/generic/tracklang/tracklang.tex))
+\l__datatool_tmpa_int=\count418
+\l__datatool_tmpb_int=\count419
+\l__datatool_tmpc_int=\count420
+\l__datatool_tmpd_int=\count421
+\l__datatool_count_int=\count422
+\l__datatool_tmp_datatype_int=\count423
+\l__datatool_tmpa_dim=\dimen357
+\l__datatool_tmpb_dim=\dimen358
+ (/usr/share/texmf-dist/tex/latex/datatool/datatool-l3fp.def
+File: datatool-l3fp.def 2025/12/04 v3.4.3 (NLCT)
+)
+\@dtl@toks=\toks65
+\@dtl@tmpcount=\count424
+\dtl@tmplength=\skip263
+\l__datatool_measure_box=\box150
+\dtl@sortresult=\count425
+ (/usr/share/texmf-dist/tex/latex/datatool/datatool-utf8.ldf
+File: datatool-utf8.ldf 2025/12/04 v3.4.3 (NLCT)
+)
+\@dtl@datatype=\count426
+\c_datatool_unknown_int=\count427
+\l__datatool_year_int=\count428
+\l__datatool_month_int=\count429
+\l__datatool_day_int=\count430
+\l__datatool_hour_int=\count431
+\l__datatool_minute_int=\count432
+\l__datatool_second_int=\count433
+\l__datatool_tzhour_int=\count434
+\l__datatool_tzminute_int=\count435
+\l__datatool_julian_int=\count436
+\l__datatool_local_julian_int=\count437
+\l__datatool_prefix_int=\count438
+\l__datatool_suffix_int=\count439
+\@dtl@foreach@level=\count440
+\dtl@codeA=\count441
+\dtl@codeB=\count442
+)
+\gls@level=\count443
+\@gls@tmpb=\toks66
+\gls@tmplen=\skip264
+\l__glossaries_tmpa_dim=\dimen359
+\l__glossaries_tmpb_dim=\dimen360
+\glskeylisttok=\toks67
+\glslabeltok=\toks68
+\glsshorttok=\toks69
+\glslongtok=\toks70
+ (/usr/share/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
+Package: glossary-hypernav 2025/11/09 v4.9 (NLCT)
+) (/usr/share/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
+Package: glossary-list 2025/11/09 v4.9 (NLCT)
+\glslistdottedwidth=\skip265
+) (/usr/share/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
+Package: glossary-long 2025/11/09 v4.9 (NLCT)
+ (/usr/share/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip266
+\LTright=\skip267
+\LTpre=\skip268
+\LTpost=\skip269
+\LTchunksize=\count444
+\LTcapwidth=\dimen361
+\LT@head=\box151
+\LT@firsthead=\box152
+\LT@foot=\box153
+\LT@lastfoot=\box154
+\LT@gbox=\box155
+\LT@cols=\count445
+\LT@rows=\count446
+\c@LT@tables=\count447
+\c@LT@chunks=\count448
+\LT@p@ftn=\toks71
+)
+Class scrbook Info: longtable captions redefined on input line 47.
+\glsdescwidth=\skip270
+\glspagelistwidth=\skip271
+) (/usr/share/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
+Package: glossary-super 2025/11/09 v4.9 (NLCT)
+ (/usr/share/texmf-dist/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2025/06/26 v4.2d the supertabular environment
+\c@tracingst=\count449
+\ST@wd=\dimen362
+\ST@rightskip=\skip272
+\ST@leftskip=\skip273
+\ST@parfillskip=\skip274
+\ST@pageleft=\dimen363
+\ST@headht=\dimen364
+\ST@tailht=\dimen365
+\ST@pagesofar=\dimen366
+\ST@pboxht=\dimen367
+\ST@rowht=\dimen368
+\ST@prevht=\dimen369
+\ST@toadd=\dimen370
+\ST@dimen=\dimen371
+\ST@pbox=\box156
+)) (/usr/share/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
+Package: glossary-tree 2025/11/09 v4.9 (NLCT)
+\l__glossaries_tree_max_known_level_int=\count450
+\l__glossaries_tree_offset_dim=\dimen372
+\l__glossaries_tree_namewidth_dim=\dimen373
+\l__glossaries_tree_symbolwidth_dim=\dimen374
+\l__glossaries_tree_prenamesym_width_dim=\dimen375
+\l__glossaries_tree_presubnamesym_width_dim=\dimen376
+\l__glossaries_tree_namewidth_padding_dim=\dimen377
+\l__glossaries_tree_symbolwidth_padding_dim=\dimen378
+\l__glossaries_tree_namesymbolwidth_dim=\dimen379
+\l__glossaries_tree_namesymbolwidth_padding_dim=\dimen380
+\l__glossaries_tree_level_int=\count451
+\glstreeindent=\skip275
+)) (/usr/share/texmf-dist/tex/latex/nomencl/nomencl.sty
+Package: nomencl 2021/11/10 v5.6 Nomenclature package
+Package tocbasic Info: omitting babel extension for `nlo'
+(tocbasic)             because of missing \bbl@set@language on input line 187.
+Package tocbasic Info: omitting babel extension for `nls'
+(tocbasic)             because of missing \bbl@set@language on input line 188.
+\nomlabelwidth=\dimen381
+\nom@tempdim=\dimen382
+\nomitemsep=\skip276
+))) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2026/02/14 v26.3 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+\babel@savecnt=\count452
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2078.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2080.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2082.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2083.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
+\U@D=\dimen383
+\l@unhyphenated=\language5
+ (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read5
+\bbl@dirlevel=\count453
+ (/usr/share/texmf-dist/tex/generic/babel/locale/it/babel-italian.tex)
+Package babel Info: Importing font and identification data for italian
+(babel)             from babel-it.ini. Reported on input line 4330.
+ (/usr/share/texmf-dist/tex/generic/babel-italian/italian.ldf
+Language: italian 2026/01/13 v.1.5.02 Italian support for the babel system
+\it@lettering=\count454
+\it@doublequoteactive=\count455
+\it@ISOcompliance=\count456
+)) (/usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+\csq@reset=\count457
+\csq@gtype=\count458
+\csq@glevel=\count459
+\csq@qlevel=\count460
+\csq@maxlvl=\count461
+\csq@tshold=\count462
+\csq@ltx@everypar=\toks72
+ (/usr/share/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (/usr/share/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)
+Package csquotes Info: Redefining alias 'english' -> 'english/british'.
+) (/usr/share/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+\c@blindtext=\count463
+\c@Blindtext=\count464
+\c@blind@countparstart=\count465
+\blind@countxx=\count466
+\blindtext@numBlindtext=\count467
+\blind@countyy=\count468
+\c@blindlist=\count469
+\c@blindlistlevel=\count470
+\c@blindlist@level=\count471
+\blind@listitem=\count472
+\c@blind@listcount=\count473
+\c@blind@levelcount=\count474
+\blind@mathformula=\count475
+\blind@Mathformula=\count476
+\c@blind@randomcount=\count477
+\c@blind@randommax=\count478
+\c@blind@pangramcount=\count479
+\c@blind@pangrammax=\count480
+) (./kaobiblio.sty
+Package: kaobiblio 
+ (/usr/share/texmf-dist/tex/latex/bigfoot/perpage.sty
+Package: perpage 2014/10/25 2.0 Reset/sort counters per page
+) (/usr/share/texmf-dist/tex/generic/oberdiek/iflang.sty
+Package: iflang 2018/01/21 v1.7 Checks for the current language (HO)
+Package iflang Info: Naming convention for patterns: babel.
+) (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
+ (/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count481
+ (/usr/share/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count482
+\c@listtotal=\count483
+\c@listcount=\count484
+\c@liststart=\count485
+\c@liststop=\count486
+\c@citecount=\count487
+\c@citetotal=\count488
+\c@multicitecount=\count489
+\c@multicitetotal=\count490
+\c@instcount=\count491
+\c@maxnames=\count492
+\c@minnames=\count493
+\c@maxitems=\count494
+\c@minitems=\count495
+\c@citecounter=\count496
+\c@maxcitecounter=\count497
+\c@savedcitecounter=\count498
+\c@uniquelist=\count499
+\c@uniquename=\count500
+\c@refsection=\count501
+\c@refsegment=\count502
+\c@maxextratitle=\count503
+\c@maxextratitleyear=\count504
+\c@maxextraname=\count505
+\c@maxextradate=\count506
+\c@maxextraalpha=\count507
+\c@abbrvpenalty=\count508
+\c@highnamepenalty=\count509
+\c@lownamepenalty=\count510
+\c@maxparens=\count511
+\c@parenlevel=\count512
+\blx@tempcnta=\count513
+\blx@tempcntb=\count514
+\blx@tempcntc=\count515
+\c@blx@maxsection=\count516
+\blx@maxsegment@0=\count517
+\blx@notetype=\count518
+\blx@parenlevel@text=\count519
+\blx@parenlevel@foot=\count520
+\blx@sectionciteorder@0=\count521
+\blx@sectionciteorderinternal@0=\count522
+\blx@entrysetcounter=\count523
+\blx@biblioinstance=\count524
+\labelnumberwidth=\skip277
+\labelalphawidth=\skip278
+\biblabelsep=\skip279
+\bibitemsep=\skip280
+\bibnamesep=\skip281
+\bibinitsep=\skip282
+\bibparsep=\skip283
+\bibhang=\skip284
+\blx@bcfin=\read6
+\blx@bcfout=\write129
+\blx@langwohyphens=\language6
+\c@mincomprange=\count525
+\c@maxcomprange=\count526
+\c@mincompwidth=\count527
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (/usr/share/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex citestyle data model...
+Package biblatex Info: ... file 'numeric-comp.dbx' not found.
+Package biblatex Info: Trying to load biblatex bibstyle data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count528
+\c@savedafterword=\count529
+\c@annotator=\count530
+\c@savedannotator=\count531
+\c@author=\count532
+\c@savedauthor=\count533
+\c@bookauthor=\count534
+\c@savedbookauthor=\count535
+\c@commentator=\count536
+\c@savedcommentator=\count537
+\c@editor=\count538
+\c@savededitor=\count539
+\c@editora=\count540
+\c@savededitora=\count541
+\c@editorb=\count542
+\c@savededitorb=\count543
+\c@editorc=\count544
+\c@savededitorc=\count545
+\c@foreword=\count546
+\c@savedforeword=\count547
+\c@holder=\count548
+\c@savedholder=\count549
+\c@introduction=\count550
+\c@savedintroduction=\count551
+\c@namea=\count552
+\c@savednamea=\count553
+\c@nameb=\count554
+\c@savednameb=\count555
+\c@namec=\count556
+\c@savednamec=\count557
+\c@translator=\count558
+\c@savedtranslator=\count559
+\c@shortauthor=\count560
+\c@savedshortauthor=\count561
+\c@shorteditor=\count562
+\c@savedshorteditor=\count563
+\c@labelname=\count564
+\c@savedlabelname=\count565
+\c@institution=\count566
+\c@savedinstitution=\count567
+\c@lista=\count568
+\c@savedlista=\count569
+\c@listb=\count570
+\c@savedlistb=\count571
+\c@listc=\count572
+\c@savedlistc=\count573
+\c@listd=\count574
+\c@savedlistd=\count575
+\c@liste=\count576
+\c@savedliste=\count577
+\c@listf=\count578
+\c@savedlistf=\count579
+\c@location=\count580
+\c@savedlocation=\count581
+\c@organization=\count582
+\c@savedorganization=\count583
+\c@origlocation=\count584
+\c@savedoriglocation=\count585
+\c@origpublisher=\count586
+\c@savedorigpublisher=\count587
+\c@publisher=\count588
+\c@savedpublisher=\count589
+\c@language=\count590
+\c@savedlanguage=\count591
+\c@origlanguage=\count592
+\c@savedoriglanguage=\count593
+\c@pageref=\count594
+\c@savedpageref=\count595
+\shorthandwidth=\skip285
+\shortjournalwidth=\skip286
+\shortserieswidth=\skip287
+\shorttitlewidth=\skip288
+\shortauthorwidth=\skip289
+\shorteditorwidth=\skip290
+\locallabelnumberwidth=\skip291
+\locallabelalphawidth=\skip292
+\localshorthandwidth=\skip293
+\localshortjournalwidth=\skip294
+\localshortserieswidth=\skip295
+\localshorttitlewidth=\skip296
+\localshortauthorwidth=\skip297
+\localshorteditorwidth=\skip298
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (/usr/share/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+\c@textcitecount=\count596
+\c@textcitetotal=\count597
+\c@textcitemaxnames=\count598
+\c@biburlbigbreakpenalty=\count599
+\c@biburlbreakpenalty=\count600
+\c@biburlnumpenalty=\count601
+\c@biburlucpenalty=\count602
+\c@biburllcpenalty=\count603
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count604
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+ (/usr/share/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count605
+\c@bbx:relatedtotal=\count606
+))
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+ (/usr/share/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+File: numeric-comp.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count607
+\c@cbx@tempcntb=\count608
+\c@cbx@tempcntc=\count609
+\c@cbx@tempcntd=\count610
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2026-01-19 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (/usr/share/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
+))
+Package biblatex Info: Redefining '\fullcite' on input line 407.
+) (./kaotheorems.sty
+Package: kaotheorems 
+ (/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks73
+\thm@bodyfont=\toks74
+\thm@headfont=\toks75
+\thm@notefont=\toks76
+\thm@headpunct=\toks77
+\thm@preskip=\skip299
+\thm@postskip=\skip300
+\thm@headsep=\skip301
+\dth@everypar=\toks78
+LaTeX Info: Redefining \textsquare on input line 427.
+)
+Class scrbook Info: amsthm's \deferred@thm@head patched.
+ (/usr/share/texmf-dist/tex/latex/thmtools/thmtools.sty
+Package: thmtools 2023/05/04 v0.76
+\thmt@toks=\toks79
+\c@thmt@dummyctr=\count611
+ (/usr/share/texmf-dist/tex/latex/thmtools/thm-patch.sty
+Package: thm-patch 2023/05/04 v0.76
+ (/usr/share/texmf-dist/tex/latex/thmtools/parseargs.sty
+Package: parseargs 2023/05/04 v0.76
+\@parsespec=\toks80
+)) (/usr/share/texmf-dist/tex/latex/thmtools/thm-kv.sty
+Package: thm-kv 2023/05/04 v0.76
+Package thm-kv Info: Theorem names will be uppercased on input line 42.
+Package thm-kv Info: kvsetkeys patch (v1.16 or later) on input line 158.
+) (/usr/share/texmf-dist/tex/latex/thmtools/thm-autoref.sty
+Package: thm-autoref 2023/05/04 v0.76
+ (/usr/share/texmf-dist/tex/latex/thmtools/aliasctr.sty
+Package: aliasctr 2023/05/04 v0.76
+)) (/usr/share/texmf-dist/tex/latex/thmtools/thm-listof.sty
+Package: thm-listof 2023/05/04 v0.76
+) (/usr/share/texmf-dist/tex/latex/thmtools/thm-restate.sty
+Package: thm-restate 2023/05/04 v0.76
+) (/usr/share/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
+Package: thm-amsthm 2023/05/04 v0.76
+\thmt@style@headstyle=\toks81
+))
+Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line 148.
+ (/usr/share/texmf-dist/tex/latex/thmtools/thmdef-mdframed.sty
+Package: thmdef-mdframed 2023/05/04 v0.76
+)
+\c@theorem=\count612
+\c@definition=\count613
+\c@assumption=\count614
+\c@remark=\count615
+\c@example=\count616
+\c@exercise=\count617
+) (./kaorefs.sty
+Package: kaorefs 
+ (/usr/share/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `varioref' support loaded on input line 2605.
+Package cleveref Info: `cleveref' supersedes `varioref's \labelformatcommand on input line 2605.
+LaTeX Info: Redefining \vref on input line 2605.
+LaTeX Info: Redefining \Vref on input line 2605.
+LaTeX Info: Redefining \vrefrange on input line 2605.
+LaTeX Info: Redefining \fullref on input line 2605.
+Package cleveref Info: `amsthm' support loaded on input line 3026.
+Package cleveref Info: `listings' support loaded on input line 3131.
+Package cleveref Info: `algorithm2e' support loaded on input line 3147.
+Package cleveref Info: always capitalise cross-reference names on input line 7825.
+Package cleveref Info: include cross-reference names in hyperlinks on input line 7836.
+Package cleveref Info: always capitalise cross-reference names on input line 7852.
+Package cleveref Info: include cross-reference names in hyperlinks on input line 7852.
+Package cleveref Info: no abbreviation of names on input line 7852.
+)
+==> First Aid for cleveref.sty applied!
+)
+\main@idxfile=\write130
+\openout4 = `main.idx'.
+
+
+Writing index file main.idx
+\glswrite=\write131
+\glo@main@file=\write132
+\openout4 = `main.glo'.
+
+Package glossaries Info: Writing glossary file main.glo on input line 37.
+(./glossary.tex)
+\@nomenclaturefile=\write133
+\openout4 = `main.nlo'.
+
+Package nomencl Info: Writing nomenclature file main.nlo on input line 40.
+ (/usr/share/texmf-dist/tex/latex/scrhack/scrhack.sty
+Package: scrhack 2024-09-04 v3.42 scrhack emulation package
+ (/usr/share/texmf-dist/tex/latex/floatrowbytocbasic/floatrowbytocbasic.sty
+Package: floatrowbytocbasic 2023-08-16 v1.0 improved floatrow package using tocbasic
+) (/usr/share/texmf-dist/tex/latex/setspaceenhanced/setspaceenhanced.sty
+Package: setspaceenhanced 2024-11-12 v1.04 improved setspace package
+))
+LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
+(Font)              scaled to size 9.70001pt on input line 47.
+ Replaced itshape by thfamily in theorem style plain.
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'italian'.
+
+
+LaTeX Warning: Unused global option(s):
+    [a4paper,fontsize,twoside,numbers].
+
+(build/main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 47.
+LaTeX Font Info:    Trying to load font information for OML+npxmi on input line 47.
+ (/usr/share/texmf-dist/tex/latex/newpx/omlnpxmi.fd
+File: omlnpxmi.fd 2013/03/21 Fontinst v1.933 font definitions for OML/npxmi.
+)
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 47.
+LaTeX Font Info:    Trying to load font information for U+npxexa on input line 47.
+ (/usr/share/texmf-dist/tex/latex/newpx/unpxexa.fd
+File: unpxexa.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxexa.
+)
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 47.
+LaTeX Font Info:    Trying to load font information for LMS+npxsy on input line 47.
+ (/usr/share/texmf-dist/tex/latex/newpx/lmsnpxsy.fd
+File: lmsnpxsy.fd 2016/07/04 Fontinst v1.933 font definitions for LMS/npxsy.
+)
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 47.
+LaTeX Font Info:    Trying to load font information for LMX+npxexx on input line 47.
+ (/usr/share/texmf-dist/tex/latex/newpx/lmxnpxexx.fd
+File: lmxnpxexx.fd 2016/07/04 Fontinst v1.933 font definitions for LMX/npxexx.
+)
+LaTeX Font Info:    ... okay on input line 47.
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count618
+\scratchdimen=\dimen384
+\scratchbox=\box157
+\nofMPsegments=\count619
+\nofMParguments=\count620
+\everyMPshowfont=\toks82
+\MPscratchCnt=\count621
+\MPscratchDim=\dimen385
+\MPnumerator=\count622
+\makeMPintoPDFobject=\count623
+\everyMPtoPDFconversion=\toks83
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.7013pt, 418.25148pt, 107.55196pt)
+* v-part:(T,H,B)=(101.4061pt, 591.5271pt, 152.1092pt)
+* \paperwidth=597.50473pt
+* \paperheight=845.0424pt
+* \textwidth=418.25148pt
+* \textheight=591.5271pt
+* \oddsidemargin=-0.5687pt
+* \evensidemargin=35.28197pt
+* \topmargin=-3.86389pt
+* \headheight=15.0pt
+* \headsep=31.29787pt
+* \topskip=10.0pt
+* \footskip=42.0pt
+* \marginparwidth=112.03273pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(70.56247pt, 304.44289pt, 222.49937pt)
+* v-part:(T,H,B)=(77.96011pt, 689.12218pt, 77.96011pt)
+* \paperwidth=597.50473pt
+* \paperheight=845.0424pt
+* \textwidth=304.44289pt
+* \textheight=689.12218pt
+* \oddsidemargin=-1.70752pt
+* \evensidemargin=150.22939pt
+* \topmargin=-40.60774pt
+* \headheight=15.0pt
+* \headsep=31.29787pt
+* \topskip=10.0pt
+* \footskip=42.0pt
+* \marginparwidth=135.71892pt
+* \marginparsep=17.6406pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Redefining \microtypecontext on input line 47.
+Package microtype Info: Applying patch `item' on input line 47.
+Package microtype Info: Applying patch `toc' on input line 47.
+Package microtype Info: Applying patch `eqnum' on input line 47.
+Package microtype Info: Applying patch `footnote' on input line 47.
+Package microtype Info: Applying patch `verbatim' on input line 47.
+LaTeX Info: Redefining \microtypesetup on input line 47.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+Package microtype Info: Patching command `\showhyphens'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(/usr/share/texmf-dist/tex/latex/microtype/mt-ppl.cfg
+File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen386
+\caption@adjustwidth@linewidth=\dimen387
+Package caption Info: float package is loaded.
+Package caption Info: floatrow package is loaded.
+Package caption Info: floatrow package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+ (/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: Fixing longtable code of `floatrow' package.
+Package caption Info: rotating package is loaded.
+Package caption Info: supertabular package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\@sidenotes@extrawidth=\skip302
+Package hyperref Info: Link coloring ON on input line 47.
+\c@lstlisting=\count624
+Package tocbasic Info: setting babel extension for `lol' on input line 47.
+\scr@dte@lstlisting@maxnumwidth=\skip303
+ (/usr/share/texmf-dist/tex/latex/floatrow/fr-longtable.sty
+Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
+\flrow@LT@lasthead=\box158
+\flrow@LT@prelastfoot=\box159
+\c@FBLTpage=\count625
+)
+\Etoc@tf=\read7
+\c@mv@tabular=\count626
+\c@mv@boldtabular=\count627
+LaTeX Info: Command `\dddot' is already robust on input line 47.
+LaTeX Info: Command `\ddddot' is already robust on input line 47.
+ (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2025-06-23 v0.14 Display of landscape pages in PDF
+ (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2025-06-23 v0.14 Display of landscape pages in PDF (HO)
+ (/usr/share/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+) (/usr/share/texmf-dist/tex/latex/lscapeenhanced/lscapeenhanced.sty
+Package: lscapeenhanced 2024-04-16 v1.0 improved lscape package
+Package lscapeenhanced Info: \landscape patched to make \textheight change optional on input line 72.
+\@lscapeenhanced@textheight=\skip304
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+LaTeX Info: Redefining \it@ocap on input line 47.
+LaTeX Info: Redefining \it@ccap on input line 47.
+Package biblatex Info: Trying to load language 'italian'...
+Package biblatex Info: ... file 'italian.lbx' found.
+ (/usr/share/texmf-dist/tex/latex/biblatex/lbx/italian.lbx
+File: italian.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout4 = `main.bcf'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (build/main.bbl)
+Package biblatex Info: Reference section=0 on input line 47.
+Package biblatex Info: Reference segment=0 on input line 47.
+LaTeX Font Info:    Trying to load font information for T1+qhv on input line 56.
+ (/usr/share/texmf-dist/tex/latex/tex-gyre/t1qhv.fd
+File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
+)
+LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
+(Font)              scaled to size 9.02084pt on input line 56.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `qhv' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
+(Font)              scaled to size 9.02084pt on input line 56.
+LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
+(Font)              scaled to size 18.70923pt on input line 56.
+LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
+(Font)              scaled to size 13.968pt on input line 56.
+LaTeX Font Info:    Trying to load font information for OT1+minzpl on input line 56.
+ (/usr/share/texmf-dist/tex/latex/newpx/ot1minzpl.fd
+File: ot1minzpl.fd 2021/05/25 v1.0 font definition file for OT1/minzpl/TLF
+)
+LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
+(Font)              scaled to size 13.968pt on input line 56.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `minzpl' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
+(Font)              scaled to size 10.18501pt on input line 56.
+LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
+(Font)              scaled to size 7.663pt on input line 56.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 56.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 56.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+npxmia on input line 56.
+ (/usr/share/texmf-dist/tex/latex/newpx/unpxmia.fd
+File: unpxmia.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxmia.
+)
+LaTeX Font Info:    Trying to load font information for U+npxsym on input line 56.
+ (/usr/share/texmf-dist/tex/latex/newpx/unpxsym.fd
+File: unpxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/npxsym.
+)
+LaTeX Font Info:    Trying to load font information for U+npxsyc on input line 56.
+ (/usr/share/texmf-dist/tex/latex/newpx/unpxsyc.fd
+File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
+)
+\openout4 = `main.mw'.
+
+ [1
+
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-lf.enc}] (build/main.mw)
+\openout4 = `main.mw'.
+
+\openout4 = `main.xdy'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.xdy'.
+
+
+
+Package etoc Warning: \etocstandarddisplaystyle on input line 67
+(etoc)                is deprecated.  Please use \etocclasstocstyle.
+
+\tf@toc=\write134
+\openout4 = `main.toc'.
+
+\openout4 = `main.mw'.
+
+[2
+
+
+] (build/main.mw)
+\openout4 = `main.mw'.
+
+LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
+(Font)              scaled to size 20.11783pt on input line 71.
+LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
+(Font)              scaled to size 20.11783pt on input line 71.
+Package tocbasic Info: character protrusion at toc deactivated on input line 71.
+LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
+(Font)              scaled to size 9.70001pt on input line 71.
+LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
+(Font)              scaled to size 9.70001pt on input line 71.
+LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
+(Font)              scaled to size 7.08101pt on input line 71.
+LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
+(Font)              scaled to size 5.335pt on input line 71.
+LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
+(Font)              scaled to size 10.82501pt on input line 71.
+LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
+(Font)              scaled to size 11.64001pt on input line 71.
+LaTeX Font Info:    Font shape `T1/zpllf/m/sc' will be
+(Font)              scaled to size 11.64001pt on input line 71.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/zpllf/m/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `T1/zpllf/b/sc' will be
+(Font)              scaled to size 11.64001pt on input line 71.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/zpllf/b/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `T1/zpllf/m/sl' will be
+(Font)              scaled to size 9.70001pt on input line 78.
+\openout4 = `main.mw'.
+
+ [3{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-lf-pc.enc}] (build/main.mw)
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+ [4
+
+
+] (build/main.mw)
+\openout4 = `main.mw'.
+
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(70.56247pt, 304.44289pt, 222.49937pt)
+* v-part:(T,H,B)=(77.96011pt, 689.12218pt, 77.96011pt)
+* \paperwidth=597.50473pt
+* \paperheight=845.0424pt
+* \textwidth=304.44289pt
+* \textheight=689.12218pt
+* \oddsidemargin=-1.70752pt
+* \evensidemargin=150.22939pt
+* \topmargin=-40.60774pt
+* \headheight=15.0pt
+* \headsep=31.29787pt
+* \topskip=10.0pt
+* \footskip=42.0pt
+* \marginparwidth=135.71892pt
+* \marginparsep=17.6406pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+ (./chapters/eulerTourTrees.tex
+chapter 1.
+LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
+(Font)              scaled to size 13.968pt on input line 2.
+LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
+(Font)              scaled to size 8.73001pt on input line 2.
+Package marginnote Info: Margin note 5.1 is on absolute page 5 on input line 2.
+Package marginnote Info: xpos seems to be 70.56247pt on input line 2.
+LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
+(Font)              scaled to size 7.76001pt on input line 2.
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
+(Font)              scaled to size 8.73001pt on input line 13.
+LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
+(Font)              scaled to size 8.73001pt on input line 13.
+Package mdframed Info: mdframed works in twoside mode on input line 25.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 25.
+LaTeX Font Info:    Font shape `T1/zpllf/m/it' will be
+(Font)              scaled to size 9.70001pt on input line 25.
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 25.
+Package mdframed Info: mdframed works in twoside mode on input line 28.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 28.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 30.
+<images/makeTour.png, id=70, 482.80376pt x 362.35374pt>
+File: images/makeTour.png Graphic file (type png)
+<use images/makeTour.png>
+Package pdftex.def Info: images/makeTour.png  used on input line 36.
+(pdftex.def)             Requested size: 135.71455pt x 101.85645pt.
+LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
+(Font)              scaled to size 7.76001pt on input line 37.
+LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
+(Font)              scaled to size 6.79001pt on input line 51.
+
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 41--62
+$[]$ 
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 66.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 66.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 68.
+LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
+(Font)              scaled to size 11.64001pt on input line 71.
+
+Package hyperref Warning: bookmark level for unknown mtocsubsection defaults to 0.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.74 
+     
+\openout4 = `main.mw'.
+
+ [1
+
+
+
+{/usr/share/texmf-dist/fonts/enc/dvips/newpx/px-lms.enc} <./images/makeTour.png>] (build/main.mw)
+\openout4 = `main.mw'.
+
+LaTeX Font Info:    Font shape `T1/zpllf/b/it' will be
+(Font)              scaled to size 9.70001pt on input line 119.
+
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 88--122
+$[]$ 
+ []
+
+
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 132--148
+$[]$ 
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.150 \subsubsection
+                    {Cut}
+\openout4 = `main.mw'.
+
+ [2{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] (build/main.mw)
+\openout4 = `main.mw'.
+
+LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
+(Font)              scaled to size 7.08101pt on input line 170.
+LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
+(Font)              scaled to size 5.335pt on input line 170.
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 175.
+ (/usr/share/texmf-dist/tex/latex/bera/t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 8.50006pt on input line 175.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `fvm' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/zpllf/m/it' will be
+(Font)              scaled to size 7.08101pt on input line 182.
+LaTeX Font Info:    Font shape `T1/zpllf/m/it' will be
+(Font)              scaled to size 5.335pt on input line 182.
+
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 159--200
+$[]$ 
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 203.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 203.
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 203.
+)
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.84 
+     
+\openout4 = `main.mw'.
+
+ [3{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}] (build/main.mw)
+\openout4 = `main.mw'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.85 \pagelayout{wide}
+                       % No margins
+\openout4 = `main.mw'.
+
+ [4] (build/main.mw)
+\openout4 = `main.mw'.
+
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(70.56247pt, 456.37979pt, 70.56247pt)
+* v-part:(T,H,B)=(77.96011pt, 689.12218pt, 77.96011pt)
+* \paperwidth=597.50473pt
+* \paperheight=845.0424pt
+* \textwidth=456.37979pt
+* \textheight=689.12218pt
+* \oddsidemargin=-1.70752pt
+* \evensidemargin=-1.70752pt
+* \topmargin=-40.60774pt
+* \headheight=15.0pt
+* \headsep=31.29787pt
+* \topskip=10.0pt
+* \footskip=42.0pt
+* \marginparwidth=0.0pt
+* \marginparsep=0.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+part without number
+LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
+(Font)              scaled to size 22.44386pt on input line 86.
+LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
+(Font)              scaled to size 24.13362pt on input line 86.
+LaTeX Font Info:    Font shape `T1/zpllf/m/sc' will be
+(Font)              scaled to size 24.13362pt on input line 86.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/zpllf/m/sc/24.88'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `T1/zpllf/b/sc' will be
+(Font)              scaled to size 24.13362pt on input line 86.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/zpllf/b/sc/24.88'.
+(microtype)             Ignoring protrusion settings for this character.
+\openout4 = `main.mw'.
+
+[5
+
+
+
+] (build/main.mw)
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+ [6] (build/main.mw)
+\openout4 = `main.mw'.
+
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(70.56247pt, 304.44289pt, 222.49937pt)
+* v-part:(T,H,B)=(77.96011pt, 689.12218pt, 77.96011pt)
+* \paperwidth=597.50473pt
+* \paperheight=845.0424pt
+* \textwidth=304.44289pt
+* \textheight=689.12218pt
+* \oddsidemargin=-1.70752pt
+* \evensidemargin=150.22939pt
+* \topmargin=-40.60774pt
+* \headheight=15.0pt
+* \headsep=31.29787pt
+* \topskip=10.0pt
+* \footskip=42.0pt
+* \marginparwidth=135.71892pt
+* \marginparsep=17.6406pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+ (./chapters/balancedBST.tex
+chapter 2.
+Package marginnote Info: Margin note 11.1 is on absolute page 11 on input line 2.
+Package marginnote Info: xpos seems to be 70.56247pt on input line 2.
+LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
+(Font)              scaled to size 12.99pt on input line 6.
+
+Package hyperref Warning: bookmark level for unknown mtocsection defaults to 0.
+
+Package mdframed Info: mdframed works in twoside mode on input line 13.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 13.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 15.
+
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 37--60
+$[]$ 
+ []
+
+\openout4 = `main.mw'.
+
+[7
+
+
+
+] (build/main.mw)
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+ [8] (build/main.mw)
+\openout4 = `main.mw'.
+
+
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 123--144
+$[]$ 
+ []
+
+
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 148--168
+$[]$ 
+ []
+
+\openout4 = `main.mw'.
+
+[9] (build/main.mw)
+\openout4 = `main.mw'.
+
+
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 184--233
+$[]$ 
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 235.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 235.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 237.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+\openout4 = `main.mw'.
+
+ [10] (build/main.mw)
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+Package mdframed Info: mdframed works in twoside mode on input line 263.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 263.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 265.
+Package mdframed Info: mdframed works in twoside mode on input line 268.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 268.
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 268.
+\openout4 = `main.mw'.
+
+ [11] (build/main.mw)
+\openout4 = `main.mw'.
+
+<images/rotazioneSS.png, id=340, 1461.46pt x 514.92375pt>
+File: images/rotazioneSS.png Graphic file (type png)
+<use images/rotazioneSS.png>
+Package pdftex.def Info: images/rotazioneSS.png  used on input line 313.
+(pdftex.def)             Requested size: 243.5389pt x 85.80731pt.
+\openout4 = `main.mw'.
+
+ [12] (build/main.mw)
+\openout4 = `main.mw'.
+
+<images/rotazioneSinistroDestro.png, id=348, 2761.31625pt x 657.45625pt>
+File: images/rotazioneSinistroDestro.png Graphic file (type png)
+<use images/rotazioneSinistroDestro.png>
+Package pdftex.def Info: images/rotazioneSinistroDestro.png  used on input line 323.
+(pdftex.def)             Requested size: 273.99896pt x 65.23784pt.
+Package mdframed Info: mdframed works in twoside mode on input line 332.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 332.
+\openout4 = `main.mw'.
+
+ [13 <./images/rotazioneSS.png> <./images/rotazioneSinistroDestro.png>] (build/main.mw)
+\openout4 = `main.mw'.
+
+<images/triangoloDS.png, id=364, 442.65375pt x 442.65375pt>
+File: images/triangoloDS.png Graphic file (type png)
+<use images/triangoloDS.png>
+Package pdftex.def Info: images/triangoloDS.png  used on input line 358.
+(pdftex.def)             Requested size: 135.72177pt x 135.72177pt.
+<images/lineaDestra.png, id=365, 603.25375pt x 402.50375pt>
+File: images/lineaDestra.png Graphic file (type png)
+<use images/lineaDestra.png>
+Package pdftex.def Info: images/lineaDestra.png  used on input line 364.
+(pdftex.def)             Requested size: 135.71703pt x 90.55328pt.
+Package mdframed Info: mdframed works in twoside mode on input line 389.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 389.
+
+pdfTeX warning (ext4): destination with the same identifier (name{remark.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.389     √
+           à importante notare che, mentre il Caso 2 pu√≤ propagare la viola...
+\openout4 = `main.mw'.
+
+ [14 <./images/triangoloDS.png> <./images/lineaDestra.png>] (build/main.mw)
+\openout4 = `main.mw'.
+
+<images/fratelloRosso.png, id=383, 1280.785pt x 512.91624pt>
+File: images/fratelloRosso.png Graphic file (type png)
+<use images/fratelloRosso.png>
+Package pdftex.def Info: images/fratelloRosso.png  used on input line 409.
+(pdftex.def)             Requested size: 135.70784pt x 54.34694pt.
+<images/nipoteVicinoRosso.png, id=384, 1446.40375pt x 623.32875pt>
+File: images/nipoteVicinoRosso.png Graphic file (type png)
+<use images/nipoteVicinoRosso.png>
+Package pdftex.def Info: images/nipoteVicinoRosso.png  used on input line 415.
+(pdftex.def)             Requested size: 135.71037pt x 58.48448pt.
+<images/nipoteLontanoRosso.png, id=385, 1366.10374pt x 502.87875pt>
+File: images/nipoteLontanoRosso.png Graphic file (type png)
+<use images/nipoteLontanoRosso.png>
+Package pdftex.def Info: images/nipoteLontanoRosso.png  used on input line 421.
+(pdftex.def)             Requested size: 135.70119pt x 49.95319pt.
+Package mdframed Info: mdframed works in twoside mode on input line 449.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 449.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 451.
+Package mdframed Info: mdframed works in twoside mode on input line 454.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 454.
+\openout4 = `main.mw'.
+
+ [15 <./images/fratelloRosso.png> <./images/nipoteVicinoRosso.png> <./images/nipoteLontanoRosso.png>] (build/main.mw)
+\openout4 = `main.mw'.
+
+Package mdframed Info: mdframed works in twoside mode on input line 479.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 479.
+
+pdfTeX warning (ext4): destination with the same identifier (name{definition.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.479     I
+           l costo del  $join(S_1, i, S_2)$ √® $O(log(n))$
+Overfull \hbox (2.30391pt too wide) in paragraph at lines 482--484
+[]\T1/zpllf/m/n/10 (-20) La com-ples-si-t‡ tem-po-ra-le del-la pro-ce-du-ra di $\OML/npxmi/m/it/10 join\LMS/npxsy/m/n/10 π\OML/npxmi/m/it/10 S[]; i; S[]\LMS/npxsy/m/n/10 ∫$
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 486.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 486.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 492.
+\openout4 = `main.mw'.
+
+[16] (build/main.mw)
+\openout4 = `main.mw'.
+
+Package mdframed Info: mdframed works in twoside mode on input line 506.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 506.
+Package mdframed Info: mdframed works in twoside mode on input line 513.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 513.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 515.
+\openout4 = `main.mw'.
+
+ [17] (build/main.mw)
+\openout4 = `main.mw'.
+
+
+Overfull \hbox (6.2051pt too wide) detected at line 529
+[][] \U/npxmia/m/it/10 = \OML/npxmi/m/it/10 O\LMS/npxsy/m/n/10 π\OML/npxmi/m/it/10 rank\LMS/npxsy/m/n/10 π\OML/npxmi/m/it/10 S[]\LMS/npxsy/m/n/10 ∫ ^^@ \OML/npxmi/m/it/10 rank\LMS/npxsy/m/n/10 π\OML/npxmi/m/it/10 T[]\LMS/npxsy/m/n/10 ∫ œ \OT1/minzpl/m/n/10 1\LMS/npxsy/m/n/10 ∫ \U/npxmia/m/it/10 = \OML/npxmi/m/it/10 O\LMS/npxsy/m/n/10 π\OML/npxmi/m/it/10 rank\LMS/npxsy/m/n/10 π\OML/npxmi/m/it/10 T[]\LMS/npxsy/m/n/10 ∫ ^^@ \OML/npxmi/m/it/10 rank\LMS/npxsy/m/n/10 π\OML/npxmi/m/it/10 T[]\LMS/npxsy/m/n/10 ∫ œ \OT1/minzpl/m/n/10 1\LMS/npxsy/m/n/10 ∫
+ []
+
+) (./chapters/ottimizzazioni.tex
+\openout4 = `main.mw'.
+
+ [18] (build/main.mw)
+\openout4 = `main.mw'.
+
+
+chapter 3.
+Package marginnote Info: Margin note 23.1 is on absolute page 23 on input line 2.
+Package marginnote Info: xpos seems to be 70.56247pt on input line 2.
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+Package mdframed Info: mdframed works in twoside mode on input line 20.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 20.
+
+pdfTeX warning (ext4): destination with the same identifier (name{definition.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20     $
+          size(v) = 1 + size(v.left) +size(v.right)$
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 28--51
+$[]$ 
+ []
+
+
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 56--83
+$[]$ 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+\openout4 = `main.mw'.
+
+ [19
+
+
+] (build/main.mw)
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+ [20] (build/main.mw)
+\openout4 = `main.mw'.
+
+
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 126--151
+$[]$ 
+ []
+
+<images/rerootingEfficente.png, id=485, 931.48pt x 637.38126pt>
+File: images/rerootingEfficente.png Graphic file (type png)
+<use images/rerootingEfficente.png>
+Package pdftex.def Info: images/rerootingEfficente.png  used on input line 167.
+(pdftex.def)             Requested size: 135.70784pt x 92.86043pt.
+\openout4 = `main.mw'.
+
+[21 <./images/rerootingEfficente.png>] (build/main.mw)
+\openout4 = `main.mw'.
+
+<images/linkEfficiente.png, id=515, 1012.78375pt x 604.2575pt>
+File: images/linkEfficiente.png Graphic file (type png)
+<use images/linkEfficiente.png>
+Package pdftex.def Info: images/linkEfficiente.png  used on input line 185.
+(pdftex.def)             Requested size: 135.71541pt x 80.97192pt.
+File: images/linkEfficiente.png Graphic file (type png)
+<use images/linkEfficiente.png>
+Package pdftex.def Info: images/linkEfficiente.png  used on input line 197.
+(pdftex.def)             Requested size: 135.71541pt x 80.97192pt.
+)
+\openout4 = `main.mw'.
+
+ [22 <./images/linkEfficiente.png>] (build/main.mw)
+\openout4 = `main.mw'.
+
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(70.56247pt, 456.37979pt, 70.56247pt)
+* v-part:(T,H,B)=(77.96011pt, 689.12218pt, 77.96011pt)
+* \paperwidth=597.50473pt
+* \paperheight=845.0424pt
+* \textwidth=456.37979pt
+* \textheight=689.12218pt
+* \oddsidemargin=-1.70752pt
+* \evensidemargin=-1.70752pt
+* \topmargin=-40.60774pt
+* \headheight=15.0pt
+* \headsep=31.29787pt
+* \topskip=10.0pt
+* \footskip=42.0pt
+* \marginparwidth=0.0pt
+* \marginparsep=0.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\openout4 = `main.mw'.
+
+ [23
+
+
+
+] (build/main.mw)
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+ [24
+
+
+
+] (build/main.mw)
+\openout4 = `main.mw'.
+
+
+chapter without number
+(./main.gls)
+\openout4 = `main.mw'.
+
+ [25] (build/main.mw)
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+ [26
+
+
+] (build/main.mw)
+\openout4 = `main.mw'.
+
+\openout4 = `main.idx'.
+
+runsystem(makeindex main.idx)...executed.
+
+ (build/main.ind)
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+ (build/main.aux
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2020/03/25>
+ ***********
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.bcf'.
+
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+\openout4 = `main.glo'.
+
+\openout4 = `main.nlo'.
+
+\openout4 = `main.toc'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 63344 strings out of 469504
+ 1275481 string characters out of 5470379
+ 2550357 words of memory out of 5000000
+ 89730 multiletter control sequences out of 15000+600000
+ 769937 words of font info for 287 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 122i,20n,159p,11227b,2267s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
+Output written on build/main.pdf (30 pages, 579365 bytes).
+PDF statistics:
+ 736 PDF objects out of 1000 (max. 8388607)
+ 650 compressed objects within 7 object streams
+ 350 named destinations out of 1000 (max. 500000)
+ 67775 words of extra memory for PDF output out of 74296 (max. 10000000)
+
