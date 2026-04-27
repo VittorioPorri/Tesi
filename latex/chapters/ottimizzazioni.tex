@@ -150,17 +150,41 @@ che la radice sia la medesima
     
 \end{algorithm}
 
+\subsubsection{Ottimizzazione tramite Tabelle Hash}
+
+Per garantire che le operazioni di \textbf{link}, \textbf{cut} e \textbf{rerooting} mantengano una complessità temporale logaritmica $O(\log n)$, è fondamentale eliminare la dipendenza dalla scansione lineare del ciclo euleriano. Per risolvere tale problema introduciamo la struttura dati \textit{Hash Map} agisce come un dizionario che mappa chiavi univoche a riferimenti di memoria, permettendo operazioni di ricerca in tempo costante $O(1)$.
+Il principio di funzionamento si basa su una funzione di hash $h: U \to \{0, \dots, m-1\}$ che mappa un universo di chiavi $U$ in un array di dimensione $m$. Per prevenire il degradamento delle prestazioni dovuto alle collisioni (quando $h(u) = h(v)$ per $u \neq v$), si adotta una famiglia di hash universale $\mathcal{H}$, che limita la probabilità di collisione tra due chiavi distinte a $1/m$.
+Nella struttura degli Euler Tour Trees, l'integrazione delle tabelle hash permette di passare rapidamente dall'albero originale alla posizione fisica nel RB-Trees tramite due mappature distinte:
+\begin{itemize}
+    \item \textbf{mapNode: } Associa ogni nodo originale $v \in V$ all'indirizzo di memoria di un nodo nell'albero di ricerca che rappresenta un arco uscente da $v$ (ad esempio, l'arco $(v, u)$). Questa mappa è essenziale per l'operazione di \textbf{rerooting}, consentendo di individuare rapidamente il primo arco dal quale dovra partire il tour.
+    \[{mapNode}[F] \to \&(F, E)\].3
+    \item \textbf{mapEdge: } Associa una coppia ordinata di nodi $(u, v)$, che rappresenta un arco diretto univoco del tour, al corrispondente nodo nel RB-Trees. Questa mappatura trasforma la ricerca di un arco da una scansione lineare $O(n)$ a un accesso diretto $O(1)$, rendendo efficienti le operazioni di \textit{split} e \textit{join} necessarie per il \textbf{cut} e il \textbf{link}.
+\end{itemize}
+
+
 \subsubsection{Rerooting}
-Per rendere l'operazione ausiliaria di rerooting(T,v) 
-un'operazione efficente sfruttiamo le operazione della 
-struttra dati introdotta precedentemente:
+
+Per ottimizzare l'operazione ausiliaria di \textbf{rerooting}$(T, v)$, rendendola computazionalmente efficiente, si sfruttano le proprietà degli alberi binari di ricerca bilanciati (Red-Black Trees) in combinazione con una tabella hash per l'accesso diretto ai nodi. Tale approccio permette di ridurre la complessità dell'operazione da $O(n)$ a $O(\log n)$.
+
+La procedura si articola nelle seguenti fasi:
+
 \begin{enumerate}
-\item Si esegue l'operazione split(T,v) in corrispondenza della prima occorrenza del nodo $v$. Tale operazione divide la sequenza originale in tre componenti: $T_L$(che conterrà tutti gli elementi che precedono $v$), il nodo $v$ stesso, e $T_R$(che conterrà gli elementi che seguono v).
-\item Si elimina l'elemento più a sinistra di $T_L$. Poiché in un Euler Tour completo la sequenza inizia e termina con la radice, questo elemento rappresenta l'occorrenza iniziale della vecchia radice.
-\item Si rimuove l'elemento più a destra di $T_R$, che rappresenta l'occorrenza finale della vecchia radice. Denotiamo tale elemento rimosso come $P$.
-\item {Si procede alla creazione di una nuova sequenza $T_{new}$ concatenando le sottosequenze in ordine invertito rispetto alla struttura originale, utilizzando la vecchia radice $P$ come elemento di giunzione:
-    \[ T_{new} = \text{join}(T_R, P, T_L) \]}
-\item Infine, per garantire che $v$ sia la nuova radice e che il tour sia completo, si inserisce il nodo $v$ come elemento minimo (all'inizio) e come elemento massimo (alla fine) della sequenza $T_{new}$. 
+    \item \textbf{Accesso alla sequenza:} Si interroga la hash map $\textit{mapNode}[v]$ per ottenere il puntatore al nodo dell'RB-Tree che memorizza un arco uscente da $v$, denotato come $e_{start} = (v, c)$. Questa operazione garantisce la localizzazione del punto di taglio in tempo costante $O(1)$.
+    
+    \item \textbf{Decomposizione (Split):} Si esegue l'operazione di $\text{split}(T, e_{start})$ sulla sequenza originale. Tale operazione scinde l'albero $T$ in tre componenti distinte:
+    \begin{itemize}
+        \item $T_L$: sottosequenza contenente tutti gli archi che precedono $e_{start}$ nel tour corrente;
+        \item $e_{start}$: il nodo stesso identificato come punto di rotazione;
+        \item $T_R$: sottosequenza contenente gli archi successivi a $e_{start}$.
+    \end{itemize}
+
+    \item \textbf{Rimozione della vecchia apertura:} Si estrae l'elemento situato all'estrema destra di $T_L$. Tale elemento, che denotiamo con $P$, rappresenta l'arco di inizio del tour originale.
+
+    \item \textbf{Ricomposizione della sequenza (Join):} Si procede alla creazione della nuova sequenza $T_{new}$ invertendo l'ordine relativo dei blocchi estratti. Utilizzando $P$ come elemento di giunzione, si esegue:
+    \[ T_{new} = \text{join}(T_R, P, T_L) \]
+
+    \item \textbf{Finalizzazione del ciclo:} Per garantire la coerenza della struttura euleriana e ristabilire il nodo $v$ come radice si inserisce $e_{start}$ come elemento minimo (all'inizio) della sequenza $T_{new}$.
+
 \end{enumerate}
 
 \begin{marginfigure}
@@ -170,31 +194,56 @@ struttra dati introdotta precedentemente:
 \end{marginfigure}
 
 \subsubsection{Link}
-Come fatto per il rerooting,per rendere il link(u,v)
-efficente utilizziamo le operazioni della struttra 
-dati introdotta precedentemente 
+
+L'operazione di \textbf{link}$(u, v)$ permette di unire due alberi distinti attraverso l'introduzione di un nuovo arco $(u, v)$. Per garantire un'efficienza logaritmica, l'operazione viene implementata sfruttando le struttre dati precedentemente introdotte e l'operazione ausiliaria di \textit{rerooting}.
+
+La procedura si articola nelle seguenti fasi:
+
 \begin{enumerate}
-    \item Si esegue l'operazione ausiliaria di rerooting(T,v) sugli alberi che contengono $u$ e $v$, $\text{rerooting}(T_1,u)$ $\text{rerooting}(T_2,v)$
-    \item Si rimuove l'elemento più a destra di $T_1$, che sarà sicuramente $u$. Denotiamo tale elemento rimosso come $P$.
-    \item {Si procede alla creazione di una nuova sequenza $T_{new}$ concatenando $T_1$ e $T_2$, utilizzando $P$ come elemento di giunzione:
-    \[ T_{new} = \text{join}(T_1, P, T_2) \]}
-    \item Infine, per garantire che $u$ sia la nuova radice e che il tour sia completo, si inserisce il nodo $u$ come elemento  massimo (alla fine) della sequenza $T_{new}$. 
+    \item \textbf{Normalizzazione delle radici:} Si eseguono le operazioni $\text{rerooting}(T_1, u)$ e $\text{rerooting}(T_2, v)$ sui rispettivi Euler Tour Trees. Questa fase assicura che il tour di $T_1$ inizi nel nodo $u$ e quello di $T_2$ inizi nel nodo $v$, predisponendo le sequenze per la giunzione lineare.
+    
+    \item \textbf{Composizione della sequenza (Join):} Si crea un nuovo nodo dell'RB-Tree, denotato come $P = (u, v)$, che funge da arco di giunzione tra i due alberi. Si procede alla concatenazione delle sottosequenze tramite l'operazione di \textit{join}:
+    \[ T_{new} = \text{join}(T_1, P, T_2) \]
+    Il riferimento al nuovo arco $P$ viene contestualmente inserito nelle hash map $\textit{mapEdge}$ e solo se necessario in $\textit{mapNode}$ per consentire accessi futuri in tempo costante.
+
+    \item \textbf{Chiusura del ciclo euleriano:} Per ristabilire la proprietà di ciclo della struttura risultante e mantenere $u$ come radice complessiva, è necessario introdurre un arco di ritorno. Si crea un nodo $P' = (v, u)$ e lo si inserisce come elemento massimo (ovvero in ultima posizione) della sequenza $T_{new}$, anche l'arco $P'$ viene registrato nella struttura di supporto $\textit{mapEdge}$.
 \end{enumerate}
 
 \begin{marginfigure}
-    \includegraphics{linkEfficiente.png}
+    \includegraphics{linkEfficente.png}
     \caption[Titolo breve]{Procedura di link}
     \labfig{linkEfficente}
 \end{marginfigure}
 
 \subsubsection{Cut}
-Come fatto per il rerooting e per il link,per rendere 
-il cut(u,v) efficente utilizziamo le operazioni della 
-struttra dati introdotta precedentemente 
+L'operazione di \textbf{cut}$(u, v)$ permette di separare un albero in due alberi distinti attraverso la cancellazione di un arco $(u, v)$. Per garantire un'efficienza logaritmica, l'operazione viene implementata sfruttando le struttre dati precedentemente introdotte e l'operazione ausiliaria di \textit{rerooting}.
 
+La procedura si articola nelle seguenti fasi:
+
+\begin{enumerate}
+    \item \textbf{Primo accesso alla sequenza:}Si interroga la hash map $\textit{mapedge}[u,v]$ per ottenere il puntatore al nodo dell'RB-Tree che memorizza un arco $e_{del}=(u,v)$. Questa operazione garantisce la localizzazione del punto di taglio in tempo costante $O(1)$.
+    \item \textbf{Prima decomposizione (Split):} Si esegue l'operazione di $\text{split}(T, e_{del})$ sulla sequenza originale. Tale operazione scinde l'albero $T$ in tre componenti distinte:
+    \begin{itemize}
+        \item $T_L$: sottosequenza contenente tutti gli archi che precedono $e_{del}$ nel tour corrente;
+        \item $e_{del}$: il nodo stesso identificato come punto di rottura;
+        \item $T_R$: sottosequenza contenente gli archi successivi a $e_{del}$.
+    \end{itemize}
+    \item \textbf{Secondo accesso alla sequenza:}Si interroga la hash map $\textit{mapedge}[v,u]$ per ottenere il puntatore al nodo dell'RB-Tree che memorizza un arco $e'_{del}=(v,u)$.
+    \item \textbf{Seconda decomposizione (Split):}Si esegue l'operazione di $\text{split}(T_R, e'_{del})$. Tale operazione scinde l'albero $T_L$ in tre componenti distinte:
+    \begin{itemize}
+        \item $T'_L$: sottosequenza contenente tutti gli archi successivi a $e_{del}$ e precedenti a $'e_{del}$ nel tour originale;
+        \item $e'_{del}$: il nodo stesso identificato come punto di rottura;
+        \item $T'_R$: sottosequenza contenente gli archi successivi a $e'_{del}$.
+    \end{itemize}
+    \item \textbf{Rimozione del gancio:} Si estrae l'elemento situato all'estrema destra di $T'_R$, che denotiamo con $P$.
+
+    \item \textbf{Ricomposizione della sequenza (Join):} Si procede alla ricomposizione della sequenza utilizzando $P$ come elemento di giunzione, si esegue:
+    \[ T_{new} = \text{join}(T_L, P, T'_R) \]
+\end{enumerate}
+In questo modo abbiamo otternuo $T'_L$ che rappresenta il tour euleriana del sottoalbero radicato in $v$ e $T_{new}$ che rappresenta l'albero originale senza il sottoalbero $T'_L$
 
 \begin{marginfigure}
-    \includegraphics{linkEfficiente.png}
+    \includegraphics{cutEfficente.png}
     \caption[Titolo breve]{Procedura di cut}
     \labfig{cutEfficente}
 \end{marginfigure}

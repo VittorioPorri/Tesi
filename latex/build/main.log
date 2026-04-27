@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.19)  17 APR 2026 18:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.19)  27 APR 2026 17:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2741,21 +2741,25 @@ Package pdftex.def Info: images/makeTour.png  used on input line 36.
 LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
 (Font)              scaled to size 7.76001pt on input line 37.
 LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
-(Font)              scaled to size 6.79001pt on input line 51.
+(Font)              scaled to size 6.79001pt on input line 57.
 
-Overfull \hbox (9.99756pt too wide) in paragraph at lines 41--62
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 41--58
 $[]$ 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 66.
+Package mdframed Info: mdframed works in twoside mode on input line 62.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 66.
+(mdframed)              on input line 62.
+LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
+(Font)              scaled to size 7.08101pt on input line 66.
+LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
+(Font)              scaled to size 5.335pt on input line 66.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 68.
+(mdframed)              on input line 67.
 LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
-(Font)              scaled to size 11.64001pt on input line 71.
+(Font)              scaled to size 11.64001pt on input line 70.
 
 Package hyperref Warning: bookmark level for unknown mtocsubsection defaults to 0.
 
@@ -2774,15 +2778,25 @@ l.74
 {/usr/share/texmf-dist/fonts/enc/dvips/newpx/px-lms.enc} <./images/makeTour.png>] (build/main.mw)
 \openout4 = `main.mw'.
 
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 119.
+ (/usr/share/texmf-dist/tex/latex/bera/t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 8.50006pt on input line 119.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `fvm' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/zpllf/b/it' will be
 (Font)              scaled to size 9.70001pt on input line 119.
 
-Overfull \hbox (9.99756pt too wide) in paragraph at lines 88--122
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 87--121
 $[]$ 
  []
 
 
-Overfull \hbox (9.99756pt too wide) in paragraph at lines 132--148
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 131--147
 $[]$ 
  []
 
@@ -2790,61 +2804,36 @@ $[]$
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.150 \subsubsection
+l.149 \subsubsection
                     {Cut}
 \openout4 = `main.mw'.
 
- [2{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] (build/main.mw)
+ [2{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}] (build/main.mw)
 \openout4 = `main.mw'.
 
-LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
-(Font)              scaled to size 7.08101pt on input line 170.
-LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
-(Font)              scaled to size 5.335pt on input line 170.
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 175.
- (/usr/share/texmf-dist/tex/latex/bera/t1fvm.fd
-File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
-)
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 175.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `fvm' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/zpllf/m/it' will be
-(Font)              scaled to size 7.08101pt on input line 182.
+(Font)              scaled to size 7.08101pt on input line 185.
 LaTeX Font Info:    Font shape `T1/zpllf/m/it' will be
-(Font)              scaled to size 5.335pt on input line 182.
+(Font)              scaled to size 5.335pt on input line 185.
 
-Overfull \hbox (9.99756pt too wide) in paragraph at lines 159--200
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 158--206
 $[]$ 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 203.
+Package mdframed Info: mdframed works in twoside mode on input line 209.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 203.
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 203.
+(mdframed)              on input line 209.
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 209.
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.84 
-     
-\openout4 = `main.mw'.
-
- [3{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}] (build/main.mw)
-\openout4 = `main.mw'.
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.85 \pagelayout{wide}
                        % No margins
 \openout4 = `main.mw'.
 
- [4] (build/main.mw)
+ [3] (build/main.mw)
 \openout4 = `main.mw'.
 
 *geometry* verbose mode - [ newgeometry ] result:
@@ -2880,6 +2869,21 @@ l.85 \pagelayout{wide}
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.86 \addpart{Struttura dati}
+                             
+\openout4 = `main.mw'.
+
+ [4
+
+
+
+] (build/main.mw)
+\openout4 = `main.mw'.
+
+
 part without number
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
 (Font)              scaled to size 22.44386pt on input line 86.
@@ -2897,11 +2901,7 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
 \openout4 = `main.mw'.
 
-[5
-
-
-
-] (build/main.mw)
+[5] (build/main.mw)
 \openout4 = `main.mw'.
 
 \openout4 = `main.mw'.
@@ -3032,7 +3032,7 @@ Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input l
  [11] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/rotazioneSS.png, id=340, 1461.46pt x 514.92375pt>
+<images/rotazioneSS.png, id=332, 1461.46pt x 514.92375pt>
 File: images/rotazioneSS.png Graphic file (type png)
 <use images/rotazioneSS.png>
 Package pdftex.def Info: images/rotazioneSS.png  used on input line 313.
@@ -3042,7 +3042,7 @@ Package pdftex.def Info: images/rotazioneSS.png  used on input line 313.
  [12] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/rotazioneSinistroDestro.png, id=348, 2761.31625pt x 657.45625pt>
+<images/rotazioneSinistroDestro.png, id=340, 2761.31625pt x 657.45625pt>
 File: images/rotazioneSinistroDestro.png Graphic file (type png)
 <use images/rotazioneSinistroDestro.png>
 Package pdftex.def Info: images/rotazioneSinistroDestro.png  used on input line 323.
@@ -3056,12 +3056,12 @@ Package mdframed Info: mdframed detected package amsthm
  [13 <./images/rotazioneSS.png> <./images/rotazioneSinistroDestro.png>] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/triangoloDS.png, id=364, 442.65375pt x 442.65375pt>
+<images/triangoloDS.png, id=356, 442.65375pt x 442.65375pt>
 File: images/triangoloDS.png Graphic file (type png)
 <use images/triangoloDS.png>
 Package pdftex.def Info: images/triangoloDS.png  used on input line 358.
 (pdftex.def)             Requested size: 135.72177pt x 135.72177pt.
-<images/lineaDestra.png, id=365, 603.25375pt x 402.50375pt>
+<images/lineaDestra.png, id=357, 603.25375pt x 402.50375pt>
 File: images/lineaDestra.png Graphic file (type png)
 <use images/lineaDestra.png>
 Package pdftex.def Info: images/lineaDestra.png  used on input line 364.
@@ -3081,17 +3081,17 @@ l.389     Ã
  [14 <./images/triangoloDS.png> <./images/lineaDestra.png>] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/fratelloRosso.png, id=383, 1280.785pt x 512.91624pt>
+<images/fratelloRosso.png, id=375, 1280.785pt x 512.91624pt>
 File: images/fratelloRosso.png Graphic file (type png)
 <use images/fratelloRosso.png>
 Package pdftex.def Info: images/fratelloRosso.png  used on input line 409.
 (pdftex.def)             Requested size: 135.70784pt x 54.34694pt.
-<images/nipoteVicinoRosso.png, id=384, 1446.40375pt x 623.32875pt>
+<images/nipoteVicinoRosso.png, id=376, 1446.40375pt x 623.32875pt>
 File: images/nipoteVicinoRosso.png Graphic file (type png)
 <use images/nipoteVicinoRosso.png>
 Package pdftex.def Info: images/nipoteVicinoRosso.png  used on input line 415.
 (pdftex.def)             Requested size: 135.71037pt x 58.48448pt.
-<images/nipoteLontanoRosso.png, id=385, 1366.10374pt x 502.87875pt>
+<images/nipoteLontanoRosso.png, id=377, 1366.10374pt x 502.87875pt>
 File: images/nipoteLontanoRosso.png Graphic file (type png)
 <use images/nipoteLontanoRosso.png>
 Package pdftex.def Info: images/nipoteLontanoRosso.png  used on input line 421.
@@ -3213,29 +3213,71 @@ Overfull \hbox (9.99756pt too wide) in paragraph at lines 126--151
 $[]$ 
  []
 
-<images/rerootingEfficente.png, id=485, 931.48pt x 637.38126pt>
+LaTeX Font Info:    Font shape `U/BOONDOX-calo/m/n' will be
+(Font)              scaled to size 10.0pt on input line 156.
+LaTeX Font Info:    Font shape `U/BOONDOX-calo/m/n' will be
+(Font)              scaled to size 7.3pt on input line 156.
+LaTeX Font Info:    Font shape `U/BOONDOX-calo/m/n' will be
+(Font)              scaled to size 5.5pt on input line 156.
+LaTeX Font Info:    Font shape `U/BOONDOX-calo/m/n' will be
+(Font)              scaled to size 9.0pt on input line 159.
+\openout4 = `main.mw'.
+
+[21] (build/main.mw)
+\openout4 = `main.mw'.
+
+<images/rerootingEfficente.png, id=500, 877.2775pt x 655.44875pt>
 File: images/rerootingEfficente.png Graphic file (type png)
 <use images/rerootingEfficente.png>
-Package pdftex.def Info: images/rerootingEfficente.png  used on input line 167.
-(pdftex.def)             Requested size: 135.70784pt x 92.86043pt.
+Package pdftex.def Info: images/rerootingEfficente.png  used on input line 191.
+(pdftex.def)             Requested size: 135.70888pt x 101.39348pt.
+
+Overfull \hbox (20.3315pt too wide) in paragraph at lines 203--204
+[]\T1/zpllf/b/n/10 (-20) Normalizzazione del-le ra-di-ci: \T1/zpllf/m/n/10 (-20) Si ese-guo-no le ope-ra-zio-ni $[]\LMS/npxsy/m/n/10 ¹\OML/npxmi/m/it/10 T[]; u\LMS/npxsy/m/n/10 º$
+ []
+
 \openout4 = `main.mw'.
 
-[21 <./images/rerootingEfficente.png>] (build/main.mw)
+[22 <./images/rerootingEfficente.png>] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/linkEfficiente.png, id=515, 1012.78375pt x 604.2575pt>
-File: images/linkEfficiente.png Graphic file (type png)
-<use images/linkEfficiente.png>
-Package pdftex.def Info: images/linkEfficiente.png  used on input line 185.
-(pdftex.def)             Requested size: 135.71541pt x 80.97192pt.
-File: images/linkEfficiente.png Graphic file (type png)
-<use images/linkEfficiente.png>
-Package pdftex.def Info: images/linkEfficiente.png  used on input line 197.
-(pdftex.def)             Requested size: 135.71541pt x 80.97192pt.
+<images/linkEfficente.png, id=515, 1003.75pt x 464.73625pt>
+File: images/linkEfficente.png Graphic file (type png)
+<use images/linkEfficente.png>
+Package pdftex.def Info: images/linkEfficente.png  used on input line 213.
+(pdftex.def)             Requested size: 135.71483pt x 62.83595pt.
+
+Overfull \hbox (5.82567pt too wide) in paragraph at lines 225--227
+[]\T1/zpllf/b/n/10 (-20) Prima de-com-po-si-zio-ne (Split): \T1/zpllf/m/n/10 (-20) Si ese-gue l'o-pe-ra-zio-ne di $[]\LMS/npxsy/m/n/10 ¹\OML/npxmi/m/it/10 T; e[]\LMS/npxsy/m/n/10 º$
+ []
+
+
+Overfull \hbox (9.22736pt too wide) in paragraph at lines 231--232
+[]\T1/zpllf/b/n/10 (-20) Secondo ac-ces-so al-la se-quen-za:\T1/zpllf/m/n/10 (-20) Si in-ter-ro-ga la hash map $[]\LMS/npxsy/m/n/10 »\OML/npxmi/m/it/10 v; u\LMS/npxsy/m/n/10 ¼$
+ []
+
+
+Overfull \hbox (19.31099pt too wide) in paragraph at lines 232--234
+[]\T1/zpllf/b/n/10 (-20) Seconda de-com-po-si-zio-ne (Split):\T1/zpllf/m/n/10 (-20) Si ese-gue l'o-pe-ra-zio-ne di $[]\LMS/npxsy/m/n/10 ¹\OML/npxmi/m/it/10 T[]; e[]\LMS/npxsy/m/n/10 º$\T1/zpllf/m/n/10 (-20) .
+ []
+
+<images/cutEfficente.png, id=516, 1096.095pt x 648.4225pt>
+File: images/cutEfficente.png Graphic file (type png)
+<use images/cutEfficente.png>
+Package pdftex.def Info: images/cutEfficente.png  used on input line 246.
+(pdftex.def)             Requested size: 135.70699pt x 80.28087pt.
 )
 \openout4 = `main.mw'.
 
- [22 <./images/linkEfficiente.png>] (build/main.mw)
+ [23 <./images/linkEfficente.png> <./images/cutEfficente.png>] (build/main.mw)
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+ [24
+
+
+] (build/main.mw)
 \openout4 = `main.mw'.
 
 *geometry* verbose mode - [ newgeometry ] result:
@@ -3272,16 +3314,14 @@ Package pdftex.def Info: images/linkEfficiente.png  used on input line 197.
 
 \openout4 = `main.mw'.
 
- [23
-
-
+ [25
 
 ] (build/main.mw)
 \openout4 = `main.mw'.
 
 \openout4 = `main.mw'.
 
- [24
+ [26
 
 
 
@@ -3293,7 +3333,7 @@ chapter without number
 (./main.gls)
 \openout4 = `main.mw'.
 
- [25] (build/main.mw)
+ [27] (build/main.mw)
 \openout4 = `main.mw'.
 
 \openout4 = `main.mw'.
@@ -3306,7 +3346,7 @@ chapter without number
 
 \openout4 = `main.mw'.
 
- [26
+ [28
 
 
 ] (build/main.mw)
@@ -3534,6 +3574,10 @@ runsystem(makeindex main.idx)...executed.
 
 \openout4 = `main.mw'.
 
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
 )
  ***********
 LaTeX2e <2025-11-01>
@@ -3556,18 +3600,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 63344 strings out of 469504
- 1275481 string characters out of 5470379
- 2550357 words of memory out of 5000000
- 89730 multiletter control sequences out of 15000+600000
- 769937 words of font info for 287 fonts, out of 8000000 for 9000
+ 63386 strings out of 469504
+ 1276226 string characters out of 5470379
+ 2550434 words of memory out of 5000000
+ 89749 multiletter control sequences out of 15000+600000
+ 771492 words of font info for 296 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  122i,20n,159p,11227b,2267s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on build/main.pdf (30 pages, 579365 bytes).
+</usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/share/texmf-dist/fonts/type1/public/boondox/zxxrw8a.pfb>
+Output written on build/main.pdf (32 pages, 650136 bytes).
 PDF statistics:
- 736 PDF objects out of 1000 (max. 8388607)
- 650 compressed objects within 7 object streams
+ 750 PDF objects out of 1000 (max. 8388607)
+ 658 compressed objects within 7 object streams
  350 named destinations out of 1000 (max. 500000)
- 67775 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 67780 words of extra memory for PDF output out of 74296 (max. 10000000)
 
