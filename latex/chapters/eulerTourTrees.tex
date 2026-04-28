@@ -69,8 +69,7 @@ Il ciclo euleriano è strettamente connesso con la struttra dell'albero, ad esem
 \subsection{Operazioni}
 
 \subsubsection{isConnected}
-L'operazione \textbf{isConnected(u,v)} è la più semplice poichè è sufficente verificare che i due nodi $u$ e $v$ si trovino nello stesso ciclo euleriano, per farlo basta verificare che il primo elemento della sequanza sia il medesimo per i due nodi  
-link, cut e rerooting
+L'operazione \textbf{isConnected(u,v)} è la più semplice poichè è sufficente verificare che i due nodi $u$ e $v$ si trovino nello stesso ciclo euleriano, per farlo basta verificare che il primo elemento della sequanza sia il medesimo per i due nodi.
 
 \subsubsection{Rerooting}
 Prima di introdurre le altre operazioni introduciamo,
@@ -85,7 +84,7 @@ interno del ciclo euleriano il primo nodo del ciclo
 \end{enumerate}
 
 \begin{algorithm}[H]
-    \caption{Rerooting (Versione Archi)}
+    \caption{Rerooting}
     \label{alg:rerooting}
     \SetAlgoLined
     \DontPrintSemicolon
@@ -125,7 +124,7 @@ L'operazione \textbf{link(u,v)} permette di unire due alberi distinti aggiungend
 \begin{enumerate}
     \item A = rerooting(u)
     \item B = rerooting(v) 
-    \item concateno  $A + B + (v,u)$ 
+    \item concateno  $A + (u,v) + B + (v,u)$ 
 \end{enumerate}
 
 \begin{algorithm}[H]
@@ -142,7 +141,7 @@ L'operazione \textbf{link(u,v)} permette di unire due alberi distinti aggiungend
     $A \leftarrow rerooting(L,u)$\;
     $B \leftarrow rerooting(C,v)$\;
 
-    \Return $A + B + (v,u)$
+    \Return $A + (u,v) + B + (v,u)$
     
 \end{algorithm}
 
@@ -200,7 +199,7 @@ L'operazione \textbf{cut(u,v)} permette di separare un albero in due alberi dist
         $B \leftarrow B + L[k]$\;
     }
 
-\   text{elimino il primo e l'ultimo elemento di } $B$\;
+    \text{elimino il primo e l'ultimo elemento di } $B$\;
 
     \Return $(A + C)$, $B$ 
 \end{algorithm}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.19)  27 APR 2026 17:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.19)  28 APR 2026 09:24
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2767,7 +2767,7 @@ Package hyperref Warning: bookmark level for unknown mtocsubsection defaults to 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 
+l.73 
      
 \openout4 = `main.mw'.
 
@@ -2778,25 +2778,25 @@ l.74
 {/usr/share/texmf-dist/fonts/enc/dvips/newpx/px-lms.enc} <./images/makeTour.png>] (build/main.mw)
 \openout4 = `main.mw'.
 
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 119.
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 118.
  (/usr/share/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 119.
+(Font)              scaled to size 8.50006pt on input line 118.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/zpllf/b/it' will be
-(Font)              scaled to size 9.70001pt on input line 119.
+(Font)              scaled to size 9.70001pt on input line 118.
 
-Overfull \hbox (9.99756pt too wide) in paragraph at lines 87--121
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 86--120
 $[]$ 
  []
 
 
-Overfull \hbox (9.99756pt too wide) in paragraph at lines 131--147
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 130--146
 $[]$ 
  []
 
@@ -2804,7 +2804,7 @@ $[]$
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.149 \subsubsection
+l.148 \subsubsection
                     {Cut}
 \openout4 = `main.mw'.
 
@@ -2812,19 +2812,19 @@ l.149 \subsubsection
 \openout4 = `main.mw'.
 
 LaTeX Font Info:    Font shape `T1/zpllf/m/it' will be
-(Font)              scaled to size 7.08101pt on input line 185.
+(Font)              scaled to size 7.08101pt on input line 184.
 LaTeX Font Info:    Font shape `T1/zpllf/m/it' will be
-(Font)              scaled to size 5.335pt on input line 185.
+(Font)              scaled to size 5.335pt on input line 184.
 
-Overfull \hbox (9.99756pt too wide) in paragraph at lines 158--206
+Overfull \hbox (9.99756pt too wide) in paragraph at lines 157--205
 $[]$ 
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 209.
+Package mdframed Info: mdframed works in twoside mode on input line 208.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 209.
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 209.
+(mdframed)              on input line 208.
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 208.
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
@@ -3608,7 +3608,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  122i,20n,159p,11227b,2267s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/share/texmf-dist/fonts/type1/public/boondox/zxxrw8a.pfb>
-Output written on build/main.pdf (32 pages, 650136 bytes).
+Output written on build/main.pdf (32 pages, 650117 bytes).
 PDF statistics:
  750 PDF objects out of 1000 (max. 8388607)
  658 compressed objects within 7 object streams
