@@ -2393,9 +2393,11 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">HenzingerKing1999</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">tarjan1983data</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">CLRS09</bcf:citekey>
-    <bcf:citekeycount count="1">HenzingerKing1999</bcf:citekeycount>
+    <bcf:citekey order="2" intorder="1">HenzingerKing1999</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">HenzingerKing1999</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">tarjan1983data</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">CLRS09</bcf:citekey>
+    <bcf:citekeycount count="3">HenzingerKing1999</bcf:citekeycount>
     <bcf:citekeycount count="1">tarjan1983data</bcf:citekeycount>
     <bcf:citekeycount count="1">CLRS09</bcf:citekeycount>
   </bcf:section>

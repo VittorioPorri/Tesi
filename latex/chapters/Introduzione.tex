@@ -1,0 +1,27 @@
+\setchapterpreamble[u]{\margintoc}
+\chapter{Introduzione}
+\labch{Introduzione}
+
+In questa tesi esploreremo gli Euler Tour Trees 
+(ETT), una struttura dati dinamica introdotta da 
+Henzinger e King \cite{HenzingerKing1999}, 
+progettata per mantenere informazioni su foreste 
+soggette a modifiche strutturali.
+
+L'obiettivo è supportare operazioni di: 
+\begin{itemize}
+    \item \textbf{link(u,v)}: aggiungere un arco $(u,v)$ unendo due alberi.
+    \item \textbf{cut(u,v)}: rimuovere l'arco $(u,v)$ dividendo l'albero in due.
+    \item \textbf{isConnected(u,v)}: verificare se $u$ e $v$ appartengono allo stesso albero.
+\end{itemize}
+
+Il presente lavoro di tesi si propone di sistematizzare ed estendere il framework teorico relativo 
+alla struttura dati introdotta da Henzinger e King \cite{HenzingerKing1999}. L’obiettivo principale è 
+stato quello di colmare le lacune informative presenti nel contributo originale, descrivendole in maniera 
+esaustiva e rigorosa di tutti i dettagli implementativi necessari alla piena comprensione del suo funzionamento.\\
+
+Un elemento di forte originalità della ricerca risiede nella scelta dell'architettura sottostante: 
+a differenza delle implementazioni convenzionali basate sugli Splay Tree, si è scelto di adottare i Red-Black Tree. 
+Tale approccio garantisce il mantenimento di un costo computazionale logaritmico nel caso peggiore, 
+offrendo una maggiore stabilità prestazionale rispetto alle strutture auto-bilancianti basate sull'accesso.
+

@@ -1,13 +1,13 @@
 \setchapterpreamble[u]{\margintoc}
-\chapter{Le Ottimizzazioni}
-\labch{Ottimizzazioni}
+\chapter{Gli alberi Euler-Tour}
+\labch{ET}
 
 \section{Size}
 Negli Euler Tour Trees, la struttura deve gestire sequenze 
 dinamiche dove la posizione dei nodi cambia continuamente a
-causa di cut e link. Per trasformare i RB-Trees una struttra
-dati dinamica abbiamo bisongo di eliminare il concetto
-di chiavi statiche introducendone uno che gestiche le chiavi 
+causa di cut e link. Per trasformare i RB-Trees una struttura
+dati dinamica abbiamo bisogno di eliminare il concetto
+di chiavi statiche introducendone uno che gestisce le chiavi 
 in maniera implicita.\\
 L'idea fondamentale è che la posizione di un nodo nella 
 sequenza non è determinata da un valore fisso, ma dalla 
@@ -240,7 +240,7 @@ La procedura si articola nelle seguenti fasi:
     \item \textbf{Ricomposizione della sequenza (Join):} Si procede alla ricomposizione della sequenza utilizzando $P$ come elemento di giunzione, si esegue:
     \[ T_{new} = \text{join}(T_L, P, T'_R) \]
 \end{enumerate}
-In questo modo abbiamo otternuo $T'_L$ che rappresenta il tour euleriana del sottoalbero radicato in $v$ e $T_{new}$ che rappresenta l'albero originale senza il sottoalbero $T'_L$
+In questo modo abbiamo ottenuto $T'_L$ che rappresenta il tour euleriana del sottoalbero radicato in $v$ e $T_{new}$ che rappresenta l'albero originale senza il sottoalbero $T'_L$
 
 \begin{marginfigure}
     \includegraphics{cutEfficente.png}

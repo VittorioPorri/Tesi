@@ -1,22 +1,20 @@
 \setchapterpreamble[u]{\margintoc}
-\chapter{Euler Tour Trees}
-\labch{Introduzione}
+\chapter{Il Problema della Connettività Dinamica su foreste}
+\labch{connectivita}
 
-In questa tesi esploreremo gli Euler Tour Trees 
-(ETT), una struttura dati dinamica introdotta da 
-Henzinger e King \cite{HenzingerKing1999}, 
-progettata per mantenere informazioni su foreste 
-soggette a modifiche strutturali.
+Il problema della connettività dinamica consiste nel mantenere aggiornate le informazioni 
+sulla struttura di un grafo soggetto a modifiche topologiche repentine. Nel caso specifico delle 
+foreste, l'obiettivo è la gestione di una collezione di alberi disgiunti tramite le operazioni di 
+link e cut.\\
 
-L'obiettivo è supportare operazioni di: 
-\begin{itemize}
-    \item \textbf{link(u,v)}: aggiungere un arco $(u,v)$ unendo due alberi.
-    \item \textbf{cut(u,v)}: rimuovere l'arco $(u,v)$ dividendo l'albero in due.
-    \item \textbf{isConnected(u,v)}: verificare se $u$ e $v$ appartengono allo stesso albero.
-\end{itemize}
+\begin{definition}
+    Una foresta è un grafo aciclico non orientato
+\end{definition}
 
-A differenza di altre strutture che operano direttamente sui nodi,
-gli ETT si basano sulla linearizzazione dell'albero 
+Per gestire queste operazioni in modo efficiente, Henzinger e King 
+\cite{HenzingerKing1999} introducono gli Euler Tour Trees (ETT). 
+Questa struttura dati a differenza di altre strutture che operano 
+direttamente sui nodi, si basa sulla linearizzazione dell'albero 
 tramite cicli di Eulero. Questa rappresentazione
 permette di ridurre complessi problemi di connettività 
 a semplici manipolazioni di sequenze.
@@ -57,13 +55,13 @@ L'idea della stuttura dati è quella di creare il ciclo euleriano visitando l'al
 
 \end{algorithm}
 
-Il ciclo euleriano è strettamente connesso con la struttra dell'albero, ad esempio si osserva che la sequanza (A,B), \textbf{(B,D), (D,B), (B,E), (E,B)}, (B,A), (A,C), (C,A) rappresenta il sottoalbero radicato in B
+Il ciclo euleriano è strettamente connesso con la struttura dell'albero; ad esempio si osserva che la sequenza evidenziata (A,B), \textbf{(B,D), (D,B), (B,E), (E,B)}, (B,A), (A,C), (C,A) rappresenta il sottoalbero radicato in B
 
 \begin{kaobox}[frametitle = Claim]
     Sia $S$ la sequenza di archi che descrive 
     il tour euleriamo per ogni nodo $v$ il 
-    sottoalbero radicato in $v$ è rappresenta dall'intervallo 
-    contiguo va dal primo arco che ha $(v,\_)$ fino all'ultimo arco che contiene $(\_,v)$    
+    sottoalbero radicato in $v$ è rappresentato dall'intervallo 
+    contiguo che va dal primo arco che ha $(v,\_)$ fino all'ultimo arco che contiene $(\_,v)$    
 \end{kaobox}\setchapterpreamble[u]{\margintoc}
 
 \subsection{Operazioni}
@@ -72,11 +70,10 @@ Il ciclo euleriano è strettamente connesso con la struttra dell'albero, ad esem
 L'operazione \textbf{isConnected(u,v)} è la più semplice poichè è sufficente verificare che i due nodi $u$ e $v$ si trovino nello stesso ciclo euleriano, per farlo basta verificare che il primo elemento della sequanza sia il medesimo per i due nodi.
 
 \subsubsection{Rerooting}
-Prima di introdurre le altre operazioni introduciamo,
+Prima di introdurre le altre operazioni introduciamo
 un'operazione ausiliaria \textbf{rerooting(T,v)}, 
 tale operazione ha il compito di rendere un nodo 
-interno del ciclo euleriano il primo nodo del ciclo
-, per farlo seguiamo i seguenti passaggi:
+interno del ciclo euleriano il primo nodo del ciclo, per farlo seguiamo i seguenti passaggi:
 
 \begin{enumerate}
     \item si cerca una occorrenza che ha $(v,c)$ (dove $c$ è un figlio casuale di v) nel ciclo euleriano, e si separa la sequanza in A che conterrà tutto ciò che c'era prima di tale arco e B che conterrà l'arco $(v,c)$ e tutto ciò che c'è dopo
@@ -146,10 +143,10 @@ L'operazione \textbf{link(u,v)} permette di unire due alberi distinti aggiungend
 \end{algorithm}
 
 \subsubsection{Cut}
-L'operazione \textbf{cut(u,v)} permette di separare un albero in due alberi distinti, eliminando l'arco $(u,v)$ crando due nuovi alberi radicati rispettivamente in $u$ e $v$, per farlo seguiamo i seguenti passaggi:
+L'operazione \textbf{cut(u,v)} permette di separare un albero in due alberi distinti. Eliminando l'arco $(u,v)$ creiamo due nuovi alberi radicati rispettivamente in $u$ e $v$, per farlo seguiamo i seguenti passaggi:
 \begin{enumerate}
     \item rerooting(T,v)
-    \item si cerca la sequanza $(u,v)$ e $(v,u)$ e si separea in A che conterrà tutto ciò che c'era prima di $(u,v)$, B che conterrà $(u,v)$ e $(v,u)$ e tutto ciò che c'è tra i due e C che contiene ciò che c'è dopo $(v,u)$
+    \item si cerca la sequenza $(u,v)$ e $(v,u)$ e si separa in A che conterrà tutto ciò che c'era prima di $(u,v)$, B che conterrà $(u,v)$ e $(v,u)$ e tutto ciò che c'è tra i due e C che contiene ciò che c'è dopo $(v,u)$
     \item si eliminano il primo e l'ultimo elemento in $B$
     \item si restituisce $A + C$ e $B$
 \end{enumerate}
@@ -205,7 +202,8 @@ L'operazione \textbf{cut(u,v)} permette di separare un albero in due alberi dist
 \end{algorithm}
 
  \begin{remark}
-    Tutte queste implementazioni delle operazioni però hanno costo proporzionale alla dimensione del ciclo euleriano dunque il loro costo sara $O(n)$
+    Tutte queste implementazioni delle operazioni però hanno costo proporzionale alla dimensione del ciclo euleriano, dunque il loro costo sarà $O(n)$
  \end{remark}
 
-L'obbiettivo quindi sara quello di introdurre una struttra dati che ci permetterà di eseguire queste operazioni in maniera molto piu efficente
+Introduciamo una struttura dati che ci permetterà di eseguire queste operazioni in maniera molto piu efficente.
+

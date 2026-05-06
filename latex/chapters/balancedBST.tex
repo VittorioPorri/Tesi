@@ -294,11 +294,11 @@ Risistemando i termini
 
 Dalla \textit{Proprietà del Nonno}, sappiamo che lungo ogni cammino non possono esserci due nodi rossi consecutivi. Questo implica che l'altezza fisica $h$ dell'albero può essere al massimo il doppio del rango della radice ($h \leq 2k$). 
 
-Utilizzando entrambe le disuguaglianze trovata per $k$:
+Utilizzando entrambe le disuguaglianze trovate per $k$:
 \[ h \leq 2k \leq \log_2(n+1) \]
 \end{proof}
 
-Le operazioni di inserimento (Insert) e di cancellazione (Delete) sono le medesime degli alberi binari tuttavia potrebbero rovinare il bilanciamento e violare le proprietà dell'albero quindi abbiamo bisogno di alcune operazioni ausiliarie che ripristino tutte le proprietà dei red-blak trees 
+Le operazioni di inserimento (Insert) e di cancellazione (Delete) sono le medesime degli alberi binari, tuttavia potrebbero rovinare il bilanciamento e violare le proprietà dell'albero quindi abbiamo bisogno di alcune operazioni ausiliarie che ripristinano tutte le proprietà dei red-black trees 
 
 \subsubsection{Rotazioni e Ribilanciamento}
 
@@ -342,7 +342,7 @@ Sia $v$ il nodo sbilanciato possiamo distinguere quattro casi fondamentali in ba
 
 L'inserimento di un elemento in un \textit{Red-Black Tree} (RBT) è un'operazione composta che integra la logica strutturale degli alberi binari di ricerca con un protocollo di ripristino delle proprietà cromatiche.
 
-Sia $v$ il nodo da inserire nell'albero $T$, si colora il nodo $v$ di \textbf{rosso} e si seguendo l'algoritmo di inserimento standard per i BST.
+Sia $v$ il nodo da inserire nell'albero $T$, si colora il nodo $v$ di \textbf{rosso} e si segue l'algoritmo di inserimento standard per i BST.
 
 \paragraph{Analisi della politica di colorazione}
 La scelta di assegnare il colore rosso al nuovo nodo $v$ è dettata dalla necessità di limitare le potenziali violazioni alle proprietà strutturali dell'RBT:
@@ -428,7 +428,7 @@ Il comportamento dell'algoritmo è determinato dal colore del fratello $f$ e dei
     Se $f$ è rosso, il padre $p[x]$ deve essere necessariamente nero. Si esegue una rotazione (sinistra se $x$ è figlio sinistro, destra se $x$ è figlio destro come nel \ref{fig:fratello-rosso}) su $p[x]$ e si scambiano i colori tra $p[x]$ e $f$. Questa operazione trasforma la configurazione in uno dei casi 2, 3 o 4, dove il nuovo fratello di $x$ è nero.
 
     \item \textbf{Caso 2: Fratello $f$ e nipoti entrambi neri.}
-    In questa situazione, vengono ricolorati $x$ e da $f$ di rosso ora controllo $p[x]$. 
+    In questa situazione, vengono ricolorati $x$ e da $f$ di rosso, ora si procede esegue un controllo su $p[x]$.
     \begin{itemize}
         \item Se $p[x]$ era rosso, esso diventa semplicemente nero e la procedura termina.
         \item Se $p[x]$ era già nero, allora la procedura \texttt{fixDelete} viene richiamata ricorsivamente verso l'alto su $p[x]$.
@@ -521,7 +521,7 @@ L'operazione di \texttt{split}$(T, v)$ divide l'albero $T$ in due alberi $T_L$ e
             \item Se il nodo $n$ è rosso i figli $n.left$ e $n.right$ avranno rank minore di 1 mentre il padre sarà necessariamente nero e avra $rank(n.parent) = rank(n)$.Di conseguenza il suo figlio sinistro di $n.parent$ ossia $S_i$ dovra avere se è rosso $rank(S_i) = rank(n.parent)$ mentre se è nero avrà lo stesso rank dei figli di $n$ ossia $rank(S_i) = rank(n.left)$ e $rank(S_i) = rank(n.right)$
         \end{itemize}
         In entrambi i casi $rank(S_i)$ sarà o uguale o maggiore di 1 rispetto al rank dei nipoti\\
-        L'accumulato $T_{L,i}$ è il risultato delle join effettuate con sottoalberi aventi rank minore o uguale a $S_i$ e siccome la funione join come abbiamo visto preserva il rank possiamo concluedere che $rank(S_i) \geq rank(T_{L,i})$
+        L'accumulato $T_{L,i}$ è il risultato delle join effettuate con sottoalberi aventi rank minore o uguale a $S_i$ e siccome la funzione join come abbiamo visto preserva il rank possiamo concluedere che $rank(S_i) \geq rank(T_{L,i})$
     \end{proof} 
     Siccome $rank(S_i) \geq rank(T_{L,i})$, avremo che $rank(T_{L,i+1})= rank(S_i)$ oppure $rank(T_{L,i+1})= rank(S_i)+1$, quindi possiamo scrivere che  $rank(T_{L,i+1}) \approx rank(S_i)$
     

@@ -19,7 +19,7 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{HenzingerKing1999}{article}{}{1}
+    \entry{HenzingerKing1999}{article}{}{3}
       \name{author}{2}{}{%
         {{hash=8397503437f589797f52937b49c16620}{%
            family={Henzinger},
@@ -78,8 +78,8 @@
       \strng{authornamehash}{09f1ee63063ed5ad11c3baa87f800eb7}
       \strng{authorfullhash}{09f1ee63063ed5ad11c3baa87f800eb7}
       \strng{authorfullhashraw}{09f1ee63063ed5ad11c3baa87f800eb7}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0-89871-187-5}
@@ -122,8 +122,8 @@
       \strng{authornamehash}{c251cdfd036d9474565c517e73c19c5d}
       \strng{authorfullhash}{10f004e08c7c03d98be0da1231a869ce}
       \strng{authorfullhashraw}{10f004e08c7c03d98be0da1231a869ce}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3rd}
