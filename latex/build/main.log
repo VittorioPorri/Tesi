@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.19)  6 MAY 2026 11:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.19)  6 MAY 2026 12:43
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1859,7 +1859,7 @@ Package glossaries Info: Writing glossary file main.glo on input line 37.
 \openout4 = `main.nlo'.
 
 Package nomencl Info: Writing nomenclature file main.nlo on input line 40.
- (/usr/share/texmf-dist/tex/latex/scrhack/scrhack.sty
+ (./chapters/intestazione.tex) (/usr/share/texmf-dist/tex/latex/scrhack/scrhack.sty
 Package: scrhack 2024-09-04 v3.42 scrhack emulation package
  (/usr/share/texmf-dist/tex/latex/floatrowbytocbasic/floatrowbytocbasic.sty
 Package: floatrowbytocbasic 2023-08-16 v1.0 improved floatrow package using tocbasic
@@ -1867,7 +1867,7 @@ Package: floatrowbytocbasic 2023-08-16 v1.0 improved floatrow package using tocb
 Package: setspaceenhanced 2024-11-12 v1.04 improved setspace package
 ))
 LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
-(Font)              scaled to size 9.70001pt on input line 47.
+(Font)              scaled to size 9.70001pt on input line 48.
  Replaced itshape by thfamily in theorem style plain.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1881,44 +1881,44 @@ LaTeX Warning: Unused global option(s):
 (build/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 47.
-LaTeX Font Info:    Trying to load font information for OML+npxmi on input line 47.
+LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 48.
+LaTeX Font Info:    Trying to load font information for OML+npxmi on input line 48.
  (/usr/share/texmf-dist/tex/latex/newpx/omlnpxmi.fd
 File: omlnpxmi.fd 2013/03/21 Fontinst v1.933 font definitions for OML/npxmi.
 )
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 47.
-LaTeX Font Info:    Trying to load font information for U+npxexa on input line 47.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 48.
+LaTeX Font Info:    Trying to load font information for U+npxexa on input line 48.
  (/usr/share/texmf-dist/tex/latex/newpx/unpxexa.fd
 File: unpxexa.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxexa.
 )
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 47.
-LaTeX Font Info:    Trying to load font information for LMS+npxsy on input line 47.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 48.
+LaTeX Font Info:    Trying to load font information for LMS+npxsy on input line 48.
  (/usr/share/texmf-dist/tex/latex/newpx/lmsnpxsy.fd
 File: lmsnpxsy.fd 2016/07/04 Fontinst v1.933 font definitions for LMS/npxsy.
 )
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 47.
-LaTeX Font Info:    Trying to load font information for LMX+npxexx on input line 47.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 48.
+LaTeX Font Info:    Trying to load font information for LMX+npxexx on input line 48.
  (/usr/share/texmf-dist/tex/latex/newpx/lmxnpxexx.fd
 File: lmxnpxexx.fd 2016/07/04 Fontinst v1.933 font definitions for LMX/npxexx.
 )
-LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    ... okay on input line 48.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count618
@@ -2004,13 +2004,13 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 47.
-Package microtype Info: Applying patch `item' on input line 47.
-Package microtype Info: Applying patch `toc' on input line 47.
-Package microtype Info: Applying patch `eqnum' on input line 47.
-Package microtype Info: Applying patch `footnote' on input line 47.
-Package microtype Info: Applying patch `verbatim' on input line 47.
-LaTeX Info: Redefining \microtypesetup on input line 47.
+LaTeX Info: Redefining \microtypecontext on input line 48.
+Package microtype Info: Applying patch `item' on input line 48.
+Package microtype Info: Applying patch `toc' on input line 48.
+Package microtype Info: Applying patch `eqnum' on input line 48.
+Package microtype Info: Applying patch `footnote' on input line 48.
+Package microtype Info: Applying patch `verbatim' on input line 48.
+LaTeX Info: Redefining \microtypesetup on input line 48.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2042,9 +2042,9 @@ Package caption Info: rotating package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \@sidenotes@extrawidth=\skip302
-Package hyperref Info: Link coloring ON on input line 47.
+Package hyperref Info: Link coloring ON on input line 48.
 \c@lstlisting=\count624
-Package tocbasic Info: setting babel extension for `lol' on input line 47.
+Package tocbasic Info: setting babel extension for `lol' on input line 48.
 \scr@dte@lstlisting@maxnumwidth=\skip303
  (/usr/share/texmf-dist/tex/latex/floatrow/fr-longtable.sty
 Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
@@ -2055,8 +2055,8 @@ Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 \Etoc@tf=\read7
 \c@mv@tabular=\count626
 \c@mv@boldtabular=\count627
-LaTeX Info: Command `\dddot' is already robust on input line 47.
-LaTeX Info: Command `\ddddot' is already robust on input line 47.
+LaTeX Info: Command `\dddot' is already robust on input line 48.
+LaTeX Info: Command `\ddddot' is already robust on input line 48.
  (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2025-06-23 v0.14 Display of landscape pages in PDF
  (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -2070,8 +2070,8 @@ Package lscapeenhanced Info: \landscape patched to make \textheight change optio
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-LaTeX Info: Redefining \it@ocap on input line 47.
-LaTeX Info: Redefining \it@ccap on input line 47.
+LaTeX Info: Redefining \it@ocap on input line 48.
+LaTeX Info: Redefining \it@ccap on input line 48.
 Package biblatex Info: Trying to load language 'italian'...
 Package biblatex Info: ... file 'italian.lbx' found.
  (/usr/share/texmf-dist/tex/latex/biblatex/lbx/italian.lbx
@@ -2089,59 +2089,90 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (build/main.bbl)
-Package biblatex Info: Reference section=0 on input line 47.
-Package biblatex Info: Reference segment=0 on input line 47.
-LaTeX Font Info:    Trying to load font information for T1+qhv on input line 56.
- (/usr/share/texmf-dist/tex/latex/tex-gyre/t1qhv.fd
-File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
-)
-LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 9.02084pt on input line 56.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `qhv' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 9.02084pt on input line 56.
-LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 18.70923pt on input line 56.
+Package biblatex Info: Reference section=0 on input line 48.
+Package biblatex Info: Reference segment=0 on input line 48.
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(85.35826pt, 426.78821pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 674.32588pt, 85.35826pt)
+* \paperwidth=597.50473pt
+* \paperheight=845.0424pt
+* \textwidth=426.78821pt
+* \textheight=674.32588pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-33.2096pt
+* \headheight=15.0pt
+* \headsep=31.29787pt
+* \topskip=10.0pt
+* \footskip=42.0pt
+* \marginparwidth=112.03273pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
-(Font)              scaled to size 13.968pt on input line 56.
-LaTeX Font Info:    Trying to load font information for OT1+minzpl on input line 56.
+(Font)              scaled to size 11.64001pt on input line 52.
+LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
+(Font)              scaled to size 11.64001pt on input line 52.
+<images/TorVergataLogo.png, id=7, 729.72626pt x 172.645pt>
+File: images/TorVergataLogo.png Graphic file (type png)
+<use images/TorVergataLogo.png>
+Package pdftex.def Info: images/TorVergataLogo.png  used on input line 52.
+(pdftex.def)             Requested size: 360.78693pt x 85.35811pt.
+LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
+(Font)              scaled to size 13.968pt on input line 52.
+LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
+(Font)              scaled to size 13.968pt on input line 52.
+LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
+(Font)              scaled to size 9.70001pt on input line 52.
+LaTeX Font Info:    Trying to load font information for OT1+minzpl on input line 52.
  (/usr/share/texmf-dist/tex/latex/newpx/ot1minzpl.fd
 File: ot1minzpl.fd 2021/05/25 v1.0 font definition file for OT1/minzpl/TLF
 )
 LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
-(Font)              scaled to size 13.968pt on input line 56.
+(Font)              scaled to size 9.70001pt on input line 52.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `minzpl' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
-(Font)              scaled to size 10.18501pt on input line 56.
+(Font)              scaled to size 7.08101pt on input line 52.
 LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
-(Font)              scaled to size 7.663pt on input line 56.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 56.
+(Font)              scaled to size 5.335pt on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 56.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+npxmia on input line 56.
+LaTeX Font Info:    Trying to load font information for U+npxmia on input line 52.
  (/usr/share/texmf-dist/tex/latex/newpx/unpxmia.fd
 File: unpxmia.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxmia.
 )
-LaTeX Font Info:    Trying to load font information for U+npxsym on input line 56.
+LaTeX Font Info:    Trying to load font information for U+npxsym on input line 52.
  (/usr/share/texmf-dist/tex/latex/newpx/unpxsym.fd
 File: unpxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/npxsym.
 )
-LaTeX Font Info:    Trying to load font information for U+npxsyc on input line 56.
+LaTeX Font Info:    Trying to load font information for U+npxsyc on input line 52.
  (/usr/share/texmf-dist/tex/latex/newpx/unpxsyc.fd
 File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
 )
@@ -2151,8 +2182,7 @@ File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
 
 
 
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-lf.enc}] (build/main.mw)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-lf.enc} <./images/TorVergataLogo.png>] (build/main.mw)
 \openout4 = `main.mw'.
 
 \openout4 = `main.xdy'.
@@ -2613,7 +2643,7 @@ File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
 
 
 
-Package etoc Warning: \etocstandarddisplaystyle on input line 67
+Package etoc Warning: \etocstandarddisplaystyle on input line 63
 (etoc)                is deprecated.  Please use \etocclasstocstyle.
 
 \tf@toc=\write134
@@ -2624,38 +2654,43 @@ Package etoc Warning: \etocstandarddisplaystyle on input line 67
 [2
 
 
+
 ] (build/main.mw)
 \openout4 = `main.mw'.
 
-LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
-(Font)              scaled to size 20.11783pt on input line 71.
-LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
-(Font)              scaled to size 20.11783pt on input line 71.
-Package tocbasic Info: character protrusion at toc deactivated on input line 71.
-LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
-(Font)              scaled to size 9.70001pt on input line 71.
-LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
-(Font)              scaled to size 9.70001pt on input line 71.
-LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
-(Font)              scaled to size 7.08101pt on input line 71.
-LaTeX Font Info:    Font shape `OT1/minzpl/m/n' will be
-(Font)              scaled to size 5.335pt on input line 71.
+LaTeX Font Info:    Trying to load font information for T1+qhv on input line 67.
+ (/usr/share/texmf-dist/tex/latex/tex-gyre/t1qhv.fd
+File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
+)
+LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
+(Font)              scaled to size 9.02084pt on input line 67.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `qhv' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 10.82501pt on input line 71.
+(Font)              scaled to size 9.02084pt on input line 67.
+LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
+(Font)              scaled to size 18.70923pt on input line 67.
 LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
-(Font)              scaled to size 11.64001pt on input line 71.
+(Font)              scaled to size 20.11783pt on input line 67.
+LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
+(Font)              scaled to size 20.11783pt on input line 67.
+Package tocbasic Info: character protrusion at toc deactivated on input line 67.
+LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
+(Font)              scaled to size 10.82501pt on input line 67.
 LaTeX Font Info:    Font shape `T1/zpllf/m/sc' will be
-(Font)              scaled to size 11.64001pt on input line 71.
+(Font)              scaled to size 11.64001pt on input line 67.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/zpllf/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `T1/zpllf/b/sc' will be
-(Font)              scaled to size 11.64001pt on input line 71.
+(Font)              scaled to size 11.64001pt on input line 67.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/zpllf/b/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `T1/zpllf/m/sl' will be
-(Font)              scaled to size 9.70001pt on input line 78.
+(Font)              scaled to size 9.70001pt on input line 74.
 \openout4 = `main.mw'.
 
  [3{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-lf-pc.enc}] (build/main.mw)
@@ -2707,8 +2742,6 @@ Package marginnote Info: Margin note 5.1 is on absolute page 5 on input line 2.
 Package marginnote Info: xpos seems to be 70.56247pt on input line 2.
 LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
 (Font)              scaled to size 7.76001pt on input line 2.
-LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
-(Font)              scaled to size 13.968pt on input line 2.
 LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
 (Font)              scaled to size 8.73001pt on input line 2.
 \openout4 = `main.mw'.
@@ -2788,7 +2821,7 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 28.
-<images/makeTour.png, id=87, 482.80376pt x 362.35374pt>
+<images/makeTour.png, id=89, 482.80376pt x 362.35374pt>
 File: images/makeTour.png Graphic file (type png)
 <use images/makeTour.png>
 Package pdftex.def Info: images/makeTour.png  used on input line 34.
@@ -2813,8 +2846,6 @@ LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 65.
-LaTeX Font Info:    Font shape `T1/zpllf/b/n' will be
-(Font)              scaled to size 11.64001pt on input line 68.
 
 Package hyperref Warning: bookmark level for unknown mtocsubsection defaults to 0.
 
@@ -2926,16 +2957,16 @@ Package hyperref Info: bookmark level for unknown remark defaults to 0 on input 
 
 part without number
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 22.44386pt on input line 86.
+(Font)              scaled to size 22.44386pt on input line 82.
 LaTeX Font Info:    Font shape `T1/zpllf/m/n' will be
-(Font)              scaled to size 24.13362pt on input line 86.
+(Font)              scaled to size 24.13362pt on input line 82.
 LaTeX Font Info:    Font shape `T1/zpllf/m/sc' will be
-(Font)              scaled to size 24.13362pt on input line 86.
+(Font)              scaled to size 24.13362pt on input line 82.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/zpllf/m/sc/24.88'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `T1/zpllf/b/sc' will be
-(Font)              scaled to size 24.13362pt on input line 86.
+(Font)              scaled to size 24.13362pt on input line 82.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/zpllf/b/sc/24.88'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -3072,7 +3103,7 @@ Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input l
  [13] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/rotazioneSS.png, id=349, 1461.46pt x 514.92375pt>
+<images/rotazioneSS.png, id=350, 1461.46pt x 514.92375pt>
 File: images/rotazioneSS.png Graphic file (type png)
 <use images/rotazioneSS.png>
 Package pdftex.def Info: images/rotazioneSS.png  used on input line 313.
@@ -3082,7 +3113,7 @@ Package pdftex.def Info: images/rotazioneSS.png  used on input line 313.
  [14] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/rotazioneSinistroDestro.png, id=358, 2761.31625pt x 657.45625pt>
+<images/rotazioneSinistroDestro.png, id=359, 2761.31625pt x 657.45625pt>
 File: images/rotazioneSinistroDestro.png Graphic file (type png)
 <use images/rotazioneSinistroDestro.png>
 Package pdftex.def Info: images/rotazioneSinistroDestro.png  used on input line 323.
@@ -3096,12 +3127,12 @@ Package mdframed Info: mdframed detected package amsthm
  [15 <./images/rotazioneSS.png> <./images/rotazioneSinistroDestro.png>] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/triangoloDS.png, id=374, 442.65375pt x 442.65375pt>
+<images/triangoloDS.png, id=375, 442.65375pt x 442.65375pt>
 File: images/triangoloDS.png Graphic file (type png)
 <use images/triangoloDS.png>
 Package pdftex.def Info: images/triangoloDS.png  used on input line 358.
 (pdftex.def)             Requested size: 135.72177pt x 135.72177pt.
-<images/lineaDestra.png, id=375, 603.25375pt x 402.50375pt>
+<images/lineaDestra.png, id=376, 603.25375pt x 402.50375pt>
 File: images/lineaDestra.png Graphic file (type png)
 <use images/lineaDestra.png>
 Package pdftex.def Info: images/lineaDestra.png  used on input line 364.
@@ -3121,17 +3152,17 @@ l.389     Ã
  [16 <./images/triangoloDS.png> <./images/lineaDestra.png>] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/fratelloRosso.png, id=393, 1280.785pt x 512.91624pt>
+<images/fratelloRosso.png, id=394, 1280.785pt x 512.91624pt>
 File: images/fratelloRosso.png Graphic file (type png)
 <use images/fratelloRosso.png>
 Package pdftex.def Info: images/fratelloRosso.png  used on input line 409.
 (pdftex.def)             Requested size: 135.70784pt x 54.34694pt.
-<images/nipoteVicinoRosso.png, id=394, 1446.40375pt x 623.32875pt>
+<images/nipoteVicinoRosso.png, id=395, 1446.40375pt x 623.32875pt>
 File: images/nipoteVicinoRosso.png Graphic file (type png)
 <use images/nipoteVicinoRosso.png>
 Package pdftex.def Info: images/nipoteVicinoRosso.png  used on input line 415.
 (pdftex.def)             Requested size: 135.71037pt x 58.48448pt.
-<images/nipoteLontanoRosso.png, id=395, 1366.10374pt x 502.87875pt>
+<images/nipoteLontanoRosso.png, id=396, 1366.10374pt x 502.87875pt>
 File: images/nipoteLontanoRosso.png Graphic file (type png)
 <use images/nipoteLontanoRosso.png>
 Package pdftex.def Info: images/nipoteLontanoRosso.png  used on input line 421.
@@ -3272,7 +3303,7 @@ LaTeX Font Info:    Font shape `U/BOONDOX-calo/m/n' will be
 [23] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/rerootingEfficente.png, id=516, 877.2775pt x 655.44875pt>
+<images/rerootingEfficente.png, id=517, 877.2775pt x 655.44875pt>
 File: images/rerootingEfficente.png Graphic file (type png)
 <use images/rerootingEfficente.png>
 Package pdftex.def Info: images/rerootingEfficente.png  used on input line 191.
@@ -3287,7 +3318,7 @@ Overfull \hbox (20.3315pt too wide) in paragraph at lines 203--204
 [24 <./images/rerootingEfficente.png>] (build/main.mw)
 \openout4 = `main.mw'.
 
-<images/linkEfficente.png, id=531, 1003.75pt x 464.73625pt>
+<images/linkEfficente.png, id=532, 1003.75pt x 464.73625pt>
 File: images/linkEfficente.png Graphic file (type png)
 <use images/linkEfficente.png>
 Package pdftex.def Info: images/linkEfficente.png  used on input line 213.
@@ -3307,7 +3338,7 @@ Overfull \hbox (19.31099pt too wide) in paragraph at lines 232--234
 []\T1/zpllf/b/n/10 (-20) Seconda de-com-po-si-zio-ne (Split):\T1/zpllf/m/n/10 (-20) Si ese-gue l'o-pe-ra-zio-ne di $[]\LMS/npxsy/m/n/10 ¹\OML/npxmi/m/it/10 T[]; e[]\LMS/npxsy/m/n/10 º$\T1/zpllf/m/n/10 (-20) .
  []
 
-<images/cutEfficente.png, id=532, 1096.095pt x 648.4225pt>
+<images/cutEfficente.png, id=533, 1096.095pt x 648.4225pt>
 File: images/cutEfficente.png Graphic file (type png)
 <use images/cutEfficente.png>
 Package pdftex.def Info: images/cutEfficente.png  used on input line 246.
@@ -3658,18 +3689,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 63439 strings out of 469504
- 1276821 string characters out of 5470379
- 2550858 words of memory out of 5000000
- 89767 multiletter control sequences out of 15000+600000
- 771623 words of font info for 297 fonts, out of 8000000 for 9000
+ 63397 strings out of 469504
+ 1276076 string characters out of 5470379
+ 2550551 words of memory out of 5000000
+ 89723 multiletter control sequences out of 15000+600000
+ 759084 words of font info for 267 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 122i,20n,159p,11227b,2268s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/share/texmf-dist/fonts/type1/public/boondox/zxxrw8a.pfb>
-Output written on build/main.pdf (34 pages, 654015 bytes).
+ 122i,20n,159p,11227b,2267s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/share/texmf-dist/fonts/type1/public/boondox/zxxrw8a.pfb>
+Output written on build/main.pdf (34 pages, 676116 bytes).
 PDF statistics:
- 771 PDF objects out of 1000 (max. 8388607)
- 677 compressed objects within 7 object streams
+ 764 PDF objects out of 1000 (max. 8388607)
+ 670 compressed objects within 7 object streams
  356 named destinations out of 1000 (max. 500000)
- 67788 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 66249 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -1,0 +1,59 @@
+\newcommand{\intestazione}{
+    % 1. Forza margini simmetrici per la copertina
+    \newgeometry{left=3cm, right=3cm, top=3cm, bottom=3cm}
+    
+    \thispagestyle{empty}
+    
+    \begin{center}
+        % Intestazione Ateneo
+        {\large \textbf{UNIVERSITÀ DEGLI STUDI DI ROMA ``TOR VERGATA''}} \\
+        \vspace{0.4cm}
+        {\large MACROAREA DI SCIENZE MATEMATICHE, FISICHE E NATURALI} \\
+        
+        \vspace{0.5cm}
+        
+        % Logo
+        \begin{figure}[H]
+            \centering
+            \includegraphics[height=3cm]{images/TorVergataLogo.png}
+        \end{figure}
+        
+        \vspace{0.5cm}
+        
+        % Corso di Laurea
+        {\large CORSO DI LAUREA IN} \\
+        {\large \textbf{INFORMATICA}}
+
+        \vspace{2.5cm} 
+        
+        % Titolo Tesi
+        {\large TITOLO} \\ 
+        \vspace{0.3cm}
+        {\Large \textbf{Gli alberi Euler-Tour: \\ analisi e implementazione}}
+    \end{center}
+
+    \vfill
+
+    % Blocco Relatore/Candidato
+    \begin{center}
+    \begin{minipage}{0.9\textwidth}
+        \begin{tabbing}
+            % Imposta la tabulazione per la seconda colonna
+            \hspace{7cm} \= \kill
+            \textbf{Relatore:} \> \textbf{Candidato:} \\
+            Chiar.mo Prof. \> Vittorio Porri \\
+            Luciano Gualà \> Matricola: 0323885
+        \end{tabbing}
+    \end{minipage}
+    \end{center}
+
+    \vspace{2cm} 
+    
+    \begin{center}
+        {\normalsize Anno Accademico 2024/2025}
+    \end{center}
+    
+    \newpage
+    % 2. Ripristina i margini asimmetrici di kaobook
+    \restoregeometry
+}

@@ -1,7 +1,7 @@
 \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
 \babel@toc {italian}{}\relax
 \babel@toc {italian}{}\relax
-\contentsline {chapter}{\nonumberline Indice}{3}{chapter*.1}%
+\contentsline {chapter}{\nonumberline Indice}{3}{chapter*.2}%
 \contentsline {chapter}{\numberline {1}Introduzione}{1}{chapter.1}%
 \etoc@startlocaltoc {2}
 \etoc@startlocaltoc {3}
@@ -10,11 +10,11 @@
 \etoc@startlocaltoc {5}
 \contentsline {subsection}{\numberline {2.0.1}Operazioni}{4}{subsection.2.0.1}%
 \contentsline {mtocsubsection}{\numberline {2.0.1}Operazioni}{4}{subsection.2.0.1}%
-\contentsline {subsubsection}{\nonumberline isConnected}{4}{subsubsection*.3}%
-\contentsline {subsubsection}{\nonumberline Rerooting}{4}{subsubsection*.4}%
-\contentsline {subsubsection}{\nonumberline Link}{4}{subsubsection*.5}%
-\contentsline {subsubsection}{\nonumberline Cut}{5}{subsubsection*.6}%
-\contentsline {part}{\nonumberline Struttura dati}{7}{part*.8}%
+\contentsline {subsubsection}{\nonumberline isConnected}{4}{subsubsection*.4}%
+\contentsline {subsubsection}{\nonumberline Rerooting}{4}{subsubsection*.5}%
+\contentsline {subsubsection}{\nonumberline Link}{4}{subsubsection*.6}%
+\contentsline {subsubsection}{\nonumberline Cut}{5}{subsubsection*.7}%
+\contentsline {part}{\nonumberline Struttura dati}{7}{part*.9}%
 \contentsline {chapter}{\numberline {3}Balanced Binary Search Trees}{9}{chapter.3}%
 \etoc@startlocaltoc {6}
 \etoc@startlocaltoc {7}
@@ -22,34 +22,34 @@
 \contentsline {mtocsection}{\numberline {3.1}Alberi Binari di Ricerca}{9}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Operazioni}{9}{subsection.3.1.1}%
 \contentsline {mtocsubsection}{\numberline {3.1.1}Operazioni}{9}{subsection.3.1.1}%
-\contentsline {subsubsection}{\nonumberline Search}{9}{subsubsection*.9}%
-\contentsline {subsubsection}{\nonumberline Insert}{10}{subsubsection*.10}%
-\contentsline {subsubsection}{\nonumberline Delete}{11}{subsubsection*.12}%
+\contentsline {subsubsection}{\nonumberline Search}{9}{subsubsection*.10}%
+\contentsline {subsubsection}{\nonumberline Insert}{10}{subsubsection*.11}%
+\contentsline {subsubsection}{\nonumberline Delete}{11}{subsubsection*.13}%
 \contentsline {section}{\numberline {3.2}Red-Black Trees}{13}{section.3.2}%
 \contentsline {mtocsection}{\numberline {3.2}Red-Black Trees}{13}{section.3.2}%
-\contentsline {subsubsection}{\nonumberline Rotazioni e Ribilanciamento}{14}{subsubsection*.13}%
-\contentsline {subsubsection}{\nonumberline Insert}{15}{subsubsection*.16}%
-\contentsline {paragraph}{\nonumberline Analisi della politica di colorazione}{15}{paragraph*.17}%
-\contentsline {subsubsection}{\nonumberline fixInsert}{16}{subsubsection*.18}%
-\contentsline {subsubsection}{\nonumberline Delete}{16}{subsubsection*.21}%
-\contentsline {subsubsection}{\nonumberline fixDelete}{17}{subsubsection*.22}%
-\contentsline {subsubsection}{\nonumberline Join}{18}{subsubsection*.26}%
-\contentsline {subsubsection}{\nonumberline Split}{19}{subsubsection*.27}%
+\contentsline {subsubsection}{\nonumberline Rotazioni e Ribilanciamento}{14}{subsubsection*.14}%
+\contentsline {subsubsection}{\nonumberline Insert}{15}{subsubsection*.17}%
+\contentsline {paragraph}{\nonumberline Analisi della politica di colorazione}{15}{paragraph*.18}%
+\contentsline {subsubsection}{\nonumberline fixInsert}{16}{subsubsection*.19}%
+\contentsline {subsubsection}{\nonumberline Delete}{16}{subsubsection*.22}%
+\contentsline {subsubsection}{\nonumberline fixDelete}{17}{subsubsection*.23}%
+\contentsline {subsubsection}{\nonumberline Join}{18}{subsubsection*.27}%
+\contentsline {subsubsection}{\nonumberline Split}{19}{subsubsection*.28}%
 \contentsline {chapter}{\numberline {4}Gli alberi Euler-Tour}{21}{chapter.4}%
 \etoc@startlocaltoc {8}
 \etoc@startlocaltoc {9}
 \contentsline {section}{\numberline {4.1}Size}{21}{section.4.1}%
 \contentsline {mtocsection}{\numberline {4.1}Size}{21}{section.4.1}%
-\contentsline {subsubsection}{\nonumberline Perche la size è fondamentale?}{21}{subsubsection*.28}%
-\contentsline {subsubsection}{\nonumberline La size influenza i costi?}{22}{subsubsection*.29}%
-\contentsline {paragraph}{\nonumberline Rotazioni}{22}{paragraph*.30}%
-\contentsline {paragraph}{\nonumberline Operazioni di Insert e Delete}{22}{paragraph*.31}%
-\contentsline {paragraph}{\nonumberline Operazioni di Join e Split}{22}{paragraph*.32}%
+\contentsline {subsubsection}{\nonumberline Perche la size è fondamentale?}{21}{subsubsection*.29}%
+\contentsline {subsubsection}{\nonumberline La size influenza i costi?}{22}{subsubsection*.30}%
+\contentsline {paragraph}{\nonumberline Rotazioni}{22}{paragraph*.31}%
+\contentsline {paragraph}{\nonumberline Operazioni di Insert e Delete}{22}{paragraph*.32}%
+\contentsline {paragraph}{\nonumberline Operazioni di Join e Split}{22}{paragraph*.33}%
 \contentsline {subsection}{\numberline {4.1.1}Operazioni}{23}{subsection.4.1.1}%
 \contentsline {mtocsubsection}{\numberline {4.1.1}Operazioni}{23}{subsection.4.1.1}%
-\contentsline {subsubsection}{\nonumberline isConnected}{23}{subsubsection*.33}%
-\contentsline {subsubsection}{\nonumberline Ottimizzazione tramite Tabelle Hash}{23}{subsubsection*.34}%
-\contentsline {subsubsection}{\nonumberline Rerooting}{24}{subsubsection*.35}%
-\contentsline {subsubsection}{\nonumberline Link}{24}{subsubsection*.37}%
-\contentsline {subsubsection}{\nonumberline Cut}{25}{subsubsection*.39}%
-\contentsline {chapter}{\nonumberline Bibliography}{29}{chapter*.41}%
+\contentsline {subsubsection}{\nonumberline isConnected}{23}{subsubsection*.34}%
+\contentsline {subsubsection}{\nonumberline Ottimizzazione tramite Tabelle Hash}{23}{subsubsection*.35}%
+\contentsline {subsubsection}{\nonumberline Rerooting}{24}{subsubsection*.36}%
+\contentsline {subsubsection}{\nonumberline Link}{24}{subsubsection*.38}%
+\contentsline {subsubsection}{\nonumberline Cut}{25}{subsubsection*.40}%
+\contentsline {chapter}{\nonumberline Bibliography}{29}{chapter*.42}%
