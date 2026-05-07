@@ -26,7 +26,6 @@ void RBTree::rotateRight(Node*& root, Node* n){
         n->parent->right = temp;
     }
 
-    //Collego n e temp
     temp->right = n;
     n->parent = temp;
 
@@ -60,7 +59,6 @@ void RBTree::rotateLeft(Node*& root, Node* n){
         n->parent->right = temp;
     }
 
-    //Collego n e temp
     temp->left = n;
     n->parent = temp;
 
@@ -69,8 +67,89 @@ void RBTree::rotateLeft(Node*& root, Node* n){
 
 }
 
+/*
+* Dato in input un nodo appena inserito se questo viola le proprietà cromatiche 
+* (ossia ha un nodo rosso come padre), questa operazione ha il compito di risistemare tali violazioni con
+* rotazioni e ricolorazioni opportune
+*/
 void RBTree::fixInsert(Node*& root, Node* n){
+    while(n != root  && n->parent->color == RED){
+        Node* p = n->parent;
+        Node* g = p->parent;
 
+        if(p == g->left){
+            Node* u = g->right;
+            // CASO 2:
+            if(u != nullptr && u->color == RED){
+                p->recolor();
+                u->recolor();
+                g->recolor();
+
+                n = g;
+            }else{
+                // CASO 3:
+                if(n == p->right){
+                    n = p;
+                    rotateLeft(root, n);
+                    p = n->parent;
+                }
+                // CASO 4:
+                p->recolor();
+                g->recolor();
+                rotateRight(root, g);
+            }
+
+        }else{
+            Node* u = g->left;
+            // CASO 2:
+            if(u != nullptr && u->color == RED){
+                p->recolor();
+                u->recolor();
+                g->recolor();
+
+                n = g;
+            }else{
+                // CASO 3:
+                if(n == p->left){
+                    n = p;
+                    rotateRight(root, n);
+                    p = n->parent;
+                }
+                // CASO 4:
+                p->recolor();
+                g->recolor();
+                rotateLeft(root, g);
+            }
+        }
+    }
+    // CASO 1
+    root->color = BLACK;
+}
+
+/*Dato un nodo restituisce in output il nodo minimo, ossia nodo il piu a sinistra possibile nell'albero  
+
+    @param {n} - Puntatore al nodo da cui devo cercare il minimo  
+    @return Puntatore al nodo minimo, oppure nullptr se n è nullo 
+*/
+Node* RBTree::findMin(Node* n){
+    if(n == nullptr){
+        return nullptr;
+    }
+
+    Node* temp = n;
+    while(temp->left != nullptr){
+        temp = temp->left;
+    }
+
+    return temp;
+}
+
+/*Dato un nodo restituisce in output il nodo minimo, ossia nodo il piu a sinistra possibile nell'albero  
+
+    @param {n} - Puntatore al nodo da cui devo cercare il minimo  
+    @return Puntatore al nodo minimo, oppure nullptr se n è nullo 
+*/
+Node* RBTree::findSuccessor(Node* n){
 
 }
 
@@ -118,7 +197,8 @@ Node* RBTree::insertMin(Node* root, Node* n){
     curr->left = n;
     n->parent = curr;
 
-    fixinsert(root, n);
+    fixInsert(root, n);
+
     return root;
 }
 
@@ -144,7 +224,8 @@ Node* RBTree::insertMax(Node* root, Node* n){
     curr->left = n;
     n->parent = curr;
 
-    fixinsert(root, n);
+    fixInsert(root, n);
+    
     return root;
 }
 

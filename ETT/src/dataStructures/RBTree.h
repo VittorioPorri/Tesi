@@ -9,6 +9,8 @@ private:
     void rotateLeft(Node*& root, Node* n);
     void rotateRight(Node*& root, Node* n);
     void fixInsert(Node*& root, Node* n);
+    Node* findMin(Node* n);
+    Node* findSuccessor(Node* n);
     void fixRemove(Node*& root, Node* n);
 
 public:
