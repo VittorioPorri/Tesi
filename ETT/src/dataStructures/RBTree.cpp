@@ -68,7 +68,7 @@ void RBTree::rotateLeft(Node*& root, Node* n){
 }
 
 /*
-* Dato in input un nodo appena inserito se questo viola le proprietà cromatiche 
+* Dato in input un nodo {n} appena inserito se questo viola le proprietà cromatiche 
 * (ossia ha un nodo rosso come padre), questa operazione ha il compito di risistemare tali violazioni con
 * rotazioni e ricolorazioni opportune
 */
@@ -126,7 +126,7 @@ void RBTree::fixInsert(Node*& root, Node* n){
     root->color = BLACK;
 }
 
-/*Dato un nodo restituisce in output il nodo minimo, ossia nodo il piu a sinistra possibile nell'albero  
+/*Dato un nodo restituisce in output il nodo minimo, ossia nodo il più a sinistra possibile nell'albero  
 
     @param {n} - Puntatore al nodo da cui devo cercare il minimo  
     @return Puntatore al nodo minimo, oppure nullptr se n è nullo 
@@ -144,18 +144,120 @@ Node* RBTree::findMin(Node* n){
     return temp;
 }
 
-/*Dato un nodo restituisce in output il nodo minimo, ossia nodo il piu a sinistra possibile nell'albero  
+/*Dato un nodo, restituisce il suo successore nell'ordine delle chiavi
 
     @param {n} - Puntatore al nodo da cui devo cercare il minimo  
     @return Puntatore al nodo minimo, oppure nullptr se n è nullo 
 */
 Node* RBTree::findSuccessor(Node* n){
+    if(n == nullptr){
+        return nullptr;
+    }
+
+    if(n->right != nullptr){
+        return findMin(n->right);
+    }else{
+        Node* u = n;
+        while(u->parent != nullptr && u->parent->right == u){
+            u = u->parent;
+        }
+        return u->parent;
+    }
 
 }
 
+/*
+* Dato in input un nodo {n} da rimuovere se questo e nero la sua rimozioe violerebbe 
+* la proprietà della black-height, questa operazione ha il compito di risistemare 
+* tale violazione con rotazioni e ricolorazioni opportune in modo tale da permettere la corretta
+* rimozione del nodo.
+*/
 void RBTree::fixRemove(Node*& root, Node* n){
+    while(n != root && n->color == BLACK){
+        Node* p = n->parent;
+        Node* f;
+        
+        
+        if (n == p->left){
+            f = p->right;
 
-    
+            //CASO 1:
+            if(f != nullptr && f->color == RED){
+                f->recolor();
+                p->recolor();
+                rotateLeft(root, p);
+                f = p->right;
+            }
+            //CASO 2:
+            if((f->left  == nullptr || f->left->color == BLACK) && (f->right == nullptr || f->right->color == BLACK)){
+                f->recolor();
+                if(p->color == BLACK){
+                    n = p;
+                }else{
+                    p->recolor();
+                    n = root;
+                }
+            }else{
+                //CASO 3:
+                if(f->right == nullptr || f->right->color == BLACK){
+                    if(f->left){
+                        f->left->recolor();
+                    }
+                    f->recolor();
+                    rotateRight(root, f);
+                    f = p->right; 
+                }
+                //CASO 4:
+                f->color = p->color;
+                p->color = BLACK;
+                if (f->right) {
+                    f->right->recolor();
+                }
+                rotateLeft(root, p);
+                n = root;
+            }
+
+        }else{
+            f = p->left;
+
+            //CASO 1:
+            if(f != nullptr && f->color == RED){
+                f->recolor();
+                p->recolor();
+                rotateRight(root, p);
+                f = p->left;
+            }
+
+            //CASO 2:
+            if((f->left  == nullptr || f->left->color == BLACK) && (f->right == nullptr || f->right->color == BLACK)){
+                f->recolor();
+                if(p->color == BLACK){
+                    n = p;
+                }else{
+                    p->recolor();
+                    n = root;
+                }
+            }else{
+                //CASO 3:
+                if(f->left == nullptr || f->left->color == BLACK){
+                    if(f->right){
+                        f->right->recolor();
+                    }
+                    f->recolor();
+                    rotateLeft(root, f);
+                    f = p->left; 
+                }
+                //CASO 4:
+                f->color = p->color;
+                p->color = BLACK;
+                if (f->left) {
+                    f->left->recolor();
+                }
+                rotateRight(root, p);
+                n = root;
+            }
+        }
+    }
 }
 
 /*Dato un nodo restituisce in output il nodo radice 
@@ -175,7 +277,7 @@ Node* RBTree::findRoot(Node* n){
     return curr;
 }
 
-/*Inserisce un Nodo {n} come minimo dell'albero, posizionandolo il piu a sinistra possibile nell'albero
+/*Inserisce un Nodo {n} come minimo dell'albero, posizionandolo il più a sinistra possibile nell'albero
 
     @param {root} - Puntatore al nodo radice dell'albero
     @param {n} - Puntatore al nodo che deve essere inserito
@@ -189,7 +291,7 @@ Node* RBTree::insertMin(Node* root, Node* n){
 
     Node* curr = root;
     while(curr->left != nullptr){
-        curr->size++;   //Incremento di uno la size lungo il cammino che porta al padre di n
+        curr->size++;   
         curr = curr->left;
     }
 
@@ -202,17 +304,17 @@ Node* RBTree::insertMin(Node* root, Node* n){
     return root;
 }
 
-/*Inserisce un Nodo {n} come massimo dell'albero, posizionandolo il piu a destra possibile nell'albero
+/*Inserisce un Nodo {n} come massimo dell'albero, posizionandolo il più a destra possibile nell'albero
     
     @param {root} - Puntatore al nodo radice dell'albero
     @param {n} - Puntatore al nodo che deve essere inserito
-    @return Puntatore al nodo radice (Nota potrebbe essere diversa da root a causa della procedura fixInsert 
+    @return Puntatore al nodo radice (Nota: potrebbe essere diversa da root a causa della procedura fixInsert 
             oppure perche {n} è il primo nodo inserito nel RBTree)
 */
 Node* RBTree::insertMax(Node* root, Node* n){
     if(root == nullptr){
-            return n;
-        }
+        return n;
+    }
 
     Node* curr = root;
     while(curr->right != nullptr){
@@ -229,8 +331,58 @@ Node* RBTree::insertMax(Node* root, Node* n){
     return root;
 }
 
-Node* RBTree::remove(Node* root, Node* n){
+/*Rimuove un nodo {n} dall'albero
 
+    @param {root} - Puntatore al nodo radice dell'albero
+    @param {n} - Puntatore al nodo che deve essere rimosso
+    @return Puntatore al nodo radice (Nota: potrebbe essere diversa da root a causa della procedura fixRemove 
+            oppure potrebbe essere nullptr perche {n} è l'unico nodo nel RBTree)
+*/
+Node* RBTree::remove(Node* root, Node* n){
+    if(n == nullptr){
+        return root;
+    }
+
+    if(n->right != nullptr && n->left != nullptr){
+        Node* s = findSuccessor(n);
+        n->source = s->source;
+        n->target = s->target;
+        n = s;
+    }
+
+
+    fixRemove(root, n);
+    
+    Node* p = n->parent;
+    Node* child = (n->left != nullptr) ? n->left : n->right;
+
+    if (n->left == nullptr && n->right == nullptr) {
+        if (p == nullptr) {
+            root = nullptr; 
+        } else {
+            if (p->left == n) {
+                p->left = nullptr;
+            }else{ 
+                p->right = nullptr;
+            }
+        }
+    } else {
+        if (p == nullptr) {
+            root = child;
+        } else {
+            if (p->left == n) {
+                p->left = child;
+            }else{ 
+                p->right = child;
+            }
+        }
+        if (child != nullptr) {
+            child->parent = p;
+        }
+    }
+
+    delete n; 
+    return root;
 }
 
 
