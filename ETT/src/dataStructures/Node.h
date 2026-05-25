@@ -14,6 +14,7 @@ public:
     Node(int source, int target);
     void recolor();
     void updateSize();
+    void updateRank();
 };
 
 #endif

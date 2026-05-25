@@ -9,7 +9,8 @@
 Node::Node(int source,int target){
     this->source = source;
     this->target = target;
-    this->updateSize();
+    this->size = 1;
+    this->rank = 0;
     this->color = RED;
     this->left = nullptr;
     this->right = nullptr;
@@ -31,5 +32,21 @@ void Node::updateSize(){
     int leftSize = (left != nullptr) ? left->size : 0;
     int rightSize = (right != nullptr) ? right->size : 0;
 
-    size = 1 + leftSize + rightSize;
+    this->size = 1 + leftSize + rightSize;
+}
+
+//Aggiorna l'attributo rank basandosi sui rank dei sottoalberi
+void Node::updateRank(){
+    if (left == nullptr && right == nullptr) {
+        this->rank = 0;
+        return;
+    }
+
+    Node* child = (left != nullptr) ? left : right;
+
+    if (child->color == BLACK) {
+        this->rank = child->rank + 1;
+    } else {
+        this->rank = child->rank;
+    }
 }

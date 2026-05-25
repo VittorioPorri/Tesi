@@ -30,7 +30,9 @@ void RBTree::rotateRight(Node*& root, Node* n){
     n->parent = temp;
 
     n->updateSize();
+    n->updateRank();
     temp->updateSize();
+    temp->updateRank();
 }
 
 /*Dato un nodo {n} esegue una rotazione verso sinistra su tale nodo
@@ -63,8 +65,9 @@ void RBTree::rotateLeft(Node*& root, Node* n){
     n->parent = temp;
 
     n->updateSize();
+    n->updateRank();
     temp->updateSize();
-
+    temp->updateRank();
 }
 
 /*
@@ -76,6 +79,7 @@ void RBTree::fixInsert(Node*& root, Node* n){
     while(n != root  && n->parent->color == RED){
         Node* p = n->parent;
         Node* g = p->parent;
+        if(g == nullptr) break;
 
         if(p == g->left){
             Node* u = g->right;
@@ -84,6 +88,10 @@ void RBTree::fixInsert(Node*& root, Node* n){
                 p->recolor();
                 u->recolor();
                 g->recolor();
+
+                p->updateRank();
+                u->updateRank();
+                g->updateRank();
 
                 n = g;
             }else{
@@ -107,6 +115,10 @@ void RBTree::fixInsert(Node*& root, Node* n){
                 u->recolor();
                 g->recolor();
 
+                p->updateRank();
+                u->updateRank();
+                g->updateRank();
+
                 n = g;
             }else{
                 // CASO 3:
@@ -124,6 +136,24 @@ void RBTree::fixInsert(Node*& root, Node* n){
     }
     // CASO 1
     root->color = BLACK;
+}
+
+/*Dato un nodo restituisce in output il nodo massimo, ossia nodo il più a destra possibile nell'albero  
+
+    @param {n} - Puntatore al nodo da cui devo cercare il massimo  
+    @return Puntatore al nodo massimo, oppure nullptr se n è nullo 
+*/
+Node* RBTree::findMax(Node* n){
+    if(n == nullptr){
+        return nullptr;
+    }
+
+    Node* temp = n;
+    while(temp->right != nullptr){
+        temp = temp->right;
+    }
+
+    return temp;
 }
 
 /*Dato un nodo restituisce in output il nodo minimo, ossia nodo il più a sinistra possibile nell'albero  
@@ -172,11 +202,14 @@ Node* RBTree::findSuccessor(Node* n){
 * tale violazione con rotazioni e ricolorazioni opportune in modo tale da permettere la corretta
 * rimozione del nodo.
 */
-void RBTree::fixRemove(Node*& root, Node* n){
-    while(n != root && n->color == BLACK){
-        Node* p = n->parent;
+void RBTree::fixRemove(Node*& root, Node* n, Node* p){
+    while(n != root && (n == nullptr || n->color == BLACK)){
+
+        if (p == nullptr) {
+            break;
+        }
+
         Node* f;
-        
         
         if (n == p->left){
             f = p->right;
@@ -189,12 +222,18 @@ void RBTree::fixRemove(Node*& root, Node* n){
                 f = p->right;
             }
             //CASO 2:
-            if((f->left  == nullptr || f->left->color == BLACK) && (f->right == nullptr || f->right->color == BLACK)){
-                f->recolor();
+            if(f == nullptr || ((f->left  == nullptr || f->left->color == BLACK) && (f->right == nullptr || f->right->color == BLACK))){
+                if(f){
+                    f->recolor();
+                    f->updateRank();
+                }
+
                 if(p->color == BLACK){
                     n = p;
+                    p = n->parent;
                 }else{
                     p->recolor();
+                    p->updateRank();
                     n = root;
                 }
             }else{
@@ -202,6 +241,7 @@ void RBTree::fixRemove(Node*& root, Node* n){
                 if(f->right == nullptr || f->right->color == BLACK){
                     if(f->left){
                         f->left->recolor();
+                        f->left->updateRank();
                     }
                     f->recolor();
                     rotateRight(root, f);
@@ -212,6 +252,7 @@ void RBTree::fixRemove(Node*& root, Node* n){
                 p->color = BLACK;
                 if (f->right) {
                     f->right->recolor();
+                    f->right->updateRank();
                 }
                 rotateLeft(root, p);
                 n = root;
@@ -229,12 +270,18 @@ void RBTree::fixRemove(Node*& root, Node* n){
             }
 
             //CASO 2:
-            if((f->left  == nullptr || f->left->color == BLACK) && (f->right == nullptr || f->right->color == BLACK)){
-                f->recolor();
+            if(f == nullptr || ((f->left  == nullptr || f->left->color == BLACK) && (f->right == nullptr || f->right->color == BLACK))){
+                if(f){
+                    f->recolor();
+                    f->updateRank();
+                }
+
                 if(p->color == BLACK){
                     n = p;
+                    p = n->parent;
                 }else{
                     p->recolor();
+                    p->updateRank();
                     n = root;
                 }
             }else{
@@ -242,6 +289,7 @@ void RBTree::fixRemove(Node*& root, Node* n){
                 if(f->left == nullptr || f->left->color == BLACK){
                     if(f->right){
                         f->right->recolor();
+                        f->right->updateRank();
                     }
                     f->recolor();
                     rotateLeft(root, f);
@@ -252,6 +300,7 @@ void RBTree::fixRemove(Node*& root, Node* n){
                 p->color = BLACK;
                 if (f->left) {
                     f->left->recolor();
+                    f->left->updateRank();
                 }
                 rotateRight(root, p);
                 n = root;
@@ -319,11 +368,11 @@ Node* RBTree::insertMax(Node* root, Node* n){
     Node* curr = root;
     while(curr->right != nullptr){
         curr->size++;   
-        curr = curr->left;
+        curr = curr->right;
     }
 
     curr->size++;  
-    curr->left = n;
+    curr->right = n;
     n->parent = curr;
 
     fixInsert(root, n);
@@ -350,12 +399,9 @@ Node* RBTree::remove(Node* root, Node* n){
         n = s;
     }
 
-
-    fixRemove(root, n);
-    
     Node* p = n->parent;
     Node* child = (n->left != nullptr) ? n->left : n->right;
-
+    
     if (n->left == nullptr && n->right == nullptr) {
         if (p == nullptr) {
             root = nullptr; 
@@ -381,17 +427,276 @@ Node* RBTree::remove(Node* root, Node* n){
         }
     }
 
-    delete n; 
+    Node* temp = p;
+    while (temp != nullptr){
+        temp->updateRank();
+        temp->updateSize();
+        temp = temp->parent;
+    }
+
+    
+    if(n->color == BLACK){
+        fixRemove(root, child, p);
+    }
+
+    delete n;
+
+    if (root != nullptr) {
+        root->color = BLACK;
+        root->updateRank();
+    }
+    
     return root;
 }
 
+/*Rimuove un nodo {n} dall'albero SENZA deallocarlo (a differenza di remove).
+  Il nodo viene isolato (left=right=parent=nullptr) e restituito pronto per il riuso.
 
-Node* RBTree::join(Node* s1, Node* s2){
+    @param {root} - Puntatore al nodo radice dell'albero
+    @param {n} - Puntatore al nodo che deve essere staccato
+    @return Puntatore al nodo radice aggiornato
+*/
+Node* RBTree::detach(Node* root, Node* n){
+    if(n == nullptr){
+        return root;
+    }
 
+    if(n->right != nullptr && n->left != nullptr){
+        Node* s = findSuccessor(n);
+        n->source = s->source;
+        n->target = s->target;
+        n = s;
+    }
+
+    Node* p = n->parent;
+    Node* child = (n->left != nullptr) ? n->left : n->right;
+    
+    if (n->left == nullptr && n->right == nullptr) {
+        if (p == nullptr) {
+            root = nullptr; 
+        } else {
+            if (p->left == n) {
+                p->left = nullptr;
+            }else{ 
+                p->right = nullptr;
+            }
+        }
+    } else {
+        if (p == nullptr) {
+            root = child;
+        } else {
+            if (p->left == n) {
+                p->left = child;
+            }else{ 
+                p->right = child;
+            }
+        }
+        if (child != nullptr) {
+            child->parent = p;
+        }
+    }
+
+    Node* temp = p;
+    while (temp != nullptr){
+        temp->updateRank();
+        temp->updateSize();
+        temp = temp->parent;
+    }
+
+    if(n->color == BLACK){
+        fixRemove(root, child, p);
+    }
+
+    // Isolo il nodo senza deallocarlo
+    n->left = nullptr;
+    n->right = nullptr;
+    n->parent = nullptr;
+    n->size = 1;
+    n->rank = 0;
+    n->color = RED;
+
+    if (root != nullptr) {
+        root->color = BLACK;
+        root->updateRank();
+    }
+    
+    return root;
+}
+
+/*Presi due Alberi {s1} e {s2} e un nodo {i} l'obbiettivo dell'operazione è fondere i due 
+  alberi in un unico albero utilizzando il nodo {i} come perno della fusione 
+    
+    @param {s1} - Puntatore al nodo radice dell'albero s1
+    @param {s2} - Puntatore al nodo radice dell'albero s2
+    @param {i} - Puntatore al nodo perno
+    @return Puntatore al nodo radice (Nota: potrebbe essere diversa da una delle due radici
+            a causa della procedura fixInsert)
+*/
+Node* RBTree::join(Node* s1, Node* i, Node* s2) {
+    // Caso speciale: concatenazione senza nodo perno
+    if (i == nullptr) {
+        if (s1 == nullptr) return s2;
+        if (s2 == nullptr) return s1;
+        // Estraggo il minimo di s2 e lo uso come perno
+        Node* pivot = findMin(s2);
+        s2 = detach(s2, pivot);
+        return join(s1, pivot, s2);
+    }
+
+    if (s1 == nullptr){
+        return insertMin(s2, i); 
+    }    
+
+    if (s2 == nullptr){
+        return insertMax(s1, i);
+    }  
+
+    if (s1->rank >= s2->rank) {
+        Node* curr = s1;
+
+        curr->color = BLACK;
+        s2->color = BLACK;
+
+        while (curr->rank > s2->rank) {
+            curr = curr->right;
+        }
+
+        Node* p = curr->parent;
+        
+        i->left = curr;
+        i->right = s2;
+        i->parent = p;
+        i->color = RED; 
+
+        curr->parent = i;
+        s2->parent = i;
+
+        if (p == nullptr) {
+            i->color = BLACK;
+            i->updateSize();
+            i->updateRank();
+            return i;
+        } else {
+            p->right = i;
+            
+            Node* temp = i;
+            while (temp != nullptr) {
+                temp->updateSize();
+                temp->updateRank();
+                temp = temp->parent;
+            }
+
+            fixInsert(s1, i);
+
+            return findRoot(s1);
+        }
+    } else {
+        Node* curr = s2;
+
+        curr->color = BLACK;
+        s1->color = BLACK;
+
+        while (curr->rank > s1->rank) {
+            curr = curr->left;
+        }
+
+        Node* p = curr->parent;
+        
+        i->left = s1;
+        i->right = curr;
+        i->parent = p;
+        i->color = RED; 
+
+        curr->parent = i;
+        s1->parent = i;
+
+        if (p == nullptr) {
+            i->color = BLACK;
+            i->updateSize();
+            i->updateRank();
+            return i;
+        } else {
+            p->left = i;
+            
+            Node* temp = i;
+            while (temp != nullptr) {
+                temp->updateSize();
+                temp->updateRank();
+                temp = temp->parent;
+            }
+
+            fixInsert(s2, i);
+
+            return findRoot(s2);
+        }
+    }
 }
 
 
 std::pair<Node*, Node*> RBTree::split(Node* root, Node* n){
+    Node* rootTl = n->left;
+    if(n->left){
+        rootTl->parent = nullptr;
+    }
 
+    Node* rootTr = n->right;
+    if(n->right){
+        rootTr->parent = nullptr;
+    }
+    
+    Node* curr = n->parent; 
+    Node* last = n;
+
+    //Isolo n
+    n->left = nullptr;
+    n->right = nullptr;
+    n->parent = nullptr;
+    n->size = 1;
+    n->rank = 0;
+    n->color = RED;
+
+    while(curr != nullptr){
+        Node* p = curr->parent;
+
+        // Determino da che lato veniva last PRIMA di modificare i puntatori
+        bool lastWasLeft = (curr->left == last);
+
+        // Taglio il link tra curr e last (già processato)
+        if(lastWasLeft){
+            curr->left = nullptr;
+        }else{
+            curr->right = nullptr;
+        }
+
+        // L'altro sotto-albero è quello rimasto
+        Node* otherSub = lastWasLeft ? curr->right : curr->left;
+        
+        if(otherSub){
+            otherSub->parent = nullptr;
+        }
+
+        //Isolo curr
+        curr->left = nullptr;
+        curr->right = nullptr;
+        curr->parent = nullptr;
+        curr->size = 1;
+        curr->rank = 0;
+        curr->color = RED;
+
+        if(lastWasLeft){
+            // last veniva da sinistra → otherSub è il sottoalbero destro
+            // curr e otherSub vanno aggiunti a rootTr
+            rootTr = join(rootTr, curr, otherSub); 
+        }else{
+            // last veniva da destra → otherSub è il sottoalbero sinistro
+            // otherSub e curr vanno aggiunti a rootTl
+            rootTl = join(otherSub, curr, rootTl);
+        }
+
+        last = curr;
+        curr = p;
+    }
+
+    return {rootTl, rootTr};
 } 
 
